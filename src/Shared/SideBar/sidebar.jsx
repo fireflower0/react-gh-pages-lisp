@@ -7,11 +7,11 @@ import { Icon } from 'react-icons-kit';
 import { ic_home } from 'react-icons-kit/md/ic_home';
 import { ic_keyboard } from 'react-icons-kit/md/ic_keyboard';
 import { ic_assignment } from 'react-icons-kit/md/ic_assignment'
-import { AppContainer, Navigation, Body } from './containers';
-import Home from '../Pages/home';
-import Blog from '../Pages/Blog/blog';
-import Programming from '../Pages/Programming/programming';
-import CommonLisp from '../Pages/Programming/commonlisp';
+import { AppContainer, Navigation, Body } from '../containers';
+import Home from '../../Pages/Home/home';
+import Blog from '../../Pages/Blog/blog';
+import Programming from '../../Pages/Programming/programming';
+import CommonLisp from '../../Pages/Programming/commonlisp';
 
 const Text = styled.div`
   padding-left: 8px;
