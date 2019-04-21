@@ -6,10 +6,12 @@ import { withRR4 } from "react-sidenav/withRR4";
 import { Icon } from 'react-icons-kit';
 import { ic_home } from 'react-icons-kit/md/ic_home';
 import { ic_keyboard } from 'react-icons-kit/md/ic_keyboard';
+import { ic_assignment } from 'react-icons-kit/md/ic_assignment'
 import { AppContainer, Navigation, Body } from './containers';
-
-import Home from './home';
-import Programming from './programming';
+import Home from '../Pages/home';
+import Blog from '../Pages/Blog/blog';
+import Programming from '../Pages/Programming/programming';
+import CommonLisp from '../Pages/Programming/commonlisp';
 
 const Text = styled.div`
   padding-left: 8px;
@@ -22,13 +24,22 @@ const theme = {
 };
 
 class App extends React.Component {
-  MenuItem(id, icon, text){
+  SubMenuItem (child) {
+    var list = [];
+    for (let i = 0; i < child.length; i++){
+      list.push(<Nav key={i} id={child[i][0]}><Text>{child[i][1]}</Text></Nav>);
+    }
+    return list;
+  }
+
+  MenuItem(parent, child) {
     return (
-      <Nav id={id}>
+      <Nav id={parent[0]}>
         <NavIcon>
-          <Icon icon={icon} />
+          <Icon icon={parent[1]} />
         </NavIcon>
-        <Text>{text}</Text>
+        <Text>{parent[2]}</Text>
+        { child !== null ? this.SubMenuItem(child) : null }
       </Nav>
     );
   }
@@ -40,14 +51,18 @@ class App extends React.Component {
         <AppContainer>
           <Navigation>
             <SideNav theme={theme} defaultSelectedPath={"home"}>
-              {this.MenuItem("home", ic_home, "Home")}
-              {this.MenuItem("programming", ic_keyboard, "Programming")}
+              {this.MenuItem(["home", ic_home, "Home"], null)}
+              {this.MenuItem(["blog", ic_assignment, "Blog"], null)}
+              {this.MenuItem(["programming", ic_keyboard, "Programming"],
+                             [["commonlisp", "Common Lisp"]])}
             </SideNav>
           </Navigation>
           <Body>
             <Switch>
-              <Route path='/programming' component={Programming} />
               <Route path='/home' component={Home} />
+              <Route path='/blog' component={Blog} />
+              <Route path='/programming/commonlisp' component={CommonLisp} />
+              <Route path='/programming' exact component={Programming} />
               <Route path='/' exact component={Home} />
             </Switch>
           </Body>
