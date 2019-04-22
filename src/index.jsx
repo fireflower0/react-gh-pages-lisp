@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Sidebar from './Shared/SideBar/sidebar';
+import App from './app';
 
 class Index extends React.Component {
   render() {
     return (
-      <Sidebar />
+      <App />
     );
   }
 }

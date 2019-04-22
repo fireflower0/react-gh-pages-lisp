@@ -1,5 +1,4 @@
 import React from 'react';
-import { MemoryRouter as Router, Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 import { Nav, NavIcon } from 'react-sidenav';
 import { withRR4 } from "react-sidenav/withRR4";
@@ -7,11 +6,7 @@ import { Icon } from 'react-icons-kit';
 import { ic_home } from 'react-icons-kit/md/ic_home';
 import { ic_keyboard } from 'react-icons-kit/md/ic_keyboard';
 import { ic_assignment } from 'react-icons-kit/md/ic_assignment'
-import { AppContainer, Navigation, Body } from '../containers';
-import Home from '../../Pages/Home/home';
-import Blog from '../../Pages/Blog/blog';
-import Programming from '../../Pages/Programming/programming';
-import CommonLisp from '../../Pages/Programming/commonlisp';
+import { Navigation } from '../containers';
 
 const Text = styled.div`
   padding-left: 8px;
@@ -23,7 +18,7 @@ const theme = {
   selectionIconColor: "#03A9F4"
 };
 
-class App extends React.Component {
+class Sidebar extends React.Component {
   SubMenuItem (child) {
     var list = [];
     for (let i = 0; i < child.length; i++){
@@ -47,29 +42,16 @@ class App extends React.Component {
   render() {
     const SideNav = withRR4();
     return (
-      <Router>
-        <AppContainer>
-          <Navigation>
-            <SideNav theme={theme} defaultSelectedPath={"home"}>
-              {this.MenuItem(["home", ic_home, "Home"], null)}
-              {this.MenuItem(["blog", ic_assignment, "Blog"], null)}
-              {this.MenuItem(["programming", ic_keyboard, "Programming"],
-                             [["commonlisp", "Common Lisp"]])}
-            </SideNav>
-          </Navigation>
-          <Body>
-            <Switch>
-              <Route path='/home' component={Home} />
-              <Route path='/blog' component={Blog} />
-              <Route path='/programming/commonlisp' component={CommonLisp} />
-              <Route path='/programming' exact component={Programming} />
-              <Route path='/' exact component={Home} />
-            </Switch>
-          </Body>
-        </AppContainer>
-      </Router>
+      <Navigation>
+        <SideNav theme={theme} defaultSelectedPath={"home"}>
+          {this.MenuItem(["home", ic_home, "Home"], null)}
+          {this.MenuItem(["blog", ic_assignment, "Blog"], null)}
+          {this.MenuItem(["programming", ic_keyboard, "Programming"],
+                         [["commonlisp", "Common Lisp"]])}
+        </SideNav>
+      </Navigation>
     );
   }
 }
 
-export default App;
+export default Sidebar;
