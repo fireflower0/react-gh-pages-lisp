@@ -1,36 +1,38 @@
 import React from 'react';
-import marked from "marked";
+import styled from 'styled-components';
+import Markdown from '../../Shared/Markdown/markdown';
+
+const Section = styled.section`
+  background: #FFF;
+`
+
+const Article = styled.article`
+  background: #FFEFD5;
+  padding-top:    20px;
+  padding-bottom: 20px
+  padding-left:   20px;
+  padding-right:  80px;
+  border : 5px solid maroon;
+`;
 
 class Blog extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      markdown: null
-    }
-  }
-
-  componentDidMount() {
-    const readmePath = require("./20190422blog.md");
-
-    fetch(readmePath)
-      .then(response => {
-        return response.text()
-      })
-      .then(text => {
-        this.setState({
-          markdown: marked(text)
-        })
-      })
+  makeBlog(title, path){
+    return (
+      <Article>
+        <details>
+          <summary>{title}</summary>
+          <Markdown filePath={path} />
+        </details>
+      </Article>
+    );
   }
 
   render() {
-    const { markdown } = this.state;
     return (
       <div>
-        Blog
-        <section>
-          <article dangerouslySetInnerHTML={{__html: markdown}}></article>
-        </section>
+        <Section>
+          {this.makeBlog("2019/04/22 (Mon)", require("./Articles/20190422blog.md"))}
+        </Section>
       </div>
     );
   }
