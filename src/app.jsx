@@ -8,7 +8,7 @@ import Sidebar from './Shared/SideBar/sidebar';
 import Home from './Pages/Home/home';
 import Blog from './Pages/Blog/blog';
 import Programming from './Pages/Programming/programming';
-import CommonLisp from './Pages/Programming/commonlisp';
+import CommonLisp from './Pages/Programming/CommonLisp/commonlisp';
 
 const Text = styled.div`
   padding-left: 8px;
