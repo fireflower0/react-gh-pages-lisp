@@ -2,28 +2,46 @@ import React from 'react';
 import styled from 'styled-components';
 import Markdown from '../../Shared/Markdown/markdown';
 
-const Section = styled.section`
+const Div = styled.div`
+  padding: 12px;
+`
+
+const H1 = styled.h1`
+  width: 100%;
+  font-size: 150%;
+  color: #313131;
+  letter-spacing: 3px;
+  padding-bottom:2px;
+  padding-top: 10px;
+  border-bottom: 1px solid #bababa;
+  margin-bottom: 15px;
+  float: left;
 `
 
 const Article = styled.article`
-`;
+  width: calc(100% - 15px);
+  padding: 2.5%;
+  margin-bottom: 30px;
+  background-color: #f9f9f9;
+  overflow: hidden;
+  float: left;
+`
 
 class Blog extends React.Component {
-  makeBlog(path){
+  makeBlog(mdFilePath){
     return (
-      <Article>
-        <Markdown filePath={path} />
-      </Article>
+      <Markdown mdFilePath={mdFilePath} />
     );
   }
 
   render() {
     return (
-      <div>
-        <Section>
-          {this.makeBlog(require("./Articles/20190422blog.md"))}
-        </Section>
-      </div>
+      <Div>
+        <H1>Blog</H1>
+        <Article>
+          {this.makeBlog(require("./Articles/sample.md"))}
+        </Article>
+      </Div>
     );
   }
 }

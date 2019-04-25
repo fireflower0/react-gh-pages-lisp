@@ -1,5 +1,6 @@
 import React from 'react';
-import marked from "marked";
+import ReactMarkdown from "react-markdown";
+import CodeBlock from './codeblock';
 
 class Markdown extends React.Component {
   constructor(props) {
@@ -7,25 +8,14 @@ class Markdown extends React.Component {
     this.state = {
       markdown: null
     }
-    marked.setOptions({
-      renderer: new marked.Renderer(),
-      pedantic: false,
-      gfm: true,
-      tables: true,
-      breaks: false,
-      sanitize: false,
-      smartLists: true,
-      smartypants: false,
-      xhtml: false
-    });
   }
 
   componentDidMount() {
-    fetch(this.props.filePath).then(response => {
+    fetch(this.props.mdFilePath).then(response => {
       return response.text()
     }).then(text => {
       this.setState({
-        markdown: marked(text, {sanitize: true})
+        markdown: text
       })
     })
   }
@@ -33,7 +23,10 @@ class Markdown extends React.Component {
   render() {
     const { markdown } = this.state;
     return (
-      <span dangerouslySetInnerHTML={{__html: markdown}} />
+      <ReactMarkdown
+        source={ markdown }
+        renderers={{ code: CodeBlock }}
+      />
     );
   }
 }
