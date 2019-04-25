@@ -5,7 +5,7 @@ Sub-heading
 -----------
  
 ### Another deeper heading
- 
+
 Paragraphs are separated
 by a blank line.
 
@@ -41,6 +41,16 @@ Program Code:
   (cond ((= n 0) 0)
         ((= n 1) 1)
         (t (+ (fib (- n 1)) (fib (- n 2))))))
+```
+
+```
+include <iostream>
+using namespace std;
+
+int main(void) {
+  cout << "Hello, world!" << endl;
+  return 0;
+}
 ```
 
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
