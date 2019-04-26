@@ -4,6 +4,7 @@ export const AppContainer = styled.div`
   display: flex;
   height: 100%;
   width: 100%;
+  overflow-y: auto;
 `;
 
 export const Navigation = styled.div`
@@ -19,6 +20,5 @@ export const Navigation = styled.div`
 `;
 
 export const Body = styled.div`
-  padding: 12px;
   height: 100vh;
 `;
