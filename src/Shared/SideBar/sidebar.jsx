@@ -9,13 +9,16 @@ import { ic_assignment } from 'react-icons-kit/md/ic_assignment'
 import { Navigation } from '../containers';
 
 const Text = styled.div`
-  padding-left: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
 `;
 
 const theme = {
-  hoverBgColor:       "#f5f5f5",
-  selectionBgColor:   "#f5f5f5",
-  selectionIconColor: "#03A9F4"
+  selectionColor: "#FFC7AF",
+  selectionBgColor: "#000",
+  hoverBgColor: "#000",
 };
 
 class Sidebar extends React.Component {

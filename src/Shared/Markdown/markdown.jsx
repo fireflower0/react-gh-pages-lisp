@@ -1,6 +1,11 @@
 import React from 'react';
+import styled from 'styled-components';
 import ReactMarkdown from "react-markdown";
 import CodeBlock from './codeblock';
+
+const MarkDown = styled(ReactMarkdown)`
+  width: 800px;
+`
 
 class Markdown extends React.Component {
   constructor(props) {
@@ -23,7 +28,7 @@ class Markdown extends React.Component {
   render() {
     const { markdown } = this.state;
     return (
-      <ReactMarkdown
+      <MarkDown
         source={ markdown }
         renderers={{ code: CodeBlock }}
       />
