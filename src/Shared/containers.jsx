@@ -21,4 +21,7 @@ export const Navigation = styled.div`
 
 export const Body = styled.div`
   height: 100vh;
+  width:800px;
+  margin-right: auto;
+  margin-left : auto;
 `;
