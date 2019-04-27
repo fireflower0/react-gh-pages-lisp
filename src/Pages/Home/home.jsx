@@ -2,53 +2,16 @@ import React from 'react';
 import styled from "styled-components";
 
 const Body = styled.div`
-  padding: 12px;
+  padding: 2.5%;
+  background-color: #000;
+  color: #fff;
 `;
 
 class Home extends React.Component {
   render() {
     return (
       <Body>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
-        <p>Hello, world!</p>
+       <h1>Home</h1>
       </Body>
     );
   }
