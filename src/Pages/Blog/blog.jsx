@@ -23,7 +23,7 @@ class Blog extends React.Component {
     return (
       <div>
         <Article>
-          {this.makeBlog(require("./Articles/sample.md"))}
+          {this.makeBlog(require("./Articles/Sample/sample.md"))}
         </Article>
       </div>
     );

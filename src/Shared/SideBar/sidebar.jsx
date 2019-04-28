@@ -6,7 +6,18 @@ import { Icon } from 'react-icons-kit';
 import { ic_home } from 'react-icons-kit/md/ic_home';
 import { ic_keyboard } from 'react-icons-kit/md/ic_keyboard';
 import { ic_assignment } from 'react-icons-kit/md/ic_assignment'
-import { Navigation } from '../containers';
+
+export const Navigation = styled.div`
+  width: 220px;
+  flex-shrink: 0;
+  background: #333333;
+  color: #FFDBC9;
+  height: 100vh;
+  border-right: 1px solid rgba(0, 0, 0, 0.125);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+`;
 
 const Text = styled.div`
   display: flex;
