@@ -3,12 +3,25 @@ import { MemoryRouter as Router, Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 import { Nav, NavIcon } from 'react-sidenav';
 import { Icon } from 'react-icons-kit';
-import { AppContainer, Body } from './Shared/containers';
 import Sidebar from './Shared/SideBar/sidebar';
 import Home from './Pages/Home/home';
 import Blog from './Pages/Blog/blog';
 import Programming from './Pages/Programming/programming';
 import CommonLisp from './Pages/Programming/CommonLisp/commonlisp';
+
+export const AppContainer = styled.div`
+  display: flex;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+`;
+
+export const Body = styled.div`
+  height: 100vh;
+  width:800px;
+  margin-right: auto;
+  margin-left : auto;
+`;
 
 const Text = styled.div`
   padding-left: 8px;
@@ -18,7 +31,9 @@ class App extends React.Component {
   SubMenuItem (child) {
     var list = [];
     for (let i = 0; i < child.length; i++){
-      list.push(<Nav key={i} id={child[i][0]}><Text>{child[i][1]}</Text></Nav>);
+      list.push(<Nav key={i} id={child[i][0]}>
+                  <Text>{child[i][1]}</Text>
+                </Nav>);
     }
     return list;
   }
