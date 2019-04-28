@@ -6,6 +6,8 @@ Sub-heading
  
 ### Another deeper heading
 
+![cat](https://github.com/fireflower0/react-gh-pages-lisp/tree/master/src/Pages/Blog/Articles/Pic/cat.jpg)
+
 Paragraphs are separated
 by a blank line.
 
