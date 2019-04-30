@@ -25,9 +25,9 @@ class Game extends React.Component {
   render() {
     return (
       <div>
-        <h1>Common Lisp ゲームプログラミング</h1>
-        {this.makeArticle("はじめに", require("./Articles/foreword.md"))}
-        {this.makeArticle("ウィンドウを表示する", require("./Articles/simplewindow.md"))}
+        <h1>ゲームプログラミング</h1>
+        {this.makeArticle("はじめに", require("./Articles/01-foreword.md"))}
+        {this.makeArticle("ウィンドウを表示する", require("./Articles/02-window.md"))}
       </div>
     );
   }
