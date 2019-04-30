@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 import CodeBlock from './codeblock';
 
 const MarkDown = styled(ReactMarkdown)`
-  width: 800px;
+  width: 1000px;
 `
 
 class Markdown extends React.Component {

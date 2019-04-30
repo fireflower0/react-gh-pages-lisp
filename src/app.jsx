@@ -8,6 +8,7 @@ import Home from './Pages/Home/home';
 import Blog from './Pages/Blog/blog';
 import Programming from './Pages/Programming/programming';
 import CommonLisp from './Pages/Programming/CommonLisp/commonlisp';
+import Game from './Pages/Programming/CommonLisp/Game/game';
 
 export const AppContainer = styled.div`
   display: flex;
@@ -18,7 +19,7 @@ export const AppContainer = styled.div`
 
 export const Body = styled.div`
   height: 100vh;
-  width:800px;
+  width: 1000px;
   margin-right: auto;
   margin-left : auto;
 `;
@@ -59,6 +60,7 @@ class App extends React.Component {
             <Switch>
               <Route path='/home' component={Home} />
               <Route path='/blog' component={Blog} />
+              <Route path='/programming/commonlisp/game' component={Game} />
               <Route path='/programming/commonlisp' component={CommonLisp} />
               <Route path='/programming' exact component={Programming} />
               <Route path='/' exact component={Home} />
