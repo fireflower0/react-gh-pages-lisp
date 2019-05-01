@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components';
 
 const Article = styled.article`
-  padding: 2.5%;
+  padding: 10px;
   background-color: #FAF0E6;
 `;
 
@@ -21,9 +21,7 @@ class Programming extends React.Component {
     return (
       <div>
         <h1>Programming</h1>
-        <Article>
-          {this.makeList("/programming/commonlisp", "Common Lisp")}
-        </Article>
+        {this.makeList("/programming/commonlisp", "Common Lisp")}
       </div>
     );
   }

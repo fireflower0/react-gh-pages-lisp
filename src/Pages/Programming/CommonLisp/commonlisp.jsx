@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components';
 
 const Article = styled.article`
-  width: 100%;
-  padding: 2.5%;
+  padding: 10px;
   margin-top: 30px;
   margin-bottom: 30px;
   background-color: #FAF0E6;

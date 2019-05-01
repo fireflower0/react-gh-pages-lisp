@@ -3,17 +3,19 @@ import styled from 'styled-components';
 import Markdown from '../../Shared/Markdown/markdown';
 
 const Article = styled.article`
-  width: 100%;
   padding: 10px;
-  margin-top: 30px;
-  margin-bottom: 30px;
   background-color: #FAF0E6;
 `;
 
 class Blog extends React.Component {
-  makeBlog(mdFilePath){
+  makeBlog(title, mdFilePath){
     return (
-      <Markdown mdFilePath={mdFilePath} />
+      <Article>
+        <details>
+          <summary>{title}</summary>
+          <Markdown mdFilePath={mdFilePath} />
+        </details>
+      </Article>
     );
   }
 
@@ -21,9 +23,7 @@ class Blog extends React.Component {
     return (
       <div>
         <h1>Blog</h1>
-        <Article>
-          {this.makeBlog(require("./Articles/Sample/sample.md"))}
-        </Article>
+        {this.makeBlog("サンプル", require("./Articles/Sample/sample.md"))}
       </div>
     );
   }
