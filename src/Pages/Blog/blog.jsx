@@ -19,9 +19,12 @@ class Blog extends React.Component {
 
   render() {
     return (
-      <Article>
-        {this.makeBlog(require("./Articles/Sample/sample.md"))}
-      </Article>
+      <div>
+        <h1>Blog</h1>
+        <Article>
+          {this.makeBlog(require("./Articles/Sample/sample.md"))}
+        </Article>
+      </div>
     );
   }
 }
