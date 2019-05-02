@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Markdown from '../../Shared/Markdown/markdown';
 
 const Article = styled.article`
+  width: 100%;
   padding: 10px;
   background-color: #FAF0E6;
 `;

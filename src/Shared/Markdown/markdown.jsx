@@ -31,6 +31,8 @@ class Markdown extends React.Component {
       <MarkDown
         source={ markdown }
         renderers={{ code: CodeBlock }}
+        escapeHtml={false}
+        linkTarget="_blank"
       />
     );
   }
