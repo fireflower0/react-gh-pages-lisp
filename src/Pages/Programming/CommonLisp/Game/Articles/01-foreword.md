@@ -181,3 +181,52 @@ git clone https://github.com/Zulu-Inuoe/cl-sdl2-gfx.git
 ```
 
 これで、Common Lispプログラム内からロードできるようになります。
+
+## Qlotを使う
+
+qlfileを作成して以下を書いておきます。
+
+```shell
+git sdl2     https://github.com/lispgames/cl-sdl2.git
+git sdl2-gfx https://github.com/Zulu-Inuoe/cl-sdl2-gfx.git
+```
+
+後は以下のコマンドを実行すればすればローカル環境にライブラリがインストールされます。
+
+```shell
+qlot install
+```
+
+ディレクトリ構成を以下のようにすればポータブルなローカル環境でゲーム開発ができます。
+
+```
+FooGame/
+├── foogame.asd <= プロジェクト名、著者、ライセンス、ソースコードリストなどを書いておく
+├── main.lisp   <= プログラム本体
+├── qlfile      <= 使用したいライブラリを記述して qlot install
+├── qlfile.lock <= 自動生成される
+└── quicklisp/  <= 自動生成される（ここにインストールしたライブラリが入る）
+```
+
+EmacsのSlimeでQlotを有効にする場合は、設定ファイルに以下を記述します。
+
+```elisp
+;; Qlot (M-x slime-qlot-exec)
+(defun slime-qlot-exec (directory)
+  (interactive (list (read-directory-name "Project directory: ")))
+  (slime-start :program "qlot"
+               :program-args '("exec" "ros" "-S" "." "run")
+               :directory directory
+               :name 'qlot
+               :env (list (concat "PATH=" (mapconcat 'identity exec-path ":")))))
+```
+
+Lemを使用している場合は、設定ファイルに以下を記述します。
+
+```commonlisp
+;; Qlot (M-x slime-qlot-exec)
+(define-command slime-qlot-exec (directory)
+  ((list (prompt-for-directory "Project directory: " (buffer-directory))))
+  (change-directory directory)
+  (lem-lisp-mode:run-slime (lem-lisp-mode::get-lisp-command :prefix "qlot exec ")))
+```
