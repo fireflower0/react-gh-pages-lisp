@@ -1,14 +1,15 @@
 {
-  "main.js": "/react-gh-pages-lisp/static/js/main.d7a96ecd.chunk.js",
-  "main.js.map": "/react-gh-pages-lisp/static/js/main.d7a96ecd.chunk.js.map",
+  "main.js": "/react-gh-pages-lisp/static/js/main.a0f1edfc.chunk.js",
+  "main.js.map": "/react-gh-pages-lisp/static/js/main.a0f1edfc.chunk.js.map",
   "runtime~main.js": "/react-gh-pages-lisp/static/js/runtime~main.ed59056f.js",
   "runtime~main.js.map": "/react-gh-pages-lisp/static/js/runtime~main.ed59056f.js.map",
-  "static/js/2.d8b616ff.chunk.js": "/react-gh-pages-lisp/static/js/2.d8b616ff.chunk.js",
-  "static/js/2.d8b616ff.chunk.js.map": "/react-gh-pages-lisp/static/js/2.d8b616ff.chunk.js.map",
+  "static/js/2.2e0e8c4b.chunk.js": "/react-gh-pages-lisp/static/js/2.2e0e8c4b.chunk.js",
+  "static/js/2.2e0e8c4b.chunk.js.map": "/react-gh-pages-lisp/static/js/2.2e0e8c4b.chunk.js.map",
   "index.html": "/react-gh-pages-lisp/index.html",
-  "precache-manifest.2d3eb54114dc67c8329130207fda25c8.js": "/react-gh-pages-lisp/precache-manifest.2d3eb54114dc67c8329130207fda25c8.js",
+  "precache-manifest.17cc4168c544f84b3283e824784b364b.js": "/react-gh-pages-lisp/precache-manifest.17cc4168c544f84b3283e824784b364b.js",
   "service-worker.js": "/react-gh-pages-lisp/service-worker.js",
   "static/media/01-foreword.md": "/react-gh-pages-lisp/static/media/01-foreword.cab27f22.md",
   "static/media/02-window.md": "/react-gh-pages-lisp/static/media/02-window.e92a3002.md",
+  "static/media/03-string-drawing.md": "/react-gh-pages-lisp/static/media/03-string-drawing.ed992dc1.md",
   "static/media/sample.md": "/react-gh-pages-lisp/static/media/sample.9c3ab9cf.md"
 }

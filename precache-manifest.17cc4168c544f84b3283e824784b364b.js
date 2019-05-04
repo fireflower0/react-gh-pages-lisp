@@ -4,6 +4,10 @@ self.__precacheManifest = [
     "url": "/react-gh-pages-lisp/static/media/sample.9c3ab9cf.md"
   },
   {
+    "revision": "ed992dc1f9b2f0e2879c9dd2e4df202c",
+    "url": "/react-gh-pages-lisp/static/media/03-string-drawing.ed992dc1.md"
+  },
+  {
     "revision": "e92a30021526fda90c8e5a1d1b38940c",
     "url": "/react-gh-pages-lisp/static/media/02-window.e92a3002.md"
   },
@@ -20,15 +24,15 @@ self.__precacheManifest = [
     "url": "/react-gh-pages-lisp/static/js/runtime~main.ed59056f.js"
   },
   {
-    "revision": "b86552dc7c0b47b537c1",
-    "url": "/react-gh-pages-lisp/static/js/main.d7a96ecd.chunk.js"
+    "revision": "4a16e27266060d9d7682",
+    "url": "/react-gh-pages-lisp/static/js/main.a0f1edfc.chunk.js"
   },
   {
-    "revision": "9eeebf0f33c80d8c602f",
-    "url": "/react-gh-pages-lisp/static/js/2.d8b616ff.chunk.js"
+    "revision": "c20eaed55a3b8c64de9b",
+    "url": "/react-gh-pages-lisp/static/js/2.2e0e8c4b.chunk.js"
   },
   {
-    "revision": "86b26a4f8f787327b8633d559dc36bb6",
+    "revision": "05186316e0c8d7dff3bef6faffed986b",
     "url": "/react-gh-pages-lisp/index.html"
   }
 ];
