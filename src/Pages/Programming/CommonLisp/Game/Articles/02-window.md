@@ -4,7 +4,7 @@
 
 ファイルの先頭でパッケージを定義します。
 
-```
+```lisp
 (defpackage :tutorial/01-simple-window
   (:use :cl)
   (:import-from :sdl2)
@@ -18,7 +18,7 @@ SDL2ライブラリをインポートしたり、main関数を外部から呼び
 
 SDL2ライブラリの初期化と終了を行うマクロを作成します。
 
-```
+```lisp
 (defparameter *screen-width*  640)
 (defparameter *screen-height* 480)
 ```
@@ -30,7 +30,7 @@ SDL2ライブラリの初期化と終了を行うマクロを作成します。
 *  800 x 600
 * 1024 x 768
 
-```
+```commonlisp
 (defmacro with-window-renderer ((window renderer) &body body)
   `(sdl2:with-init (:video)
      (sdl2:with-window (,window
@@ -50,7 +50,7 @@ SDL2ライブラリの初期化と終了を行うマクロを作成します。
 SDLの初期化と終了時の処理をまとめて実行するマクロ。
 これは、他の全てのSDLの関数の前に呼び出される必要があります。
 
-```commonlisp
+```lisp
 (sdl2:with-init (&rest sdl-init-flags) &body body)
 ```
 
@@ -76,7 +76,7 @@ SDLの初期化と終了時の処理をまとめて実行するマクロ。
 タイトル、X座標、Y座標、幅、高さなどを設定。
 `flags`には`:shown`や`:hidden`などのパラメータを設定できます。
 
-```commonlisp
+```lisp
 (sdl2:with-window (win &key title x y w h flags) &body body)
 ```
 
@@ -87,7 +87,7 @@ SDLの初期化と終了時の処理をまとめて実行するマクロ。
 
 ウィンドウの2Dレンダリングコンテキストを生成します。
 
-```commonlisp
+```lisp
 (sdl2:with-renderer (renderer-sym window &key index flags) &body body)
 ```
 
@@ -99,7 +99,7 @@ SDLの初期化と終了時の処理をまとめて実行するマクロ。
 
 ここからプログラムを開始します。  
 
-```commonlisp
+```lisp
 (defun main ()
   (with-window-renderer (window renderer)
     (sdl2:with-event-loop (:method :poll)
@@ -118,13 +118,13 @@ SDLの初期化と終了時の処理をまとめて実行するマクロ。
 イベントループマクロです。
 このマクロ内にキー操作時の動作や各種イベントを記述していきます。
 
-```commonlisp
+```lisp
 (sdl2:with-event-loop (&key background method timeout recursive) &body event-handlers)
 ```
 
 例として、Escキーが押下されたらSDL終了イベントを投げるプログラムを記載します。
 
-```commonlisp
+```lisp
 (:keyup (:keysym keysym)
         (when (scancode= (scancode-value keysym) :scancode-escape)
               (push-event :quit)))
@@ -137,13 +137,13 @@ SDLの初期化と終了時の処理をまとめて実行するマクロ。
 
 SDL終了イベントは以下のように記述します。
 
-```commonlisp
+```lisp
 (:quit () t)
 ```
 
 描画処理などを行いたい場合は、以下のように記述します。
 
-```commonlisp
+```lisp
 (:idle ()
        ;; この中に描画処理などのイベントを記述していきます。
        )
@@ -157,7 +157,7 @@ SDL終了イベントは以下のように記述します。
 
 キーの判定処理です。
 
-```commonlisp
+```lisp
 ;; Generic-Function
 (scancode= value scancode-key)
 
@@ -172,7 +172,7 @@ SDL終了イベントは以下のように記述します。
 
 `keysym`をそのスキャンコードの数値に変換します。
 
-```commonlisp
+```lisp
 (scancode-value keysym)
 ```
 
@@ -180,7 +180,7 @@ SDL終了イベントは以下のように記述します。
 
 イベントをキューに加えます。
 
-```commonlisp
+```lisp
 (push-event event)
 ```
 
@@ -192,7 +192,7 @@ SDL終了イベントは以下のように記述します。
 
 レンダリングの結果を画面に反映します。
 
-```commonlisp
+```lisp
 (render-present renderer)
 ```
 
@@ -203,7 +203,7 @@ SDL終了イベントは以下のように記述します。
 
 作図操作(矩形、線、およびクリア)に使用する色を設定します。
 
-```commonlisp
+```lisp
 (set-render-draw-color renderer r g b a)
 ```
 
@@ -214,7 +214,7 @@ SDL終了イベントは以下のように記述します。
 
 現在のレンダーターゲットを色で塗りつぶして消去します。
 
-```commonlisp
+```lisp
 (render-clear renderer)
 ```
 
