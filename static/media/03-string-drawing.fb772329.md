@@ -109,19 +109,16 @@ sdl2-ttfが初期化されているかチェックします。
 次に文字列描画関数`print-string`を作成します。  
 
 ```commonlisp
-(defun print-string (renderer font string x y color)
-  (let* ((red     (sdl-color-red   color))
-         (green   (sdl-color-green color))
-         (blue    (sdl-color-blue  color))
-         (alpha   (sdl-color-alpha color))
-         (surface (sdl2-ttf:render-utf8-solid font string red green blue alpha))
-         (width   (sdl2:surface-width surface))
-         (height  (sdl2:surface-height surface))
-         (texture (sdl2:create-texture-from-surface renderer surface)))
-    (sdl2:render-copy renderer
-                      texture
-                      :source-rect nil
-                      :dest-rect (sdl2:make-rect x y width height))))
+(defmethod print-string (renderer font string x y (color sdl-color))
+  (with-slots (red green blue alpha) color
+    (let* ((surface (sdl2-ttf:render-utf8-solid font string red green blue alpha))
+           (width   (sdl2:surface-width surface))
+           (height  (sdl2:surface-height surface))
+           (texture (sdl2:create-texture-from-surface renderer surface)))
+      (sdl2:render-copy renderer
+                        texture
+                        :source-rect nil
+                        :dest-rect (sdl2:make-rect x y width height)))))
 ```
 
 ## sdl2-ttf:render-utf8-solid
