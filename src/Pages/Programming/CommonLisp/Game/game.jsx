@@ -29,6 +29,7 @@ class Game extends React.Component {
         {this.makeArticle("はじめに", require("./Articles/01-foreword.md"))}
         {this.makeArticle("ウィンドウを表示する", require("./Articles/02-window.md"))}
         {this.makeArticle("文字列描画", require("./Articles/03-string-drawing.md"))}
+        {this.makeArticle("2Dレンダリング", require("./Articles/04-2d-rendering.md"))}
       </div>
     );
   }
