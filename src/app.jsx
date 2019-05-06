@@ -8,6 +8,7 @@ import Programming from './Pages/Programming/programming';
 import CommonLisp from './Pages/Programming/CommonLisp/commonlisp';
 import GettingStarted from './Pages/Programming/CommonLisp/GettingStarted/gettingstarted'
 import Game from './Pages/Programming/CommonLisp/Game/game';
+import RaspberryPi from './Pages/Programming/CommonLisp/RaspberryPi/raspberrypi';
 
 export const AppContainer = styled.div`
   display: flex;
@@ -33,6 +34,7 @@ class App extends React.Component {
             <Switch>
               <Route path='/home' component={Home} />
               <Route path='/blog' component={Blog} />
+              <Route path='/programming/commonlisp/raspberrypi' component={RaspberryPi} />
               <Route path='/programming/commonlisp/game' component={Game} />
               <Route path='/programming/commonlisp/gettingstarted' component={GettingStarted} />
               <Route path='/programming/commonlisp' component={CommonLisp} />
