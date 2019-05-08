@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/react-gh-pages-lisp/static/media/01-foreword.bf536232.md"
   },
   {
-    "revision": "87e2057233fe3f2ced69",
-    "url": "/react-gh-pages-lisp/static/js/main.bcd67d01.chunk.js"
+    "revision": "5dc4bfc6f81a3bf380c2",
+    "url": "/react-gh-pages-lisp/static/js/main.3d038845.chunk.js"
   },
   {
     "revision": "80bd2ff55ccc85f43fd25f4c83437f3f",
@@ -18,6 +18,10 @@ self.__precacheManifest = [
   {
     "revision": "cab27f221f93ac408847206e431a54e1",
     "url": "/react-gh-pages-lisp/static/media/01-foreword.cab27f22.md"
+  },
+  {
+    "revision": "2fa8672815cc03a99aaf9cdf7514b460",
+    "url": "/react-gh-pages-lisp/static/media/02-standard-io.2fa86728.md"
   },
   {
     "revision": "a0944f58fc406e23e94c",
@@ -36,11 +40,11 @@ self.__precacheManifest = [
     "url": "/react-gh-pages-lisp/static/media/04-2d-rendering.c094aa8d.md"
   },
   {
-    "revision": "21b60bee8f0a26345d2e",
-    "url": "/react-gh-pages-lisp/static/js/2.948ad804.chunk.js"
+    "revision": "200701db47ce20583726",
+    "url": "/react-gh-pages-lisp/static/js/2.2c90ba44.chunk.js"
   },
   {
-    "revision": "27837f890d1f74de286f93d99cc7870f",
+    "revision": "7685f38e427e4d40829caa2032c54a0c",
     "url": "/react-gh-pages-lisp/index.html"
   }
 ];
