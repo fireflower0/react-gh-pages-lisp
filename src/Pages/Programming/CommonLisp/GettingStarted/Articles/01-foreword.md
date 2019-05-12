@@ -17,8 +17,11 @@
 
 # 開発環境構築
 
-彡(ﾟ)(ﾟ)「まずは開発環境を構築していこか」  
-彡(>)(<)「[Linuxbrew](https://docs.brew.sh/Homebrew-on-Linux)で[Roswell](https://github.com/roswell/roswell)をインストールするんや！」
+彡(ﾟ)(ﾟ)  
+「まずは開発環境を構築していこか」
+
+彡(>)(<)  
+「[Linuxbrew](https://docs.brew.sh/Homebrew-on-Linux)で[Roswell](https://github.com/roswell/roswell)をインストールするんや！」
 
 ```shell
 $ brew install roswell
@@ -123,6 +126,47 @@ $ ros run
 * [標準入出力 (逆引き Common Lisp クックブック)](https://lisphub.jp/common-lisp/cookbook/index.cgi?%E6%A8%99%E6%BA%96%E5%85%A5%E5%87%BA%E5%8A%9B)
 * [ファイル入出力 (xyzzy Lisp Programming Common Lisp 入門)](http://www.nct9.ne.jp/m_hiroi/xyzzy_lisp/abclisp07.html)
 * [独学 Common Lisp 第22章「出力」(format)](https://lisp.satoshiweb.net/2018/01/printer.html)
+
+# エディタ
+
+彡(ﾟ)(ﾟ)  
+「Common Lispでのプログラミングをする上で初心者が割と簡単に使えそうなエディタはCommon Lispで作られた[Lem](https://github.com/cxxxr/lem)や」
+
+彡(ﾟ)(ﾟ)  
+「`Roswell`を使ってインストールできるで」
+
+```shell
+$ ros install cxxxr/lem
+```
+
+彡(ﾟ)(ﾟ)  
+「インストールしたら`~/.bashrc`ファイルにパスを登録すれば使用できるようになる」
+
+```bash
+export PATH=$PATH:~/.roswell/bin
+```
+
+```shell
+$ source ~/.bashrc
+```
+
+(´・ω・｀)  
+「統合開発環境って言うと`Visual Studio`みたいなもの？」
+
+彡(ﾟ)(ﾟ)  
+「CUI(Character User Interface)やから見た目はそんなリッチやないで」
+
+(´・ω・｀)  
+「そうなんだ・・・」
+
+彡(ﾟ)(ﾟ)  
+「でも普通に仕事に使えるレベルには機能が充実しとるで」
+
+彡(ﾟ)(ﾟ)  
+「Lemについて詳しく知りたい場合は[Survival Common Lisp - 現代Lisperたちの生存プログラミング術](https://booth.pm/ja/items/1300098)の第2章と第7章を読むのが一番やで」
+
+(´・ω・｀)  
+（露骨な宣伝だ・・・）
 
 彡(ﾟ)(ﾟ)  
 「今回はここまでや、ほなまた」
