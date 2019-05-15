@@ -59,7 +59,7 @@ class GettingStarted extends React.Component {
         <div>彡(ﾟ)(ﾟ)：やきうのお兄ちゃん</div>
         <div>(´・ω・｀)：原住民</div>
         {this.makeArticle("第1章 環境構築とHello, world!", require("./Articles/01-foreword.md"))}
-        {this.makeArticle("第2章 データ構造", require("./Articles/02-data-structure.md"))}
+        {this.makeArticle("第2章 リスト", require("./Articles/02-list.md"))}
       </div>
     );
   }
