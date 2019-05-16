@@ -24,7 +24,9 @@ class GettingStarted extends React.Component {
 
   makeLinkList(title, link) {
     return(
-      <li><a href={link} rel="noopener noreferrer" target="_blank">{title}</a></li>
+      <li>
+        <a href={link} rel="noopener noreferrer" target="_blank">{title}</a>
+      </li>
     );
   }
 
@@ -60,6 +62,8 @@ class GettingStarted extends React.Component {
         <div>(´・ω・｀)：原住民</div>
         {this.makeArticle("第1章 環境構築とHello, world!", require("./Articles/01-foreword.md"))}
         {this.makeArticle("第2章 リスト", require("./Articles/02-list.md"))}
+        {/* {this.makeArticle("第3章 ")} */}
+        {/* {this.makeArticle("第4章 ")} */}
       </div>
     );
   }
