@@ -49,7 +49,15 @@ $ ros run
 
 ```lisp
 (print "Hello, world!")
+; "Hello, world!" 
+;=> "Hello, world!"
 ```
+
+　∧ ∧  
+(,,ﾟДﾟ)「最初のは標準出力で、2つ目の`;=>`の後の値は返り値だ」
+
+　∧ ∧  
+(,,ﾟДﾟ)「`print`関数の詳細は以下を参照」
 
 * [print (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm#print)
 
@@ -75,7 +83,7 @@ $ lem [filename]
 　∧ ∧  
 (,,ﾟДﾟ)「Lemについて詳しく知りたい場合は[Survival Common Lisp - 現代Lisperたちの生存プログラミング術](https://booth.pm/ja/items/1300098)の第2章と第7章を参照だ」
 
-　　∧∧  
-　 ( ﾟДﾟ)「今日はここまで、お疲れ様でした」  
-　 / つつ  
+　　∧ ∧  
+　 (,, ﾟДﾟ)「今日はここまで、お疲れ様でした」  
+　 / つつ旦  
 ～(＿＿)  
