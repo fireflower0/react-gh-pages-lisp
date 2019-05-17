@@ -58,7 +58,7 @@ class GettingStarted extends React.Component {
         <h2>参考文献</h2>
         {this.makeReferences()}
         {this.makeArticle("第1章 開発環境構築", require("./Articles/01-foreword.md"))}
-        {this.makeArticle("第2章 リスト", require("./Articles/02-list.md"))}
+        {this.makeArticle("第2章 コンスとリスト", require("./Articles/02-list.md"))}
         {/* {this.makeArticle("第3章 ")} */}
         {/* {this.makeArticle("第4章 ")} */}
       </div>
