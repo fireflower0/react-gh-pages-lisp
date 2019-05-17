@@ -50,17 +50,14 @@ class GettingStarted extends React.Component {
   render() {
     return (
       <div>
-        <h1>彡(ﾟ)(ﾟ)と学ぶCommon Lisp</h1>
+        <h1>Common Lisp入門</h1>
         <div>弱小Common Lisperが学習用に作成した入門サイトです。</div>
         <div>本格的に勉強したい人は以下の参考文献を直接読んだ方が良いと思います。</div>
         <div>それでも良いという方、私と一緒に勉強しましょう。</div>
         <div>ちなみに、Linux(Ubuntu)での開発を想定しています。</div>
         <h2>参考文献</h2>
         {this.makeReferences()}
-        <h2>登場人物</h2>
-        <div>彡(ﾟ)(ﾟ)：やきうのお兄ちゃん</div>
-        <div>(´・ω・｀)：原住民</div>
-        {this.makeArticle("第1章 環境構築とHello, world!", require("./Articles/01-foreword.md"))}
+        {this.makeArticle("第1章 開発環境構築", require("./Articles/01-foreword.md"))}
         {this.makeArticle("第2章 リスト", require("./Articles/02-list.md"))}
         {/* {this.makeArticle("第3章 ")} */}
         {/* {this.makeArticle("第4章 ")} */}
