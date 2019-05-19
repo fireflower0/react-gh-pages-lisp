@@ -321,3 +321,61 @@
 * [find-if/find-if-not (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_find_.htm)
 * [member-if/member-if-not (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_mem_m.htm)
 
+### リストをソートする
+
+　∧ ∧  
+(,,ﾟДﾟ)「リストをソートするには`sort`を使用する」
+
+```lisp
+(sort '(2 3 1 5 4) #'<)
+;=> (1 2 3 4 5)
+
+(sort '(2 3 1 5 4) #'>)
+;=> (5 4 3 2 1)
+```
+
+　∧ ∧  
+(,,ﾟДﾟ)「`sort`の詳細は以下を参照」
+
+* [sort (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_sort_.htm)
+
+　∧ ∧  
+(,,ﾟДﾟ)「リストを逆順にするだけなら`reverse`を使う」
+
+```lisp
+(reverse '(1 2 3 4 5))
+;=> (5 4 3 2 1)
+```
+
+　∧ ∧  
+(,,ﾟДﾟ)「`reverse`の詳細は以下を参照」
+
+* [reverse (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_revers.htm)
+
+### リストを結合する
+
+　∧ ∧  
+(,,ﾟДﾟ)「リストを結合するには`append`/`concatenate`/`nconc`を使う」
+
+```lisp
+(append '(1 2 3) '(4 5 6))
+;=> (1 2 3 4 5 6)
+
+(concatenate 'list '(1 2 3) '(4 5 6))
+;=> (1 2 3 4 5 6)
+
+(nconc '(1 2 3) '(4 5 6))
+;=> (1 2 3 4 5 6)
+```
+
+　∧ ∧  
+(,,ﾟДﾟ)「`append`/`concatenate`/`nconc`の詳細は以下を参照」
+
+* [append (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_append.htm)
+* [concatenate (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_concat.htm)
+* [nconc (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_nconc.htm)
+
+　　∧ ∧  
+　 (,, ﾟДﾟ)「今日はここまで、お疲れ様でした」  
+　 / つつ旦  
+～(＿＿)  
