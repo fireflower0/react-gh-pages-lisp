@@ -60,7 +60,8 @@ class GettingStarted extends React.Component {
         {this.makeArticle("第1章 開発環境構築", require("./Articles/01-foreword.md"))}
         {this.makeArticle("第2章 アトムとコンスセルとリスト", require("./Articles/02-list.md"))}
         {this.makeArticle("第3章 連想リストと属性リスト", require("./Articles/03-alist-plist.md"))}
-        {/* {this.makeArticle("第4章 ")} */}
+        {this.makeArticle("第4章 変数と定数", require("./Articles/04-variables-constants.md"))}
+        {/* {this.makeArticle("第5章 条件分岐と繰り返し", require("./Articles/05-control-structure.md"))} */}
       </div>
     );
   }
