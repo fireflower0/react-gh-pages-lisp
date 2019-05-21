@@ -1,12 +1,12 @@
 {
-  "main.js": "/react-gh-pages-lisp/static/js/main.5b8ce4ab.chunk.js",
-  "main.js.map": "/react-gh-pages-lisp/static/js/main.5b8ce4ab.chunk.js.map",
+  "main.js": "/react-gh-pages-lisp/static/js/main.f90107c5.chunk.js",
+  "main.js.map": "/react-gh-pages-lisp/static/js/main.f90107c5.chunk.js.map",
   "runtime~main.js": "/react-gh-pages-lisp/static/js/runtime~main.ed59056f.js",
   "runtime~main.js.map": "/react-gh-pages-lisp/static/js/runtime~main.ed59056f.js.map",
-  "static/js/2.0517adf8.chunk.js": "/react-gh-pages-lisp/static/js/2.0517adf8.chunk.js",
-  "static/js/2.0517adf8.chunk.js.map": "/react-gh-pages-lisp/static/js/2.0517adf8.chunk.js.map",
+  "static/js/2.b7707c1b.chunk.js": "/react-gh-pages-lisp/static/js/2.b7707c1b.chunk.js",
+  "static/js/2.b7707c1b.chunk.js.map": "/react-gh-pages-lisp/static/js/2.b7707c1b.chunk.js.map",
   "index.html": "/react-gh-pages-lisp/index.html",
-  "precache-manifest.7aa436ec6b1c207e61e2d51235979f04.js": "/react-gh-pages-lisp/precache-manifest.7aa436ec6b1c207e61e2d51235979f04.js",
+  "precache-manifest.b39c9a7d6f489b1c8921112b49ef211d.js": "/react-gh-pages-lisp/precache-manifest.b39c9a7d6f489b1c8921112b49ef211d.js",
   "service-worker.js": "/react-gh-pages-lisp/service-worker.js",
   "static/media/01-foreword.md": "/react-gh-pages-lisp/static/media/01-foreword.bf536232.md",
   "static/media/02-list.md": "/react-gh-pages-lisp/static/media/02-list.e4962502.md",
@@ -14,6 +14,7 @@
   "static/media/03-alist-plist.md": "/react-gh-pages-lisp/static/media/03-alist-plist.d9b90b3a.md",
   "static/media/03-string-drawing.md": "/react-gh-pages-lisp/static/media/03-string-drawing.be631e8d.md",
   "static/media/04-2d-rendering.md": "/react-gh-pages-lisp/static/media/04-2d-rendering.c094aa8d.md",
+  "static/media/04-variables-constants.md": "/react-gh-pages-lisp/static/media/04-variables-constants.5697ed75.md",
   "static/media/blink.md": "/react-gh-pages-lisp/static/media/blink.80bd2ff5.md",
   "static/media/sample.md": "/react-gh-pages-lisp/static/media/sample.9c3ab9cf.md"
 }
