@@ -6,6 +6,8 @@
 
 ## 比較述語関数
 
+### 基本的な比較述語関数
+
 　∧ ∧  
 (,,ﾟДﾟ)「述語関数は真偽(`t`/`nil`)を返す関数」
 
@@ -20,129 +22,26 @@
 * [equal (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_equal.htm)
 * [equalp (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_equalp.htm)
 
-## 数値を比較する述語関数
+### 数値を比較する述語関数
 
 　∧ ∧  
 (,,ﾟДﾟ)「数値を比較する述語関数には`=, /=, <, >, <=, >=`がある」
 
 　∧ ∧  
-(,,ﾟДﾟ)「`=`は以下のように使う、2値以上の比較もできる」
-
-```lisp
-(= 0 0)
-;=> T
-
-(= 0 1)
-;=> NIL
-
-(= 0 0 0)
-;=> T
-
-(= 0 1 2)
-;=> NIL
-```
-
-　∧ ∧  
-(,,ﾟДﾟ)「`/=`は以下のように使う、2値以上の比較もできる」
-
-```lisp
-(/= 0 1)
-;=> T
-
-(/= 0 0)
-;=> NIL
-
-(/= 0 1 2)
-;=> T
-
-(/= 0 1 0)
-;=> NIL
-```
-
-　∧ ∧  
-(,,ﾟДﾟ)「`<`は以下のように使う、2値以上の比較もできる」
-
-```lisp
-(< 1 2)
-;=> T
-
-(< 2 1)
-;=> NIL
-
-(< 1 2 3)
-;=> T
-
-(< 2 1 3)
-;=> NIL
-```
-
-　∧ ∧  
-(,,ﾟДﾟ)「`<=`は以下のように使う、2値以上の比較もできる」
-
-```lisp
-(<= 1 2)
-;=> T
-
-(<= 0 0)
-;=> T
-
-(<= 2 1)
-;=> NIL
-
-(<= 1 2 3)
-;=> T
-
-(<= 0 0 0)
-;=> T
-
-(<= 1 3 2)
-;=> NIL
-```
-
-　∧ ∧  
-(,,ﾟДﾟ)「`>`は以下のように使う、2値以上の比較もできる」
-
-```lisp
-(> 2 1)
-;=> T
-
-(> 1 2)
-;=> NIL
-
-(> 3 2 1)
-;=> T
-
-(> 3 1 2)
-;=> NIL
-```
-
-　∧ ∧  
-(,,ﾟДﾟ)「`>=`は以下のように使う、2値以上の比較もできる」
-
-```lisp
-(>= 2 1)
-;=> T
-
-(>= 0 0)
-;=> T
-
-(>= 1 2)
-;=> NIL
-
-(>= 3 2 1)
-;=> T
-
-(>= 0 0 0)
-;=> T
-
-(>= 2 1 3)
-;=> NIL
-```
-
-　∧ ∧  
 (,,ﾟДﾟ)「数値を比較する述語関数の詳細は以下を参照」
 
 * [=, /=, <, >, <=, >= (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_eq_sle.htm)
+
+### 文字・文字列を比較する述語関数
+
+　∧ ∧  
+(,,ﾟДﾟ)「文字・文字列を比較する述語関数には`char=, string=`などがある」
+
+　∧ ∧  
+(,,ﾟДﾟ)「文字・文字列を比較する述語関数の詳細は以下を参照」
+
+* [char=, char/= (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm)
+* [string=, string/= (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_stgeq_.htm)
 
 ## 条件分岐
 
@@ -205,11 +104,6 @@
 (,,ﾟДﾟ)「`when`/`unless`の詳細は以下を参照」
 
 * [when/unless (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/m_when_.htm)
-
-　∧ ∧  
-(,,ﾟДﾟ)「``の詳細は以下を参照」
-
-* [ (Common Lisp HyperSpec)]()
 
 ## 繰り返し
 
