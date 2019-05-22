@@ -61,6 +61,25 @@ $ ros run
 
 * [print (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm#print)
 
+　∧ ∧  
+(,,ﾟДﾟ)「`print`より便利な`format`もあるよ」
+
+```lisp
+(format t "Hello, world!~%")
+; Hello, world!
+;=> NIL
+```
+
+　∧ ∧  
+(,,ﾟДﾟ)「`~%`は改行を意味する」
+
+　∧ ∧  
+(,,ﾟДﾟ)「`format`関数の詳細は以下を参照」
+
+* [format (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_format.htm)
+* [第22章「出力」(format) (独学 Common Lisp)](https://lisp.satoshiweb.net/2018/01/printer.html)
+* [format (逆引きCommon Lisp)](https://lisphub.jp/common-lisp/cookbook/index.cgi?format)
+
 ## [Lem](https://github.com/cxxxr/lem)を使う
 
 　∧ ∧  
