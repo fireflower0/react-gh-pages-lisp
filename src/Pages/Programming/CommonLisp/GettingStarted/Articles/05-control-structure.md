@@ -48,9 +48,6 @@
 ### 2方向条件分岐 (if)
 
 　∧ ∧  
-(,,ﾟДﾟ)「条件分岐といえば`if`文」
-
-　∧ ∧  
 (,,ﾟДﾟ)「構文は以下のようになっている」
 
 ```lisp
@@ -66,13 +63,6 @@
       (format t "negative : ~a~%" a)
       (format t "positive : ~a~%" a)))
 ; positive : 0
-;=> NIL
-
-(let ((a -1))
-  (if (< a 0)
-      (format t "negative : ~a~%" a)
-      (format t "positive : ~a~%" a)))
-; negative : -1
 ;=> NIL
 ```
 
@@ -104,6 +94,40 @@
 (,,ﾟДﾟ)「`when`/`unless`の詳細は以下を参照」
 
 * [when/unless (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/m_when_.htm)
+
+### 多方向分岐 (cond, case)
+
+```lisp
+(let ((a 1))
+  (cond ((= a 0)
+         (format t "a = 0"))
+        ((= a 1)
+         (format t "a = 1"))
+        (t
+         (format t "a = other")))
+; a = 1
+;=> NIL
+```
+
+　∧ ∧  
+(,,ﾟДﾟ)「`cond`の詳細は以下を参照」
+
+* [cond (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/m_cond.htm)
+
+```lisp
+(let ((a 1))
+  (case a
+    (0 (format t "a = 0"))
+    (1 (format t "a = 1"))
+    (t (format t "a = other"))))
+; a = 1
+;=> NIL
+```
+
+　∧ ∧  
+(,,ﾟДﾟ)「`case`の詳細は以下を参照」
+
+* [case (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/m_case_.htm)
 
 ## 繰り返し
 
