@@ -6,6 +6,47 @@
 
 ## 比較述語関数
 
+　∧ ∧  
+(,,ﾟДﾟ)「アトムかどうか調べるには`atom`を使う」
+
+　∧ ∧  
+(,,ﾟДﾟ)「`atom`の詳細は以下を参照」
+
+* [atom (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_atom.htm)
+
+　∧ ∧  
+(,,ﾟДﾟ)「リストかどうか調べるには`listp`を使う」
+
+　∧ ∧  
+(,,ﾟДﾟ)「`listp`の詳細は以下を参照」
+
+* [listp (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_listp.htm)
+
+　∧ ∧  
+(,,ﾟДﾟ)「シンボルかどうか調べるには`symbolp`を使う」
+
+　∧ ∧  
+(,,ﾟДﾟ)「`symbolp`の詳細は以下を参照」
+
+* [symbolp (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_symbol.htm)
+
+　∧ ∧  
+(,,ﾟДﾟ)「数かどうか調べるには`numberp`を使う」
+
+　∧ ∧  
+(,,ﾟДﾟ)「`numberp`の詳細は以下を参照」
+
+* [numberp (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_nump.htm)
+
+　∧ ∧  
+(,,ﾟДﾟ)「空リストかどうか調べるには`null`/`endp`を使う」
+
+　∧ ∧  
+(,,ﾟДﾟ)「`null`/`endp`の詳細は以下を参照」
+
+* [null (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_null.htm)
+* [endp (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_endp.htm)
+
 ### 基本的な比較述語関数
 
 　∧ ∧  
