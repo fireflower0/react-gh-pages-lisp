@@ -7,82 +7,40 @@
 ## 比較述語関数
 
 　∧ ∧  
-(,,ﾟДﾟ)「アトムかどうか調べるには`atom`を使う」
+(,,ﾟДﾟ)「述語関数は真偽(`t`/`nil`)を返す関数」
 
 　∧ ∧  
-(,,ﾟДﾟ)「`atom`の詳細は以下を参照」
-
-* [atom (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_atom.htm)
+(,,ﾟДﾟ)「アトムかどうか調べるには[atom](http://www.lispworks.com/documentation/HyperSpec/Body/f_atom.htm)を使う」
 
 　∧ ∧  
-(,,ﾟДﾟ)「リストかどうか調べるには`listp`を使う」
+(,,ﾟДﾟ)「リストかどうか調べるには[listp](http://www.lispworks.com/documentation/HyperSpec/Body/f_listp.htm)を使う」
 
 　∧ ∧  
-(,,ﾟДﾟ)「`listp`の詳細は以下を参照」
-
-* [listp (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_listp.htm)
+(,,ﾟДﾟ)「シンボルかどうか調べるには[symbolp](http://www.lispworks.com/documentation/HyperSpec/Body/f_symbol.htm)を使う」
 
 　∧ ∧  
-(,,ﾟДﾟ)「シンボルかどうか調べるには`symbolp`を使う」
+(,,ﾟДﾟ)「数かどうか調べるには[numberp](http://www.lispworks.com/documentation/HyperSpec/Body/f_nump.htm)を使う」
 
 　∧ ∧  
-(,,ﾟДﾟ)「`symbolp`の詳細は以下を参照」
-
-* [symbolp (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_symbol.htm)
-
-　∧ ∧  
-(,,ﾟДﾟ)「数かどうか調べるには`numberp`を使う」
-
-　∧ ∧  
-(,,ﾟДﾟ)「`numberp`の詳細は以下を参照」
-
-* [numberp (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_nump.htm)
-
-　∧ ∧  
-(,,ﾟДﾟ)「空リストかどうか調べるには`null`/`endp`を使う」
-
-　∧ ∧  
-(,,ﾟДﾟ)「`null`/`endp`の詳細は以下を参照」
-
-* [null (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_null.htm)
-* [endp (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_endp.htm)
+(,,ﾟДﾟ)「空リストかどうか調べるには[null](http://www.lispworks.com/documentation/HyperSpec/Body/f_null.htm)/[endp](http://www.lispworks.com/documentation/HyperSpec/Body/f_endp.htm)を使う」
 
 ### 基本的な比較述語関数
 
 　∧ ∧  
-(,,ﾟДﾟ)「述語関数は真偽(`t`/`nil`)を返す関数」
-
-　∧ ∧  
-(,,ﾟДﾟ)「基本的な述語関数には`eq`/`eql`/`equal`/`equalp`がある」
+(,,ﾟДﾟ)「基本的な述語関数には[eq](http://www.lispworks.com/documentation/HyperSpec/Body/f_eq.htm)/[eql](http://www.lispworks.com/documentation/HyperSpec/Body/f_eql.htm)/[equal](http://www.lispworks.com/documentation/HyperSpec/Body/f_equal.htm)/[equalp](http://www.lispworks.com/documentation/HyperSpec/Body/f_equalp.htm)がある」
 
 　∧ ∧  
 (,,ﾟДﾟ)「`eq`/`eql`/`equal`/`equalp`の詳細は以下を参照」
 
-* [eq (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_eq.htm)
-* [eql (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_eql.htm)
-* [equal (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_equal.htm)
-* [equalp (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_equalp.htm)
-
 ### 数値を比較する述語関数
 
 　∧ ∧  
-(,,ﾟДﾟ)「数値を比較する述語関数には`=, /=, <, >, <=, >=`がある」
-
-　∧ ∧  
-(,,ﾟДﾟ)「数値を比較する述語関数の詳細は以下を参照」
-
-* [=, /=, <, >, <=, >= (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_eq_sle.htm)
+(,,ﾟДﾟ)「数値を比較する述語関数には[=, /=, <, >, <=, >=](http://www.lispworks.com/documentation/HyperSpec/Body/f_eq_sle.htm)がある」
 
 ### 文字・文字列を比較する述語関数
 
 　∧ ∧  
-(,,ﾟДﾟ)「文字・文字列を比較する述語関数には`char=, string=`などがある」
-
-　∧ ∧  
-(,,ﾟДﾟ)「文字・文字列を比較する述語関数の詳細は以下を参照」
-
-* [char=, char/= (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm)
-* [string=, string/= (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_stgeq_.htm)
+(,,ﾟДﾟ)「文字・文字列を比較する述語関数には[char=, char/=](http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm)/[string=, string/=](http://www.lispworks.com/documentation/HyperSpec/Body/f_stgeq_.htm)などがある」
 
 ## 条件分岐
 
