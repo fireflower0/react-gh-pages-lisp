@@ -47,6 +47,9 @@ $ ros run
 　∧ ∧  
 (,,ﾟДﾟ)「`Hello, world!`を表示してみる」
 
+　∧ ∧  
+(,,ﾟДﾟ)「標準出力には[print](http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm#print)を使う」
+
 ```lisp
 (print "Hello, world!")
 ; "Hello, world!" 
@@ -57,12 +60,7 @@ $ ros run
 (,,ﾟДﾟ)「最初のは標準出力で、2つ目の`;=>`の後の値は返り値だ」
 
 　∧ ∧  
-(,,ﾟДﾟ)「`print`関数の詳細は以下を参照」
-
-* [print (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm#print)
-
-　∧ ∧  
-(,,ﾟДﾟ)「`print`より便利な`format`もあるよ」
+(,,ﾟДﾟ)「`print`より便利な[format](http://www.lispworks.com/documentation/HyperSpec/Body/f_format.htm)もあるよ」
 
 ```lisp
 (format t "Hello, world!~%")
@@ -76,7 +74,6 @@ $ ros run
 　∧ ∧  
 (,,ﾟДﾟ)「`format`関数の詳細は以下を参照」
 
-* [format (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_format.htm)
 * [第22章「出力」(format) (独学 Common Lisp)](https://lisp.satoshiweb.net/2018/01/printer.html)
 * [format (逆引きCommon Lisp)](https://lisphub.jp/common-lisp/cookbook/index.cgi?format)
 
