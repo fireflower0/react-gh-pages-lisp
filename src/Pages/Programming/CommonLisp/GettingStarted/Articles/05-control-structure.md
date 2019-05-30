@@ -47,7 +47,7 @@
 ### 2方向条件分岐 (if)
 
 　∧ ∧  
-(,,ﾟДﾟ)「構文は以下のようになっている」
+(,,ﾟДﾟ)「2方向条件分岐するには[if](http://www.lispworks.com/documentation/HyperSpec/Body/s_if.htm)を使う」
 
 ```lisp
 (if 条件式 [then] [else])
@@ -65,13 +65,10 @@
 ;=> NIL
 ```
 
-　∧ ∧  
-(,,ﾟДﾟ)「`if`の詳細は以下を参照」
-
-* [if (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/s_if.htm)
-
 ### 1方向条件分岐 (when, unless)
 
+　∧ ∧  
+(,,ﾟДﾟ)「1方向条件分岐には[when/unless](http://www.lispworks.com/documentation/HyperSpec/Body/m_when_.htm)を使う」
 
 ```lisp
 (let ((a 0))
@@ -89,12 +86,10 @@
 ;=> NIL
 ```
 
-　∧ ∧  
-(,,ﾟДﾟ)「`when`/`unless`の詳細は以下を参照」
-
-* [when/unless (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/m_when_.htm)
-
 ### 多方向分岐 (cond, case)
+
+　∧ ∧  
+(,,ﾟДﾟ)「多方向分岐には[cond](http://www.lispworks.com/documentation/HyperSpec/Body/m_cond.htm)/[case](http://www.lispworks.com/documentation/HyperSpec/Body/m_case_.htm)を使う」
 
 ```lisp
 (let ((a 1))
@@ -108,11 +103,6 @@
 ;=> NIL
 ```
 
-　∧ ∧  
-(,,ﾟДﾟ)「`cond`の詳細は以下を参照」
-
-* [cond (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/m_cond.htm)
-
 ```lisp
 (let ((a 1))
   (case a
@@ -123,24 +113,112 @@
 ;=> NIL
 ```
 
-　∧ ∧  
-(,,ﾟДﾟ)「`case`の詳細は以下を参照」
-
-* [case (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/m_case_.htm)
-
 ## 繰り返し
 
-　∧ ∧  
-(,,ﾟДﾟ)「``の詳細は以下を参照」
-
-* [ (Common Lisp HyperSpec)]()
+### do
 
 　∧ ∧  
-(,,ﾟДﾟ)「``の詳細は以下を参照」
+(,,ﾟДﾟ)「[do](http://www.lispworks.com/documentation/HyperSpec/Body/m_do_do.htm)」
 
-* [ (Common Lisp HyperSpec)]()
+```lisp
+(do ((変数 初期値 変数更新)
+     (変数 初期値 変数更新)
+     ・・・
+     (変数 初期値 変数更新))
+    (終了条件 戻り値)
+  式)
+```
+
+```
+(do ((a  0 (+ a 1))
+     (b 10 (- b 1)))
+    ((= a b) a)
+  (format t "a=~d b=~d~%" a b))
+; a=0 b=10
+; a=1 b=9
+; a=2 b=8
+; a=3 b=7
+; a=4 b=6
+;=> 5
+```
+
+### dotimes
 
 　∧ ∧  
-(,,ﾟДﾟ)「``の詳細は以下を参照」
+(,,ﾟДﾟ)「[dotimes](http://www.lispworks.com/documentation/HyperSpec/Body/m_dotime.htm)」
 
-* [ (Common Lisp HyperSpec)]()
+```lisp
+(dotimes (n 繰り返し回数)
+  式)
+```
+
+```lisp
+(dotimes (n 3)
+  (format t "n=~d~%" n))
+; n=0
+; n=1
+; n=2
+;=> NIL
+```
+
+### dolist
+
+　∧ ∧  
+(,,ﾟДﾟ)「[dolist](http://www.lispworks.com/documentation/HyperSpec/Body/m_dolist.htm)」
+
+```lisp
+(dolist (n リスト)
+  式)
+```
+
+```lisp
+(dolist (n '(1 2 3))
+  (format t "n=~d~%" n))
+; n=1
+; n=2
+; n=3
+;=> NIL
+```
+
+### loop
+
+　∧ ∧  
+(,,ﾟДﾟ)「[loop](http://www.lispworks.com/documentation/HyperSpec/Body/m_loop.htm)」
+
+#### 0~10まで2ステップずつカウントアップ
+
+```lisp
+(loop for n from 0 to 10 by 2
+      collect n)
+;=> (0 2 4 6 8 10)
+```
+
+```lisp
+(loop for n upfrom 0 upto 10 by 2
+      collect n)
+;=> (0 2 4 6 8 10)
+```
+
+#### 10~0まで2ステップずつカウントダウン
+
+```lisp
+(loop for n downfrom 10 downto 0 by 2
+      collect n)
+;=> (10 8 6 4 2 0)
+```
+
+#### 0から5になるまでカウントアップ
+
+```lisp
+(loop for n from 0 below 5
+      collect n)
+;=> (0 1 2 3 4)
+```
+
+#### 10から5になるまでカウントダウン
+
+```lisp
+(loop for n from 10 above 5
+      collect n) 
+;=> (10 9 8 7 6)
+```
