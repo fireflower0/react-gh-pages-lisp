@@ -7,40 +7,75 @@
 ## 比較述語関数
 
 　∧ ∧  
-(,,ﾟДﾟ)「述語関数は真偽(`t`/`nil`)を返す関数」
+(,,ﾟДﾟ)「述語関数とは真偽(`t`/`nil`)を返す関数」
 
-　∧ ∧  
-(,,ﾟДﾟ)「アトムかどうか調べるには[atom](http://www.lispworks.com/documentation/HyperSpec/Body/f_atom.htm)を使う」
-
-　∧ ∧  
-(,,ﾟДﾟ)「リストかどうか調べるには[listp](http://www.lispworks.com/documentation/HyperSpec/Body/f_listp.htm)を使う」
-
-　∧ ∧  
-(,,ﾟДﾟ)「シンボルかどうか調べるには[symbolp](http://www.lispworks.com/documentation/HyperSpec/Body/f_symbol.htm)を使う」
-
-　∧ ∧  
-(,,ﾟДﾟ)「数かどうか調べるには[numberp](http://www.lispworks.com/documentation/HyperSpec/Body/f_nump.htm)を使う」
-
-　∧ ∧  
-(,,ﾟДﾟ)「空リストかどうか調べるには[null](http://www.lispworks.com/documentation/HyperSpec/Body/f_null.htm)/[endp](http://www.lispworks.com/documentation/HyperSpec/Body/f_endp.htm)を使う」
-
-### 基本的な比較述語関数
+### 基本的な述語関数
 
 　∧ ∧  
 (,,ﾟДﾟ)「基本的な述語関数には[eq](http://www.lispworks.com/documentation/HyperSpec/Body/f_eq.htm)/[eql](http://www.lispworks.com/documentation/HyperSpec/Body/f_eql.htm)/[equal](http://www.lispworks.com/documentation/HyperSpec/Body/f_equal.htm)/[equalp](http://www.lispworks.com/documentation/HyperSpec/Body/f_equalp.htm)がある」
 
 　∧ ∧  
-(,,ﾟДﾟ)「`eq`/`eql`/`equal`/`equalp`の詳細は以下を参照」
-
-### 数値を比較する述語関数
-
-　∧ ∧  
 (,,ﾟДﾟ)「数値を比較する述語関数には[=, /=, <, >, <=, >=](http://www.lispworks.com/documentation/HyperSpec/Body/f_eq_sle.htm)がある」
-
-### 文字・文字列を比較する述語関数
 
 　∧ ∧  
 (,,ﾟДﾟ)「文字・文字列を比較する述語関数には[char=, char/=](http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm)/[string=, string/=](http://www.lispworks.com/documentation/HyperSpec/Body/f_stgeq_.htm)などがある」
+
+### 特殊な述語関数
+
+　∧ ∧  
+(,,ﾟДﾟ)「アトムかどうか調べるには[atom](http://www.lispworks.com/documentation/HyperSpec/Body/f_atom.htm)を使う」
+
+```lisp
+(atom 1)
+;=> T
+
+(atom '(1 2 3))
+;=> NIL
+```
+
+　∧ ∧  
+(,,ﾟДﾟ)「リストかどうか調べるには[listp](http://www.lispworks.com/documentation/HyperSpec/Body/f_listp.htm)を使う」
+
+```lisp
+(listp '(1 2 3))
+;=> T
+
+(listp 1)
+;=> NIL
+```
+
+　∧ ∧  
+(,,ﾟДﾟ)「シンボルかどうか調べるには[symbolp](http://www.lispworks.com/documentation/HyperSpec/Body/f_symbol.htm)を使う」
+
+```lisp
+(symbolp 'a)
+;=> T
+
+(symbolp 1)
+;=> NIL
+```
+
+　∧ ∧  
+(,,ﾟДﾟ)「数かどうか調べるには[numberp](http://www.lispworks.com/documentation/HyperSpec/Body/f_nump.htm)を使う」
+
+```lisp
+(numberp 1)
+;=> T
+
+(numberp 'a)
+;=> NIL
+```
+
+　∧ ∧  
+(,,ﾟДﾟ)「空リストかどうか調べるには[null](http://www.lispworks.com/documentation/HyperSpec/Body/f_null.htm)/[endp](http://www.lispworks.com/documentation/HyperSpec/Body/f_endp.htm)を使う」
+
+```lisp
+(null nil)
+;=> T
+
+(null 1)
+;=> NIL
+```
 
 ## 条件分岐
 
