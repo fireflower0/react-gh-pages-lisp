@@ -11,11 +11,104 @@
 　∧ ∧  
 (,,ﾟДﾟ)「基本的な述語関数には[eq](http://www.lispworks.com/documentation/HyperSpec/Body/f_eq.htm)/[eql](http://www.lispworks.com/documentation/HyperSpec/Body/f_eql.htm)/[equal](http://www.lispworks.com/documentation/HyperSpec/Body/f_equal.htm)/[equalp](http://www.lispworks.com/documentation/HyperSpec/Body/f_equalp.htm)がある」
 
+```lisp
+(eq 'foo 'foo)
+;=> T
+
+(eq :foo :foo)
+;=> T
+
+(eq (+ 1 2) 3)
+;=> T
+
+(eq 1.0 0)
+;=> NIL
+
+(eql 'foo 'foo)
+;=> T
+
+(eql :foo :foo)
+;=> T
+
+(eql (+ 1 2) 3)
+;=> T
+
+(eql 1.0 1)
+;=> NIL
+
+(equal 'foo 'foo)
+;=> T
+
+(equal :foo :foo)
+;=> T
+
+(equal (+ 1 2) 3)
+;=> T
+
+(equal 1.0 1)
+;=> NIL
+
+(equalp 'foo 'foo)
+;=> T
+
+(equalp :foo :foo)
+;=> T
+
+(equalp (+ 1 2) 3)
+;=> T
+
+(equalp 1.0 1)
+;=> T
+```
+
+　∧ ∧  
+(,,ﾟДﾟ)「とまあ、色々あるが**Land of Lisp**に書いてあるように」
+
+* シンボル同士は常に`eq`で比較
+* シンボル同士の比較でなければ`equal`で比較
+
+　∧ ∧  
+(,,ﾟДﾟ)「で良いと思う」
+
 　∧ ∧  
 (,,ﾟДﾟ)「数値を比較する述語関数には[=, /=, <, >, <=, >=](http://www.lispworks.com/documentation/HyperSpec/Body/f_eq_sle.htm)がある」
 
+```lisp
+(= 3 (+ 1 2))
+;=> T
+
+(/= 2 (+ 2 2))
+;=> T
+
+(< 4 (+ 1 5))
+;=> T
+
+(> 5 (- 6 3))
+;=> T
+
+(<= 2 (* 2 3))
+;=> T
+
+(>= 8 (/ 10 2))
+;=> T
+```
+
 　∧ ∧  
 (,,ﾟДﾟ)「文字・文字列を比較する述語関数には[char=, char/=](http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm)/[string=, string/=](http://www.lispworks.com/documentation/HyperSpec/Body/f_stgeq_.htm)などがある」
+
+```lisp
+(char= #\a #\a)
+;=> T
+
+(char/= #\a #\b)
+;=> T
+
+(string= "a" "a")
+;=> T
+
+(string/= "a" "b")
+;=> 0
+```
 
 ### 特殊な述語関数
 
@@ -147,10 +240,8 @@
 
 ## 繰り返し
 
-### do
-
 　∧ ∧  
-(,,ﾟДﾟ)「[do](http://www.lispworks.com/documentation/HyperSpec/Body/m_do_do.htm)」
+(,,ﾟДﾟ)「繰り返しには[do](http://www.lispworks.com/documentation/HyperSpec/Body/m_do_do.htm)を使う」
 
 ```lisp
 (do ((変数 初期値 変数更新)
@@ -174,10 +265,8 @@
 ;=> 5
 ```
 
-### dotimes
-
 　∧ ∧  
-(,,ﾟДﾟ)「[dotimes](http://www.lispworks.com/documentation/HyperSpec/Body/m_dotime.htm)」
+(,,ﾟДﾟ)「単純なカウントアップループには[dotimes](http://www.lispworks.com/documentation/HyperSpec/Body/m_dotime.htm)が良いかも」
 
 ```lisp
 (dotimes (n 繰り返し回数)
@@ -193,10 +282,8 @@
 ;=> NIL
 ```
 
-### dolist
-
 　∧ ∧  
-(,,ﾟДﾟ)「[dolist](http://www.lispworks.com/documentation/HyperSpec/Body/m_dolist.htm)」
+(,,ﾟДﾟ)「リストの要素でループするなら[dolist](http://www.lispworks.com/documentation/HyperSpec/Body/m_dolist.htm)が便利」
 
 ```lisp
 (dolist (n リスト)
@@ -212,10 +299,8 @@
 ;=> NIL
 ```
 
-### loop
-
 　∧ ∧  
-(,,ﾟДﾟ)「[loop](http://www.lispworks.com/documentation/HyperSpec/Body/m_loop.htm)」
+(,,ﾟДﾟ)「高機能な[loop](http://www.lispworks.com/documentation/HyperSpec/Body/m_loop.htm)マクロ」
 
 #### 0~10まで2ステップずつカウントアップ
 
