@@ -12,6 +12,8 @@
 (,,ﾟДﾟ)「基本的な述語関数には[eq](http://www.lispworks.com/documentation/HyperSpec/Body/f_eq.htm)/[eql](http://www.lispworks.com/documentation/HyperSpec/Body/f_eql.htm)/[equal](http://www.lispworks.com/documentation/HyperSpec/Body/f_equal.htm)/[equalp](http://www.lispworks.com/documentation/HyperSpec/Body/f_equalp.htm)がある」
 
 ```lisp
+;;; eq
+
 (eq 'foo 'foo)
 ;=> T
 
@@ -23,6 +25,8 @@
 
 (eq 1.0 0)
 ;=> NIL
+
+;;; eql
 
 (eql 'foo 'foo)
 ;=> T
@@ -36,6 +40,8 @@
 (eql 1.0 1)
 ;=> NIL
 
+;;; equal
+
 (equal 'foo 'foo)
 ;=> T
 
@@ -47,6 +53,8 @@
 
 (equal 1.0 1)
 ;=> NIL
+
+;;; equalp
 
 (equalp 'foo 'foo)
 ;=> T
@@ -302,6 +310,13 @@
 　∧ ∧  
 (,,ﾟДﾟ)「高機能な[loop](http://www.lispworks.com/documentation/HyperSpec/Body/m_loop.htm)マクロ」
 
+### 計数繰り返し
+
+```lisp
+(loop for [ from / upfrom / downfrom ] 変数 [ to / upto / downto / below / above ] [ by ] ステップ数
+      〜)
+```
+
 #### 0~10まで2ステップずつカウントアップ
 
 ```lisp
@@ -338,6 +353,41 @@
 (loop for n from 10 above 5
       collect n) 
 ;=> (10 9 8 7 6)
+```
+
+### コレクション内繰り返し
+
+```lisp
+(loop for 変数 [ in / on ] リスト  /  [ across ] ベクタ [ by ] ステップ関数
+      〜)
+```
+
+```lisp
+(loop for n in '(1 2 3 4) by #'cddr
+      collect n)
+;=> (1 3)
+```
+
+```lisp
+(loop for n on '(1 2 3 4 5) by #'cddr
+      collect n)
+;=> ((1 2 3 4 5) (3 4 5) (5))
+```
+
+```lisp
+(loop for n across #(1 2 3 4 5)
+      collect n)
+;=> (1 2 3 4 5)
+```
+
+```lisp
+(loop for 変数 being the [ hash-keys / hash-values ] in ハッシュ表 using [ hash-value / hash-key ] 変数
+      〜)
+```
+
+```lisp
+(loop for 変数 being the [ symbols / present-symbols / external-symbols ] in パッケージ
+      〜)
 ```
 
 　　∧ ∧  
