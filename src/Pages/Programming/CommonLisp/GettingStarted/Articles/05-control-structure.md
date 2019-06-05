@@ -390,6 +390,87 @@
       〜)
 ```
 
+### 集約
+
+* リストの累積
+  * collect  : リスト作成
+  * append   : リスト結合
+  * nconc    : 破壊的にリスト結合
+
+* 統計
+  * count    : カウント
+  * sum      : 加算
+  * maximize : 最大値
+  * minimize : 最小値
+
+### 式の実行 (do)
+
+```lisp
+(loop for 〜
+      do 式)
+```
+
+```lisp
+(loop for n from 1 to 5
+      do (print n))
+; 1
+; 2
+; 3
+; 4
+; 5
+;=> NIL
+```
+
+### 条件分岐 (if / when / unless)
+
+```lisp
+(loop for 〜
+      [ if / when / unless ] 条件 〜 [ else ... ] [ end ] )
+```
+
+```lisp
+(loop for x from 1 to 10
+      if (evenp x)
+      do (format t "Even:~A~%" x)
+      else
+      do (format t "Odd:~A~%" x))
+; Odd:1
+; Even:2
+; Odd:3
+; Even:4
+; Odd:5
+; Even:6
+; Odd:7
+; Even:8
+; Odd:9
+; Even:10
+;=> NIL
+```
+
+```lisp
+(loop for x from 1 to 10
+      when (evenp x)
+      do (format t "~A~%" x))
+; 2
+; 4
+; 6
+; 8
+; 10
+;=> NIL
+```
+
+```lisp
+(loop for x from 1 to 10
+      unless (evenp x)
+      do (format t "~A~%" x))
+; 1
+; 3
+; 5
+; 7
+; 9
+;=> NIL
+```
+
 　　∧ ∧  
 　 (,, ﾟДﾟ)「今日はここまで、お疲れ様でした」  
 　 / つつ旦  
