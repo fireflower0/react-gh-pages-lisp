@@ -61,7 +61,8 @@ class GettingStarted extends React.Component {
         {this.makeArticle("第2章 アトムとコンスセルとリスト", require("./Articles/02-list.md"))}
         {this.makeArticle("第3章 連想リストと属性リスト", require("./Articles/03-alist-plist.md"))}
         {this.makeArticle("第4章 変数と定数", require("./Articles/04-variables-constants.md"))}
-        {this.makeArticle("第5章 条件分岐と繰り返し", require("./Articles/05-control-structure.md"))}
+        {this.makeArticle("第5章 条件分岐", require("./Articles/05-control-structure.md"))}
+        {this.makeArticle("第6章 繰り返し", require("./Articles/06-control-structure2.md"))}
       </div>
     );
   }
