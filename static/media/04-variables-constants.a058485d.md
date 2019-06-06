@@ -9,7 +9,7 @@
 (,,ﾟДﾟ)「Common Lispではグローバル変数はスペシャル変数またはダイナミック変数と呼ぶ」
 
 　∧ ∧  
-(,,ﾟДﾟ)「スペシャル変数を定義するには`defvar`/`defparameter`を使う」
+(,,ﾟДﾟ)「スペシャル変数を定義するには[defvar](http://www.lispworks.com/documentation/HyperSpec/Body/m_defpar.htm)/[defparameter](http://www.lispworks.com/documentation/HyperSpec/Body/m_defpar.htm)を使う」
 
 ```lisp
 (defvar *foo* 1)
@@ -52,16 +52,10 @@
 ;=> 2
 ```
 
-　∧ ∧  
-(,,ﾟДﾟ)「`defvar`/`defparameter`の詳細は以下を参照」
-
-* [defvar (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/m_defpar.htm)
-* [defparameter (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/m_defpar.htm)
-
 ### 変数に値を代入する
 
 　∧ ∧  
-(,,ﾟДﾟ)「変数の中身を変えたい場合は`setf`を使う」
+(,,ﾟДﾟ)「変数の中身を変えたい場合は[setf](http://www.lispworks.com/documentation/HyperSpec/Body/m_setf_.htm)を使う」
 
 ```lisp
 (setf *foo* 2)
@@ -86,15 +80,10 @@
 ;=> 2
 ```
 
-　∧ ∧  
-(,,ﾟДﾟ)「`setf`の詳細は以下を参照」
-
-* [setf (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/m_setf_.htm)
-
 ### 定数を定義する
 
 　∧ ∧  
-(,,ﾟДﾟ)「定数を定義するには`defconstant`を使用します」
+(,,ﾟДﾟ)「定数を定義するには[defconstant](http://www.lispworks.com/documentation/HyperSpec/Body/m_defcon.htm)を使用します」
 
 ```lisp
 (defconstant +foo+ 1)
@@ -107,18 +96,13 @@
 　∧ ∧  
 (,,ﾟДﾟ)「定数には慣例として変数名の両端に`+ (プラス)`をつける」
 
-　∧ ∧  
-(,,ﾟДﾟ)「`defconstant`の詳細は以下を参照」
-
-* [defconstant (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/m_defcon.htm)
-
 ## ローカルな変数を定義する
 
 　∧ ∧  
 (,,ﾟДﾟ)「Common Lispではローカル変数をレキシカル変数と呼ぶ」
 
 　∧ ∧  
-(,,ﾟДﾟ)「レキシカル変数を定義するには`let`/`let*`を使用する」
+(,,ﾟДﾟ)「レキシカル変数を定義するには[let/let*](http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm)を使用する」
 
 ```lisp
 (let ((foo 1)
@@ -142,11 +126,6 @@
 ; 1 
 ;=> 1
 ```
-
-　∧ ∧  
-(,,ﾟДﾟ)「`let`/`let*`の詳細は以下を参照」
-
-* [let/let* (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm)
 
 　　∧ ∧  
 　 (,, ﾟДﾟ)「今日はここまで、お疲れ様でした」  

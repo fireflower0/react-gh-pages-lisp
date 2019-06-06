@@ -32,15 +32,13 @@
 ```
 
 　∧ ∧  
-(,,ﾟДﾟ)「`cons`の詳細は以下を参照」
-
-* [cons (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_cons.htm)
+(,,ﾟДﾟ)「[cons](http://www.lispworks.com/documentation/HyperSpec/Body/f_cons.htm)を使うことでコンスセルを作ることができる」
 
 　∧ ∧  
-(,,ﾟДﾟ)「**ドット対**とも呼ばれる」
+(,,ﾟДﾟ)「**コンスセル**は**ドット対**とも呼ばれる」
 
 　∧ ∧  
-(,,ﾟДﾟ)「手前のスロットはCAR部と呼ばれ`car`で値を取得でき」
+(,,ﾟДﾟ)「手前のスロットはCAR部と呼ばれ[car](http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm#car)で値を取得でき」
 
 ```lisp
 (car (cons 1 2))
@@ -48,22 +46,12 @@
 ```
 
 　∧ ∧  
-(,,ﾟДﾟ)「`car`関数の詳細は以下を参照」
-
-* [car (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm#car)
-
-　∧ ∧  
-(,,ﾟДﾟ)「後ろのスロットはCDR部と呼ばれ`cdr`で値を取得できる」
+(,,ﾟДﾟ)「後ろのスロットはCDR部と呼ばれ[cdr](http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm#cdr)で値を取得できる」
 
 ```lisp
 (cdr (cons 1 2))
 ;=> 2
 ```
-
-　∧ ∧  
-(,,ﾟДﾟ)「`cdr`の詳細は以下を参照」
-
-* [cdr (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm#cdr)
 
 　∧ ∧  
 (,,ﾟДﾟ)「以下のような箱をイメージするとわかりやすい」
@@ -117,7 +105,7 @@
 ### リストを作成する
 
 　∧ ∧  
-(,,ﾟДﾟ)「リストを作るには`cons`以外に`list`/`quote`/`シングルクォート`/`バッククォート`が使える」
+(,,ﾟДﾟ)「リストを作るには`cons`以外に[list](http://www.lispworks.com/documentation/HyperSpec/Body/f_list_.htm)/[quote](http://www.lispworks.com/documentation/HyperSpec/Body/s_quote.htm#quote)/`シングルクォート`/`バッククォート`が使える」
 
 ```
 (list 1 2 3)
@@ -134,14 +122,7 @@
 ```
 
 　∧ ∧  
-(,,ﾟДﾟ)「`list`/`quote`の詳細は以下を参照」
-
-* [list (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_list_.htm)
-* [quote (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/s_quote.htm#quote)
-
-　∧ ∧  
 (,,ﾟДﾟ)「`シングルクォート`と`バッククォート`の違いはリスト内に式を含めることができるか」
-
 
 　∧ ∧  
 (,,ﾟДﾟ)「`バッククォート`を使ったリスト内で`, (コンマ)`を使うと式を評価できる」
@@ -173,7 +154,7 @@
 ```
 
 　∧ ∧  
-(,,ﾟДﾟ)「が、最近では`first`や`second`や`third`などの方が推奨されている」
+(,,ﾟДﾟ)「が、最近では[first/second/third](http://www.lispworks.com/documentation/HyperSpec/Body/f_firstc.htm)などの方が推奨されている」
 
 ```lisp
 (first '(1 2 3))
@@ -187,12 +168,7 @@
 ```
 
 　∧ ∧  
-(,,ﾟДﾟ)「`first`/`second`/`third`などの詳細は以下を参照」
-
-* [first/second/thirdなど (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_firstc.htm)
-
-　∧ ∧  
-(,,ﾟДﾟ)「他にも、`nth`や`elt`でも要素を取得できる」
+(,,ﾟДﾟ)「他にも、[nth](http://www.lispworks.com/documentation/HyperSpec/Body/f_nth.htm)や[elt](http://www.lispworks.com/documentation/HyperSpec/Body/f_elt.htm)でも要素を取得できる」
 
 ```lisp
 (nth 1 '(1 2 3))
@@ -218,16 +194,10 @@
 ;=> 2
 ```
 
-　∧ ∧  
-(,,ﾟДﾟ)「`nth`/`elt`の詳細は以下を参照」
-
-* [nth (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_nth.htm)
-* [elt (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_elt.htm)
-
 ### リストの要素数を取得する
 
 　∧ ∧  
-(,,ﾟДﾟ)「リストの要素数は`length`で取得できる」
+(,,ﾟДﾟ)「リストの要素数は[length](http://www.lispworks.com/documentation/HyperSpec/Body/f_length.htm)で取得できる」
 
 ```lisp
 (length '(1 2 3 4 5))
@@ -247,15 +217,10 @@
 ;=> 3
 ```
 
-　∧ ∧  
-(,,ﾟДﾟ)「`length`の詳細は以下を参照」
-
-* [length (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_length.htm)
-
 ### リストから要素を探す
 
 　∧ ∧  
-(,,ﾟДﾟ)「リストから指定した要素を探すには`find`/`member`を使用する」
+(,,ﾟДﾟ)「リストから指定した要素を探すには[find](http://www.lispworks.com/documentation/HyperSpec/Body/f_find_.htm)/[member](http://www.lispworks.com/documentation/HyperSpec/Body/f_mem_m.htm)を使用する」
 
 ```lisp
 (find 2 '(1 2 3))
@@ -293,13 +258,7 @@
 ```
 
 　∧ ∧  
-(,,ﾟДﾟ)「`find`/`member`の詳細は以下を参照」
-
-* [find (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_find_.htm)
-* [member (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_mem_m.htm)
-
-　∧ ∧  
-(,,ﾟДﾟ)「述語関数を指定して要素を探す`find-if`/`find-if-not`/`member-if`/`member-if-not`というものもある」
+(,,ﾟДﾟ)「述語関数を指定して要素を探す[find-if/find-if-not](http://www.lispworks.com/documentation/HyperSpec/Body/f_find_.htm)/[member-if/member-if-not](http://www.lispworks.com/documentation/HyperSpec/Body/f_mem_m.htm)というものもある」
 
 ```lisp
 (find-if #'evenp '(1 2 3 4 5))
@@ -315,16 +274,10 @@
 ;=> (0 1 2)
 ```
 
-　∧ ∧  
-(,,ﾟДﾟ)「`find-if`/`find-if-not`/`member-if`/`member-if-not`の詳細は以下を参照」
-
-* [find-if/find-if-not (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_find_.htm)
-* [member-if/member-if-not (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_mem_m.htm)
-
 ### リストをソートする
 
 　∧ ∧  
-(,,ﾟДﾟ)「リストをソートするには`sort`を使用する」
+(,,ﾟДﾟ)「リストをソートするには[sort](http://www.lispworks.com/documentation/HyperSpec/Body/f_sort_.htm)を使用する」
 
 ```lisp
 (sort '(2 3 1 5 4) #'<)
@@ -335,27 +288,17 @@
 ```
 
 　∧ ∧  
-(,,ﾟДﾟ)「`sort`の詳細は以下を参照」
-
-* [sort (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_sort_.htm)
-
-　∧ ∧  
-(,,ﾟДﾟ)「リストを逆順にするだけなら`reverse`を使う」
+(,,ﾟДﾟ)「リストを逆順にするだけなら[reverse](http://www.lispworks.com/documentation/HyperSpec/Body/f_revers.htm)を使う」
 
 ```lisp
 (reverse '(1 2 3 4 5))
 ;=> (5 4 3 2 1)
 ```
 
-　∧ ∧  
-(,,ﾟДﾟ)「`reverse`の詳細は以下を参照」
-
-* [reverse (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_revers.htm)
-
 ### リストを結合する
 
 　∧ ∧  
-(,,ﾟДﾟ)「リストを結合するには`append`/`concatenate`/`nconc`を使う」
+(,,ﾟДﾟ)「リストを結合するには[append](http://www.lispworks.com/documentation/HyperSpec/Body/f_append.htm)/[concatenate](http://www.lispworks.com/documentation/HyperSpec/Body/f_concat.htm)/[nconc](http://www.lispworks.com/documentation/HyperSpec/Body/f_nconc.htm)を使う」
 
 ```lisp
 (append '(1 2 3) '(4 5 6))
@@ -367,13 +310,6 @@
 (nconc '(1 2 3) '(4 5 6))
 ;=> (1 2 3 4 5 6)
 ```
-
-　∧ ∧  
-(,,ﾟДﾟ)「`append`/`concatenate`/`nconc`の詳細は以下を参照」
-
-* [append (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_append.htm)
-* [concatenate (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_concat.htm)
-* [nconc (Common Lisp HyperSpec)](http://www.lispworks.com/documentation/HyperSpec/Body/f_nconc.htm)
 
 　　∧ ∧  
 　 (,, ﾟДﾟ)「今日はここまで、お疲れ様でした」  
