@@ -1,12 +1,12 @@
 {
-  "main.js": "/react-gh-pages-lisp/static/js/main.d71f689b.chunk.js",
-  "main.js.map": "/react-gh-pages-lisp/static/js/main.d71f689b.chunk.js.map",
+  "main.js": "/react-gh-pages-lisp/static/js/main.af788693.chunk.js",
+  "main.js.map": "/react-gh-pages-lisp/static/js/main.af788693.chunk.js.map",
   "runtime~main.js": "/react-gh-pages-lisp/static/js/runtime~main.ed59056f.js",
   "runtime~main.js.map": "/react-gh-pages-lisp/static/js/runtime~main.ed59056f.js.map",
   "static/js/2.1323c07c.chunk.js": "/react-gh-pages-lisp/static/js/2.1323c07c.chunk.js",
   "static/js/2.1323c07c.chunk.js.map": "/react-gh-pages-lisp/static/js/2.1323c07c.chunk.js.map",
   "index.html": "/react-gh-pages-lisp/index.html",
-  "precache-manifest.e795dcf6007f91b3b17d1b0b9a8c8251.js": "/react-gh-pages-lisp/precache-manifest.e795dcf6007f91b3b17d1b0b9a8c8251.js",
+  "precache-manifest.cdcd859da27496bf881e281cea8f9225.js": "/react-gh-pages-lisp/precache-manifest.cdcd859da27496bf881e281cea8f9225.js",
   "service-worker.js": "/react-gh-pages-lisp/service-worker.js",
   "static/media/01-foreword.md": "/react-gh-pages-lisp/static/media/01-foreword.bf536232.md",
   "static/media/02-list.md": "/react-gh-pages-lisp/static/media/02-list.17927184.md",
@@ -16,7 +16,7 @@
   "static/media/04-2d-rendering.md": "/react-gh-pages-lisp/static/media/04-2d-rendering.c094aa8d.md",
   "static/media/04-variables-constants.md": "/react-gh-pages-lisp/static/media/04-variables-constants.a058485d.md",
   "static/media/05-control-structure.md": "/react-gh-pages-lisp/static/media/05-control-structure.0fc44bc9.md",
-  "static/media/06-control-structure2.md": "/react-gh-pages-lisp/static/media/06-control-structure2.8214b5b1.md",
+  "static/media/06-control-structure2.md": "/react-gh-pages-lisp/static/media/06-control-structure2.cc637539.md",
   "static/media/blink.md": "/react-gh-pages-lisp/static/media/blink.80bd2ff5.md",
   "static/media/sample.md": "/react-gh-pages-lisp/static/media/sample.9c3ab9cf.md"
 }

@@ -110,6 +110,19 @@
 ;=> (10 9 8 7 6)
 ```
 
+#### カウンタ変数不要な繰り返し
+
+```lisp
+(loop repeat 5
+      do (print "Hello"))
+; "Hello" 
+; "Hello" 
+; "Hello" 
+; "Hello" 
+; "Hello" 
+;=> NIL
+```
+
 ### コレクション内繰り返し
 
 ```lisp
