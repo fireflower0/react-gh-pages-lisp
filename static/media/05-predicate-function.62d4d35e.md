@@ -1,7 +1,7 @@
 　∧ ∧  
-(,,ﾟДﾟ)「今回は比較述語関数と条件分岐やってくよ」
+(,,ﾟДﾟ)「今回は述語関数やってくよ」
 
-## 比較述語関数
+## 述語関数
 
 　∧ ∧  
 (,,ﾟДﾟ)「述語関数とは真偽(`t`/`nil`)を返す関数」
@@ -165,6 +165,17 @@
 ```
 
 　∧ ∧  
+(,,ﾟДﾟ)「偶数かどうか調べるには[evenp](http://www.lispworks.com/documentation/HyperSpec/Body/f_evenpc.htm)を、奇数かどうか調べるには[oddp](http://www.lispworks.com/documentation/HyperSpec/Body/f_evenpc.htm)を使う」
+
+```lisp
+(evenp 2)
+;=> T
+
+(oddp 3)
+;=> T
+```
+
+　∧ ∧  
 (,,ﾟДﾟ)「空リストかどうか調べるには[null](http://www.lispworks.com/documentation/HyperSpec/Body/f_null.htm)/[endp](http://www.lispworks.com/documentation/HyperSpec/Body/f_endp.htm)を使う」
 
 ```lisp
@@ -175,120 +186,91 @@
 ;=> NIL
 ```
 
-## 条件分岐
-
-### 2方向条件分岐 (if)
-
 　∧ ∧  
-(,,ﾟДﾟ)「2方向条件分岐するには[if](http://www.lispworks.com/documentation/HyperSpec/Body/s_if.htm)を使う」
-
-
-#### if
+(,,ﾟДﾟ)「コンスセルかどうか調べるには[consp](http://www.lispworks.com/documentation/HyperSpec/Body/f_consp.htm)を使う」
 
 ```lisp
-(if 条件式 [then] [else])
+(consp '(1 . 2))
+;=> T
+
+(consp '(1 2 3))
+;=> T
 ```
 
 　∧ ∧  
-(,,ﾟДﾟ)「実例としては以下のような感じ」
+(,,ﾟДﾟ)「配列・ベクタかどうか調べるには[arrayp](http://www.lispworks.com/documentation/HyperSpec/Body/f_arrayp.htm)/[vectorp](http://www.lispworks.com/documentation/HyperSpec/Body/f_vecp.htm)を使う」
 
 ```lisp
-(let ((a 0))
-  (if (< a 0)
-      (format t "negative : ~a~%" a)
-      (format t "positive : ~a~%" a)))
-; positive : 0
-;=> NIL
-```
+(arrayp #(1 2))
+;=> T
 
-### 1方向条件分岐 (when, unless)
+(vectorp #(1 2 3))
+;=> T
+```
 
 　∧ ∧  
-(,,ﾟДﾟ)「1方向条件分岐には[when/unless](http://www.lispworks.com/documentation/HyperSpec/Body/m_when_.htm)を使う」
-
-#### when
+(,,ﾟДﾟ)「関数かどうか調べるには[functionp](http://www.lispworks.com/documentation/HyperSpec/Body/f_fnp.htm)を使う」
 
 ```lisp
-(let ((a 0))
-  (when (= a 0)
-    (format t "a = 0")))
-; a = 0
-;=> NIL
+(functionp #'cons)
+;=> T
 ```
-
-#### unless
-
-```lisp
-(let ((a 0))
-  (unless (/= a 0)
-    (format t "a = 0")))
-; a = 0
-;=> NIL
-```
-
-### 多方向分岐 (cond, case, ecase)
 
 　∧ ∧  
-(,,ﾟДﾟ)「多方向分岐には[cond](http://www.lispworks.com/documentation/HyperSpec/Body/m_cond.htm)/[case/ecase](http://www.lispworks.com/documentation/HyperSpec/Body/m_case_.htm)を使う」
-
-#### cond
+(,,ﾟДﾟ)「[hash-table-p](http://www.lispworks.com/documentation/HyperSpec/Body/f_hash_t.htm)を使う」
 
 ```lisp
-(let ((a 1))
-  (cond ((= a 0)
-         (format t "a = 0"))
-        ((= a 1)
-         (format t "a = 1"))
-        (t
-         (format t "a = other")))
-; a = 1
-;=> NIL
+(let ((ht (make-hash-table)))
+  (hash-table-p ht))
+;=> T
 ```
 
-#### case
+　∧ ∧  
+(,,ﾟДﾟ)「文字かどうか調べるには[characterp](http://www.lispworks.com/documentation/HyperSpec/Body/f_chp.htm)を使う」
 
 ```lisp
-(let ((a 1))
-  (case a
-    (0 (format t "a = 0"))
-    (1 (format t "a = 1"))
-    (t (format t "a = other"))))
-; a = 1
-;=> NIL
+(characterp #\a)
+;=> T
 ```
 
-#### ecase
+　∧ ∧  
+(,,ﾟДﾟ)「文字列かどうか調べるには[stringp](http://www.lispworks.com/documentation/HyperSpec/Body/f_stgp.htm)を使う」
 
 ```lisp
-(let ((a 1))
-  (ecase a
-    (0 (format t "a = 0"))
-    (1 (format t "a = 1"))
-    (2 (format t "a = 2"))))
-; a = 1
-;=> NIL
+(stringp "Hello, world!")
+;=> T
 ```
 
-```lisp
-(let ((a 3))
-  (ecase a
-    (0 (format t "a = 0"))
-    (1 (format t "a = 1"))
-    (2 (format t "a = 2"))))
+## 論理演算子
 
-; 3 fell through ECASE expression. Wanted one of (0 1 2).
-;    [Condition of type SB-KERNEL:CASE-FAILURE]
-; 
-; Restarts:
-;  0: [RETRY] Retry SLIME REPL evaluation request.
-;  1: [*ABORT] Return to SLIME's top level.
-;  2: [ABORT] abort thread (#<THREAD "repl-thread" RUNNING {1001D97F93}>)
-; 
-; Backtrace:
-;   0: ((LAMBDA ()))
-;   1: (SB-INT:SIMPLE-EVAL-IN-LEXENV (LET ((A 3)) (ECASE A (0 #) (1 #) (2 #))) #<NULL-LEXENV>)
-;   2: (EVAL (LET ((A 3)) (ECASE A (0 #) (1 #) (2 #))))
-;  --more--
+### 否定 (not)
+
+```lisp
+(not t)
+;=> NIL
+
+(not nil)
+;=> T
+```
+
+### 論理和 (or)
+
+```lisp
+(or (< 3 2)
+    (> 3 2))
+;=> T
+```
+
+### 論理積 (and)
+
+```lisp
+(and (< 3 2)
+     (> 3 2))
+;=> NIL
+
+(and (< 2 3)
+     (> 3 2))
+;=> T
 ```
 
 　　∧ ∧  
