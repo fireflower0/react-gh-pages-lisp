@@ -62,10 +62,10 @@
 ;=> NIL
 ```
 
+### 計数繰り返し
+
 　∧ ∧  
 (,,ﾟДﾟ)「高機能な[loop](http://www.lispworks.com/documentation/HyperSpec/Body/m_loop.htm)マクロ」
-
-### 計数繰り返し
 
 ```lisp
 (loop for [ from / upfrom / downfrom ] 変数 [ to / upto / downto / below / above ] [ by ] ステップ数
@@ -160,16 +160,61 @@
 
 ### 集約
 
-* リストの累積
-  * collect  : リスト作成
-  * append   : リスト結合
-  * nconc    : 破壊的にリスト結合
+#### リスト作成
 
-* 統計
-  * count    : カウント
-  * sum      : 加算
-  * maximize : 最大値
-  * minimize : 最小値
+```lisp
+(loop for n from 0 to 10
+      collect n)
+;=> (0 1 2 3 4 5 6 7 8 9 10)
+```
+
+#### リスト結合
+
+```lisp
+(loop for n from 0 to 5
+      append '(:foo n))
+;=> (:FOO N :FOO N :FOO N :FOO N :FOO N :FOO N)
+```
+
+#### 破壊的なリスト結合
+
+```lisp
+(loop for n from 0 to 5
+      nconc (list :foo n))
+;=> (:FOO 0 :FOO 1 :FOO 2 :FOO 3 :FOO 4 :FOO 5)
+```
+
+#### 最大値
+
+```lisp
+(loop for n from 0 to 10
+      maximize n)
+;=> 10
+```
+
+#### 最小値
+
+```lisp
+(loop for n from 0 to 10
+      minimize n)
+;=> 0
+```
+
+#### カウント
+
+```lisp
+(loop for n from 0 to 10
+      count n)
+;=> 11
+```
+
+#### 加算
+
+```lisp
+(loop for n from 0 to 10
+      sum n)
+;=> 55
+```
 
 ### 式の実行 (do)
 
