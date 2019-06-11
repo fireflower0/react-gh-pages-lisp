@@ -6,7 +6,14 @@
 　∧ ∧  
 (,,ﾟДﾟ)「述語関数とは真偽(`t`/`nil`)を返す関数」
 
-### 基本的な述語関数
+　∧ ∧  
+(,,ﾟДﾟ)「述語関数には主に以下の３種類がある」
+
+* 値を比較
+* データ型判定
+* データ型階層・所属関係検査
+
+### 値を比較する述語関数
 
 　∧ ∧  
 (,,ﾟДﾟ)「基本的な述語関数には[eq](http://www.lispworks.com/documentation/HyperSpec/Body/f_eq.htm)/[eql](http://www.lispworks.com/documentation/HyperSpec/Body/f_eql.htm)/[equal](http://www.lispworks.com/documentation/HyperSpec/Body/f_equal.htm)/[equalp](http://www.lispworks.com/documentation/HyperSpec/Body/f_equalp.htm)がある」
@@ -118,7 +125,7 @@
 ;=> 0
 ```
 
-### 特殊な述語関数
+### データ型を判定する述語関数
 
 　∧ ∧  
 (,,ﾟДﾟ)「アトムかどうか調べるには[atom](http://www.lispworks.com/documentation/HyperSpec/Body/f_atom.htm)を使う」
@@ -239,6 +246,78 @@
 ```lisp
 (stringp "Hello, world!")
 ;=> T
+```
+
+### データ型の階層・所属関係を検査する述語関数
+
+　∧ ∧  
+(,,ﾟДﾟ)「値が指定したデータ型と一致するかチェックするには[typep](http://clhs.lisp.se/Body/f_typep.htm)を使う」
+
+```lisp
+(typep 'foo 'symbol)
+;=> T
+
+(typep :foo 'keyword)
+;=> T
+
+(typep 2 'integer)
+;=> T
+
+(typep 1.0d0 'double-float)
+;=> T
+
+(typep #\a 'character)
+;=> T
+
+(typep "Hello" 'string)
+;=> T
+
+(typep '(1 2 3) 'list)
+;=> T
+
+(typep #(1 2 3) 'vector)
+;=> T
+```
+
+　∧ ∧  
+(,,ﾟДﾟ)「以下のようにデータ型の後に下限・上限を指定することもできる」
+
+```lisp
+(typep 10 '(integer 8 12))
+T
+
+(typep 15 '(integer 8 12))
+NIL
+```
+
+　∧ ∧  
+(,,ﾟДﾟ)「型同士の所属関係をチェックするには[subtypep](http://clhs.lisp.se/Body/f_subtpp.htm)を使う」
+
+```lisp
+;; vectorはarrayのサブタイプ
+(subtypep 'vector 'array)
+;=> T
+;=> T
+
+;; arrayはvectorのサブタイプではない
+(subtypep 'array 'vector)
+;=> NIL
+;=> T
+
+;; listはsequenceのサブタイプ
+(subtypep 'list 'sequence)
+;=> T
+;=> T
+
+;; fixnumはintegerのサブタイプ
+(subtypep 'fixnum 'integer)
+;=> T
+;=> T
+
+;; 判定不能
+(subtypep 'foo 'bar)
+;=> NIL
+;=> NIL
 ```
 
 ## 論理演算子
