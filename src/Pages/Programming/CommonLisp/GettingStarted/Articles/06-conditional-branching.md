@@ -124,6 +124,34 @@
 ;  --more--
 ```
 
+#### string-case
+
+　∧ ∧  
+(,,ﾟДﾟ)「[String-case](https://pvk.ca/Blog/Lisp/string_case_bis.html)というライブラリを使うと文字列で多方向分岐できる」
+
+　∧ ∧  
+(,,ﾟДﾟ)「`String-case`は`Quicklisp`で入れて使用する」
+
+```lisp
+CL-USER> (ql:quickload :string-case)
+; To load "string-case":
+;   Load 1 ASDF system:
+;     string-case
+;; Loading "string-case"
+; [package string-case]..
+;=> (:STRING-CASE)
+
+CL-USER> (in-package :string-case)
+;=> #<PACKAGE "STRING-CASE">
+
+STRING-CASE> (let ((str "foo"))
+               (string-case (str)
+                 ("foo" 0)
+                 ("bar" 1)
+                 ("baz" 2)))
+;=> 0
+```
+
 　　∧ ∧  
 　 (,, ﾟДﾟ)「今日はここまで、お疲れ様でした」  
 　 / つつ旦  
