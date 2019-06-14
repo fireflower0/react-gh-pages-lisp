@@ -64,6 +64,7 @@ class GettingStarted extends React.Component {
         {this.makeArticle("第5章 述語関数", require("./Articles/05-predicate-function.md"))}
         {this.makeArticle("第6章 条件分岐", require("./Articles/06-conditional-branching.md"))}
         {this.makeArticle("第7章 繰り返し", require("./Articles/07-loop.md"))}
+        {this.makeArticle("第8章 シーケンス", require("./Articles/08-sequence.md"))}
       </div>
     );
   }
