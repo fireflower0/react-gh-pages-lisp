@@ -87,6 +87,18 @@
 ```
 
 ### nreverse
+
+　∧ ∧  
+(,,ﾟДﾟ)「reverseと同じだがこっちは破壊的」
+
+```lisp
+(nreverse '(1 2 3 4 5))
+;=> (5 4 3 2 1)
+
+(nreverse "Hello, world!")
+;=> "!dlrow ,olleH"
+```
+
 ### concatenate
 ### position
 ### find
@@ -95,9 +107,27 @@
 ### map
 ### some
 ### every
+
+```lisp
+(every #'evenp '(1 3 5))
+;=> NIL
+
+(every #'evenp '(2 4 6))
+;=> T
+```
+
 ### notany
 ### notevery
 ### reduce
+
+　∧ ∧  
+(,,ﾟДﾟ)「リストの合計を求めるのに使える」
+
+```lisp
+(reduce (lambda (x m) (+ x m)) '(1 2 3 4 5))
+;=> 15
+```
+
 ### search
 ### remove
 ### delete
