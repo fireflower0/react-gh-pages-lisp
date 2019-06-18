@@ -43,8 +43,14 @@
 (length '(1 2 3 4 5))
 ;=> 5
 
+(length #(1 2 3 4 5))
+;=> 5
+
 (length "Hello, world!")
 ;=> 13
+
+(length #*10100101)
+;=> 8
 ```
 
 ### subseq
@@ -53,8 +59,14 @@
 (subseq '(1 2 3 4 5 6 7 8 9) 2 6)
 ;=> (3 4 5 6)
 
+(subseq #(1 2 3 4 5 6 7 8 9) 2 6)
+;=> #(3 4 5 6)
+
 (subseq "Hello, world!" 7 12)
 ;=> "world"
+
+(subseq #*10100101 3 8)
+;=> #*00101
 ```
 
 ### copy-seq
@@ -66,8 +78,14 @@
 (copy-seq '(1 2 3))
 ;=> (1 2 3)
 
+(copy-seq #(1 2 3))
+;=> #(1 2 3)
+
 (copy-seq "Hello, world!")
 ;=> "Hello, world!"
+
+(copy-seq #*0101)
+;=> #*0101
 ```
 
 ### fill
@@ -76,8 +94,14 @@
 (fill '(1 2 3) 1)
 ;=> (1 1 1)
 
+(fill #(1 2 3) 1)
+;=> #(1 1 1)
+
 (fill "Hello, world!" #\A :start 7 :end 12)
 ;=> "Hello, AAAAA!"
+
+(fill #*0000 1)
+;=> #*1111
 ```
 
 ### replace
@@ -86,8 +110,14 @@
 (replace '(1 2 3 4 5) '(3 4))
 ;=> (3 4 3 4 5)
 
+(replace #(1 2 3 4 5) '(3 4))
+;=> #(3 4 3 4 5)
+
 (replace "Hello, world!" "Lisp!" :start1 7)
 ;=> "Hello, Lisp!!"
+
+(replace #*10100101 #*1111)
+;=> #*11110101
 ```
 
 ### count
@@ -96,8 +126,14 @@
 (count 2 '(0 1 2 2 2 3 4 5))
 ;=> 3
 
+(count 1 #(1 0 1 1 1 2 4 4 5 5))
+;=> 4
+
 (count #\l "Hello, world!")
 ;=> 3
+
+(count 1 #*10100101)
+;=> 4
 ```
 
 ### reverse
@@ -106,8 +142,14 @@
 (reverse '(1 2 3 4 5))
 ;=> (5 4 3 2 1)
 
+(reverse #(1 2 3 4 5))
+;=> #(5 4 3 2 1)
+
 (reverse "Hello, world!")
 ;=> "!dlrow ,olleH"
+
+(reverse #*0101)
+;=> #*1010
 ```
 
 ### nreverse
@@ -119,8 +161,14 @@
 (nreverse '(1 2 3 4 5))
 ;=> (5 4 3 2 1)
 
+(nreverse #(1 2 3 4 5))
+;=> #(5 4 3 2 1)
+
 (nreverse "Hello, world!")
 ;=> "!dlrow ,olleH"
+
+(nreverse #*0101)
+;=> #*1010
 ```
 
 ### concatenate
