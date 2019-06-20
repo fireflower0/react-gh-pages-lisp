@@ -37,7 +37,10 @@
 ;=> 1
 ```
 
-### length
+### シーケンスの長さを求める
+
+　∧ ∧  
+(,,ﾟДﾟ)「シーケンスの長さは[length](http://www.lispworks.com/documentation/HyperSpec/Body/f_length.htm)で求まる」
 
 ```lisp
 (length '(1 2 3 4 5))
@@ -53,7 +56,10 @@
 ;=> 8
 ```
 
-### subseq
+### シーケンスの一部を取り出す
+
+　∧ ∧  
+(,,ﾟДﾟ)「シーケンスの一部を取り出すには[subseq](http://www.lispworks.com/documentation/HyperSpec/Body/f_subseq.htm)を使う」
 
 ```lisp
 (subseq '(1 2 3 4 5 6 7 8 9) 2 6)
@@ -69,10 +75,10 @@
 ;=> #*00101
 ```
 
-### copy-seq
+### シーケンスをコピーする
 
 　∧ ∧  
-(,,ﾟДﾟ)「引数と同じ要素を持つシーケンスを返す」
+(,,ﾟДﾟ)「引数と同じ要素を持つシーケンスを返す[copy-seq](http://www.lispworks.com/documentation/HyperSpec/Body/f_cp_seq.htm)」
 
 ```lisp
 (copy-seq '(1 2 3))
@@ -90,12 +96,20 @@
 
 ### fill
 
+[fill](http://www.lispworks.com/documentation/HyperSpec/Body/f_fill.htm)
+
 ```lisp
 (fill '(1 2 3) 1)
 ;=> (1 1 1)
 
+(fill '(1 2 3 4 5 6 7 8 9) 0 :start 2 :end 5)
+;=> (1 2 0 0 0 6 7 8 9)
+
 (fill #(1 2 3) 1)
 ;=> #(1 1 1)
+
+(fill #(1 2 3 4 5 6 7 8 9) 0 :start 2 :end 5)
+;=> #(1 2 0 0 0 6 7 8 9)
 
 (fill "Hello, world!" #\A :start 7 :end 12)
 ;=> "Hello, AAAAA!"
@@ -172,6 +186,21 @@
 ```
 
 ### concatenate
+
+```lisp
+(concatenate 'list '(1 2 3) '(4 5 6))
+;=> (1 2 3 4 5 6)
+
+(concatenate 'vector #(1 2 3) #(4 5 6))
+;=> #(1 2 3 4 5 6)
+
+(concatenate 'string "Hello" " ,world!")
+;=> "Hello ,world!"
+
+(concatenate 'bit-vector #*1010 #*0101)
+;=> #*10100101
+```
+
 ### position
 ### find
 ### sort
