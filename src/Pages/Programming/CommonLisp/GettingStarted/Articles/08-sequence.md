@@ -202,6 +202,21 @@
 ```
 
 ### position
+
+```lisp
+(position 3 '(1 2 3 4 5))
+;=> 2
+
+(position 4 #(1 2 3 4 5))
+;=> 3
+
+(position #\w "Hello, world!")
+;=> 7
+
+(position 1 #*00110101)
+;=> 2
+```
+
 ### find
 ### sort
 ### merge
