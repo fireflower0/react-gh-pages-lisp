@@ -218,6 +218,24 @@
 ```
 
 ### find
+
+```lisp
+(find 4 '(1 2 3 4 5))
+;=> 4
+
+(find 'bar '(foo bar baz))
+;=> BAR
+
+(find 3 #(1 2 3 4 5))
+;=> 3
+
+(find #\e "Hello, world!")
+;=> #\e
+
+(find 0 #*11100101)
+;=> 0
+```
+
 ### sort
 ### merge
 ### map
