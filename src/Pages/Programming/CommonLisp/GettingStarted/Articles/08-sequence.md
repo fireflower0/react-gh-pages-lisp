@@ -250,6 +250,33 @@
 ```
 
 ### merge
+
+```lisp
+(merge 'list '(1 2 3) '(4 5 6) #'<)
+;=> (1 2 3 4 5 6)
+
+(merge 'list '(1 2 3) '(4 5 6) #'>)
+;=> (4 5 6 1 2 3)
+
+(merge 'vector #(1 2 3) #(4 5 6) #'<)
+;=> #(1 2 3 4 5 6)
+
+(merge 'vector #(1 2 3) #(4 5 6) #'>)
+;=> #(4 5 6 1 2 3)
+
+(merge 'string "Hello" "world" #'string<)
+;=> "Helloworld"
+
+(merge 'string "Hello" "world" #'string>)
+;=> "worldHello"
+
+(merge 'bit-vector #*0101 #*1010 #'<)
+;=> #*01011010
+
+(merge 'bit-vector #*0101 #*1010 #'>)
+;=> #*10101010
+```
+
 ### map
 ### some
 ### every
