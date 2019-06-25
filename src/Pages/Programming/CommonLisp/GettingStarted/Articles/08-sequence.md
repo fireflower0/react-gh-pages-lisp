@@ -278,6 +278,21 @@
 ```
 
 ### map
+
+```lisp
+(map 'list #'oddp '(1 2 3 4 5))
+;=> (T NIL T NIL T)
+
+(map 'vector #'evenp #(1 2 3 4 5))
+;=> #(NIL T NIL T NIL)
+
+(map 'string (lambda (x) (if (oddp x) #\1 #\0)) '(1 2 3 4 5))
+;=> "10101"
+
+(map 'bit-vector (lambda (x) (if (evenp x) 1 0)) '(1 2 3 4 5))
+;=> #*01010
+```
+
 ### some
 ### every
 
