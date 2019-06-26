@@ -294,6 +294,15 @@
 ```
 
 ### some
+
+　∧ ∧  
+(,,ﾟДﾟ)「[some](http://clhs.lisp.se/Body/f_everyc.htm)はpredicateの呼び出しによって返される最初の非nil値を返す」
+
+```lisp
+(some #'= '(1 2 3 4 5) '(5 4 3 2 1))
+;=> T
+```
+
 ### every
 
 ```lisp
