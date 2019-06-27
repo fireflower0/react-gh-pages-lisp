@@ -356,6 +356,15 @@
 ```
 
 ### search
+
+```lisp
+(search '(1 2) '(0 1 2 3))
+;=> 1
+
+(search '(1 2) '(3 2 1 0 1 2))
+;=> 4
+```
+
 ### remove
 ### delete
 ### substitute
