@@ -382,6 +382,21 @@
 ```
 
 ### delete
+
+```lisp
+(delete 1 '(1 2 3 4 5))
+;=> (2 3 4 5)
+
+(delete 2 #(1 2 3 4 5))
+;=> #(1 3 4 5)
+
+(delete #\l "Hello, world!")
+;=> "Heo, word!"
+
+(delete 1 #*10101100)
+;=> #*0000
+```
+
 ### substitute
 ### nsubstitute
 ### nsubstitute
