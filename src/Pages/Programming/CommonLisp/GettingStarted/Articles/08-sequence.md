@@ -366,6 +366,21 @@
 ```
 
 ### remove
+
+```lisp
+(remove 1 '(1 2 3))
+;=> (2 3)
+
+(remove 2 #(1 2 3))
+;=> #(1 3)
+
+(remove #\H "Hello")
+;=> "ello"
+
+(remove 0 #*0101)
+;=> #*11
+```
+
 ### delete
 ### substitute
 ### nsubstitute
