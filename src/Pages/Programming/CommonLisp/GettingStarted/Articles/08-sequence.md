@@ -398,5 +398,22 @@
 ```
 
 ### substitute
+
+シーケンスを置換する
+
+```lisp
+(substitute 4 2 '(4 2 4 2 4 2))
+;=> (4 4 4 4 4 4)
+
+(substitute 6 1 #(1 1 1))
+;=> #(6 6 6)
+
+(substitute #\L #\l "Hello, world!")
+;=> "HeLLo, worLd!"
+
+(substitute 1 0 #*01011010)
+;=> #*11111111
+```
+
 ### nsubstitute
 ### nsubstitute
