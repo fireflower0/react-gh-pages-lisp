@@ -355,65 +355,80 @@
 ;=> 4
 ```
 
-### search
+### シーケンスから要素を探す
+
+[search](http://clhs.lisp.se/Body/f_search.htm)
 
 ```lisp
-(search '(1 2) '(0 1 2 3))
-;=> 1
+(search "world" "Hello, world!")
+;=> 7
 
-(search '(1 2) '(3 2 1 0 1 2))
-;=> 4
+(search '(0 1) '(2 4 6 1 3 5) :key #'oddp)
+;=> 2
 ```
 
-### remove
+### シーケンスから要素を削除する
+
+[remove/delete](http://clhs.lisp.se/Body/f_rm_rm.htm)
 
 ```lisp
-(remove 1 '(1 2 3))
-;=> (2 3)
+(defvar *list* '(1 2 3 4 5))
+;=> *LIST*
 
-(remove 2 #(1 2 3))
-;=> #(1 3)
+*list*
+;=> (1 2 3 4 5)
 
-(remove #\H "Hello")
-;=> "ello"
+(remove 2 *list*)
+;=> (1 3 4 5)
 
-(remove 0 #*0101)
-;=> #*11
+*list*
+;=> (1 2 3 4 5)
 ```
 
-### delete
-
 ```lisp
-(delete 1 '(1 2 3 4 5))
-;=> (2 3 4 5)
+(defvar *list* '(1 2 3 4 5))
+;=> *LIST*
 
-(delete 2 #(1 2 3 4 5))
-;=> #(1 3 4 5)
+*list*
+;=> (1 2 3 4 5)
 
-(delete #\l "Hello, world!")
-;=> "Heo, word!"
+(delete 2 *list*)
+;=> (1 3 4 5)
 
-(delete 1 #*10101100)
-;=> #*0000
+*list*
+;=> (1 3 4 5)
 ```
 
-### substitute
+### シーケンスを置換する
 
-シーケンスを置換する
+[substitute/nsubstitute](http://clhs.lisp.se/Body/f_sbs_s.htm)
 
 ```lisp
-(substitute 4 2 '(4 2 4 2 4 2))
-;=> (4 4 4 4 4 4)
+(defvar *str* "Hello, world!")
+;=> *STR*
 
-(substitute 6 1 #(1 1 1))
-;=> #(6 6 6)
+*str*
+;=> "Hello, world!"
 
-(substitute #\L #\l "Hello, world!")
+(substitute #\L #\l *str*)
 ;=> "HeLLo, worLd!"
 
-(substitute 1 0 #*01011010)
-;=> #*11111111
+;; 元のシーケンスには影響しない
+*str*
+;=> "Hello, world!"
 ```
 
-### nsubstitute
-### nsubstitute
+```lisp
+(defvar *str* "Hello, world!")
+*STR*
+
+*str*
+;=> "Hello, world!"
+
+(nsubstitute #\L #\l *str*)
+;=> "HeLLo, worLd!"
+
+;; 元のシーケンスに影響する
+*str*
+;=> "HeLLo, worLd!"
+```
