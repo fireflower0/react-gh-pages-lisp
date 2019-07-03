@@ -118,7 +118,9 @@
 ;=> #*1111
 ```
 
-### replace
+### シーケンスの置換
+
+[replace](http://clhs.lisp.se/Body/f_replac.htm)
 
 ```lisp
 (replace '(1 2 3 4 5) '(3 4))
@@ -134,7 +136,9 @@
 ;=> #*11110101
 ```
 
-### count
+### 指定したアイテムの数
+
+[count](http://clhs.lisp.se/Body/f_countc.htm)
 
 ```lisp
 (count 2 '(0 1 2 2 2 3 4 5))
