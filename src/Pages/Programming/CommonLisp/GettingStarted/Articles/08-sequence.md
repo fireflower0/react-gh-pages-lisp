@@ -94,7 +94,7 @@
 ;=> #*0101
 ```
 
-### fill
+### シーケンスの要素を指定の値で埋める
 
 [fill](http://www.lispworks.com/documentation/HyperSpec/Body/f_fill.htm)
 
@@ -154,7 +154,9 @@
 ;=> 4
 ```
 
-### reverse
+### シーケンスを反転する
+
+[reverse/nreverse](http://clhs.lisp.se/Body/f_revers.htm)
 
 ```lisp
 (reverse '(1 2 3 4 5))
@@ -169,8 +171,6 @@
 (reverse #*0101)
 ;=> #*1010
 ```
-
-### nreverse
 
 　∧ ∧  
 (,,ﾟДﾟ)「reverseと同じだがこっちは破壊的」
