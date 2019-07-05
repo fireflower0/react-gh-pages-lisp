@@ -62,6 +62,7 @@ class Sidebar extends React.Component {
           {this.MenuItem(["blog", ic_assignment, "Blog"], null)}
           {this.MenuItem(["programming", ic_keyboard, "Programming"],
                          [["commonlisp", "Common Lisp"]])}
+          {this.MenuItem(["tools", ic_assignment, "Tools"], null)}
         </SideNav>
       </Navigation>
     );
