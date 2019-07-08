@@ -244,7 +244,9 @@
 ;=> 0
 ```
 
-### sort
+### シーケンスをソートする
+
+[sort](http://clhs.lisp.se/Body/f_sort_.htm)
 
 ```lisp
 (sort '(1 2 3 4 5) #'>)
