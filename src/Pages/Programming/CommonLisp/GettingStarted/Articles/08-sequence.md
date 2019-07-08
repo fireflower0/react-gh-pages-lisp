@@ -189,7 +189,9 @@
 ;=> #*1010
 ```
 
-### concatenate
+### 文字列を結合する
+
+[concatenate](http://clhs.lisp.se/Body/f_concat.htm)
 
 ```lisp
 (concatenate 'list '(1 2 3) '(4 5 6))
@@ -205,7 +207,9 @@
 ;=> #*10100101
 ```
 
-### position
+### シーケンス要素を検索する
+
+[position](http://clhs.lisp.se/Body/f_pos_p.htm)
 
 ```lisp
 (position 3 '(1 2 3 4 5))
@@ -221,7 +225,7 @@
 ;=> 2
 ```
 
-### find
+[find](http://clhs.lisp.se/Body/f_find_.htm)
 
 ```lisp
 (find 4 '(1 2 3 4 5))
