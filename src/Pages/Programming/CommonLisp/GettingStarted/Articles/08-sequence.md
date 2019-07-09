@@ -96,7 +96,8 @@
 
 ### シーケンスの要素を指定の値で埋める
 
-[fill](http://www.lispworks.com/documentation/HyperSpec/Body/f_fill.htm)
+　∧ ∧  
+(,,ﾟДﾟ)「[fill](http://www.lispworks.com/documentation/HyperSpec/Body/f_fill.htm)」
 
 ```lisp
 (fill '(1 2 3) 1)
@@ -120,7 +121,8 @@
 
 ### シーケンスの置換
 
-[replace](http://clhs.lisp.se/Body/f_replac.htm)
+　∧ ∧  
+(,,ﾟДﾟ)「[replace](http://clhs.lisp.se/Body/f_replac.htm)」
 
 ```lisp
 (replace '(1 2 3 4 5) '(3 4))
@@ -138,7 +140,8 @@
 
 ### 指定したアイテムの数
 
-[count](http://clhs.lisp.se/Body/f_countc.htm)
+　∧ ∧  
+(,,ﾟДﾟ)「[count](http://clhs.lisp.se/Body/f_countc.htm)」
 
 ```lisp
 (count 2 '(0 1 2 2 2 3 4 5))
@@ -156,7 +159,8 @@
 
 ### シーケンスを反転する
 
-[reverse/nreverse](http://clhs.lisp.se/Body/f_revers.htm)
+　∧ ∧  
+(,,ﾟДﾟ)「[reverse/nreverse](http://clhs.lisp.se/Body/f_revers.htm)」
 
 ```lisp
 (reverse '(1 2 3 4 5))
@@ -191,7 +195,8 @@
 
 ### 文字列を結合する
 
-[concatenate](http://clhs.lisp.se/Body/f_concat.htm)
+　∧ ∧  
+(,,ﾟДﾟ)「[concatenate](http://clhs.lisp.se/Body/f_concat.htm)」
 
 ```lisp
 (concatenate 'list '(1 2 3) '(4 5 6))
@@ -209,7 +214,8 @@
 
 ### シーケンス要素を検索する
 
-[position](http://clhs.lisp.se/Body/f_pos_p.htm)
+　∧ ∧  
+(,,ﾟДﾟ)「[position](http://clhs.lisp.se/Body/f_pos_p.htm)」
 
 ```lisp
 (position 3 '(1 2 3 4 5))
@@ -225,7 +231,8 @@
 ;=> 2
 ```
 
-[find](http://clhs.lisp.se/Body/f_find_.htm)
+　∧ ∧  
+(,,ﾟДﾟ)「[find](http://clhs.lisp.se/Body/f_find_.htm)」
 
 ```lisp
 (find 4 '(1 2 3 4 5))
@@ -246,7 +253,8 @@
 
 ### シーケンスをソートする
 
-[sort](http://clhs.lisp.se/Body/f_sort_.htm)
+　∧ ∧  
+(,,ﾟДﾟ)「[sort](http://clhs.lisp.se/Body/f_sort_.htm)」
 
 ```lisp
 (sort '(1 2 3 4 5) #'>)
@@ -259,7 +267,10 @@
 ;=> "GFEDCBA"
 ```
 
-### merge
+### 2つのシーケンスをマージする
+
+　∧ ∧  
+(,,ﾟДﾟ)「[merge](http://clhs.lisp.se/Body/f_merge.htm)」
 
 ```lisp
 (merge 'list '(1 2 3) '(4 5 6) #'<)
@@ -287,7 +298,10 @@
 ;=> #*10101010
 ```
 
-### map
+### シーケンスのそれぞれの要素に関数を適用する
+
+　∧ ∧  
+(,,ﾟДﾟ)「[map](http://clhs.lisp.se/Body/f_map.htm)」
 
 ```lisp
 (map 'list #'oddp '(1 2 3 4 5))
@@ -303,17 +317,21 @@
 ;=> #*01010
 ```
 
-### some
+### シーケンスの要素をテストする
 
 　∧ ∧  
-(,,ﾟДﾟ)「[some](http://clhs.lisp.se/Body/f_everyc.htm)はpredicateの呼び出しによって返される最初の非nil値を返す」
+(,,ﾟДﾟ)「[every/some/notany/notevery](http://clhs.lisp.se/Body/f_everyc.htm)」
+
+　∧ ∧  
+(,,ﾟДﾟ)「`some`はpredicateの呼び出しによって返される最初の非nil値を返す」
 
 ```lisp
 (some #'= '(1 2 3 4 5) '(5 4 3 2 1))
 ;=> T
 ```
 
-### every
+　∧ ∧  
+(,,ﾟДﾟ)「`every`は」
 
 ```lisp
 (every #'evenp '(1 3 5))
@@ -323,10 +341,8 @@
 ;=> T
 ```
 
-### notany
-
 　∧ ∧  
-(,,ﾟДﾟ)「predicateを呼び出してもtrueが返されない場合に限り、trueを返す」
+(,,ﾟДﾟ)「`some`はpredicateを呼び出してもtrueが返されない場合に限り、trueを返す」
 
 ```lisp
 (notany #'> '(1 2 3 4) '(5 6 7 8) '(9 10 11 12))
@@ -336,10 +352,8 @@
 ;=> NIL
 ```
 
-### notevery
-
 　∧ ∧  
-(,,ﾟДﾟ)「predicateのすべての呼び出しがtrueを返すのではない場合に限り、trueを返す」
+(,,ﾟДﾟ)「`notevery`はpredicateのすべての呼び出しがtrueを返すのではない場合に限り、trueを返す」
 
 ```lisp
 (notevery #'< '(9 10 11 12) '(5 6 7 8) '(1 2 3 4))
@@ -367,7 +381,8 @@
 
 ### シーケンスから要素を探す
 
-[search](http://clhs.lisp.se/Body/f_search.htm)
+　∧ ∧  
+(,,ﾟДﾟ)「[search](http://clhs.lisp.se/Body/f_search.htm)」
 
 ```lisp
 (search "world" "Hello, world!")
@@ -379,7 +394,8 @@
 
 ### シーケンスから要素を削除する
 
-[remove/delete](http://clhs.lisp.se/Body/f_rm_rm.htm)
+　∧ ∧  
+(,,ﾟДﾟ)「[remove/delete](http://clhs.lisp.se/Body/f_rm_rm.htm)」
 
 ```lisp
 (defvar *list* '(1 2 3 4 5))
@@ -411,7 +427,8 @@
 
 ### シーケンスを置換する
 
-[substitute/nsubstitute](http://clhs.lisp.se/Body/f_sbs_s.htm)
+　∧ ∧  
+(,,ﾟДﾟ)「[substitute/nsubstitute](http://clhs.lisp.se/Body/f_sbs_s.htm)」
 
 ```lisp
 (defvar *str* "Hello, world!")
