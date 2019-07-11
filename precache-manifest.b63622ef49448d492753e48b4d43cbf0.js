@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "2570783dc553d86b2f811fbc38a2da7a",
-    "url": "/react-gh-pages-lisp/static/media/05-predicate-function.2570783d.md"
+    "revision": "47bbb0badda34373159e30ebc54344fd",
+    "url": "/react-gh-pages-lisp/static/media/06-conditional-branching.47bbb0ba.md"
   },
   {
-    "revision": "55bb4d5cacff5da48253",
-    "url": "/react-gh-pages-lisp/static/js/main.d73f71ca.chunk.js"
+    "revision": "4b2fd10ae7917adbd196",
+    "url": "/react-gh-pages-lisp/static/js/main.25116790.chunk.js"
   },
   {
     "revision": "80bd2ff55ccc85f43fd25f4c83437f3f",
@@ -32,16 +32,20 @@ self.__precacheManifest = [
     "url": "/react-gh-pages-lisp/static/media/04-variables-constants.a058485d.md"
   },
   {
+    "revision": "2570783dc553d86b2f811fbc38a2da7a",
+    "url": "/react-gh-pages-lisp/static/media/05-predicate-function.2570783d.md"
+  },
+  {
     "revision": "a0944f58fc406e23e94c",
     "url": "/react-gh-pages-lisp/static/js/runtime~main.ed59056f.js"
   },
   {
-    "revision": "47bbb0badda34373159e30ebc54344fd",
-    "url": "/react-gh-pages-lisp/static/media/06-conditional-branching.47bbb0ba.md"
-  },
-  {
     "revision": "04615c5d65e3738b1a4634d2ada1bde4",
     "url": "/react-gh-pages-lisp/static/media/07-loop.04615c5d.md"
+  },
+  {
+    "revision": "cb94253cd150187b9163714edb05963d",
+    "url": "/react-gh-pages-lisp/static/media/08-sequence.cb94253c.md"
   },
   {
     "revision": "bf536232442a0d7235ed1920cfe7e732",
@@ -60,11 +64,11 @@ self.__precacheManifest = [
     "url": "/react-gh-pages-lisp/static/media/04-2d-rendering.c094aa8d.md"
   },
   {
-    "revision": "96a72da550325a3a8d72",
-    "url": "/react-gh-pages-lisp/static/js/2.e508fa01.chunk.js"
+    "revision": "458791c8cf912f5e70c5",
+    "url": "/react-gh-pages-lisp/static/js/2.529e5279.chunk.js"
   },
   {
-    "revision": "1f3264fea2b7a97d19278d42e563de08",
+    "revision": "d810cd269d4a7ad3d009559ddd38357b",
     "url": "/react-gh-pages-lisp/index.html"
   }
 ];
