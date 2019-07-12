@@ -30,6 +30,7 @@
     "gh-pages": "^2.0.1",
     "react-icons-kit": "^1.3.1",
     "react-markdown": "^4.0.8",
+    "react-paint": "^1.0.1",
     "react-router-dom": "^5.0.0",
     "react-sidenav": "^3.1.9",
     "react-syntax-highlighter": "^10.2.1",
