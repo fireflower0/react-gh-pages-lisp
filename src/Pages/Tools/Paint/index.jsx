@@ -1,24 +1,19 @@
 import React from 'react';
-import ReactPaint from 'react-paint';
-
-const props = {
-  style: {
-    background: 'tomato',
-    /* Arbitrary css styles */
-  },
-  brushCol: '#ffffff',
-  lineWidth: 10,
-  className: 'react-paint',
-  height: 500,
-  width: 500,
-  onDraw: () => { console.log('i have drawn!'); },
-};
+import {SketchField, Tools} from 'react-sketch';
 
 class Paint extends React.Component {
 
   render() {
     return (
-      <ReactPaint {...props} />
+      <div>
+        <h1>ペイント</h1>
+        <SketchField width='1024px' 
+                     height='768px' 
+                     tool={Tools.Pencil}
+                     lineColor='black'
+                     backgroundColor='white'
+                     lineWidth={3}/>
+      </div>
     );
   }
 }
