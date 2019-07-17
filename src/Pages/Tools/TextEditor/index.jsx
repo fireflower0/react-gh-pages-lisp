@@ -1,62 +1,45 @@
 import React from 'react';
-import { Editor, EditorState, RichUtils } from 'draft-js';
-
-const styles = {
-  editor: {
-    color: 'black',
-    backgroundColor: '#FAF0E6',
-  }
-};
+import MonacoEditor from 'react-monaco-editor';
 
 class TextEditor extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
-      editorState: EditorState.createEmpty()
-    };
-    this.onChange = (editorState) => {
-      this.setState({editorState});
+      code: '// type your code...',
     }
-    this.setEditor = (editor) => {
-      this.editor = editor;
-    };
-    this.focusEditor = () => {
-      if (this.editor) {
-        this.editor.focus();
-      }
-    };
   }
 
-  componentDidMount() {
-    this.focusEditor();
+  editorDidMount(editor, monaco) {
+    console.log('editorDidMount', editor);
+    editor.focus();
   }
 
-  onBoldBtnClick() {
-    this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, 'BOLD'));
-  }
-
-  onItalicBtnClick() {
-    this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, 'ITALIC'));
-  }
-
-  onUnderlineBtnClick() {
-    this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, 'UNDERLINE'));
+  onChange(newValue, e) {
+    console.log('onChange', newValue, e);
   }
 
   render() {
+    const code = this.state.code;
+    const options = {
+      selectOnLineNumbers: true,
+      fontFamily: "RictyDiminishedDiminished",
+      fontSize: 16,
+    };
+
     return (
       <div>
         <h1>テキストエディタ</h1>
-        <button onClick={this.onBoldBtnClick.bind(this)} >Bold</button>
-        <button onClick={this.onItalicBtnClick.bind(this)} >Italic</button>
-        <button onClick={this.onUnderlineBtnClick.bind(this)} >Underline</button>
-        <div style={styles.editor} onClick={this.focusEditor}>
-          <Editor
-            ref={this.setEditor}
-            editorState={this.state.editorState}
-            onChange={this.onChange}
-          />
-        </div>
+        <MonacoEditor
+          width="800"
+          height="600"
+          language="clojure"
+          theme="vs-dark"
+          value={code}
+          options={options}
+          onChange={this.onChange}
+          editorDidMount={this.editorDidMount}
+        />
       </div>
     );
   }
