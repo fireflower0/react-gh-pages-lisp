@@ -24,6 +24,7 @@ class Tools extends React.Component {
         <h1>Tools</h1>
         {this.makeList("/tools/texteditor", "テキストエディタ")}
         {this.makeList("/tools/paint", "ペイント")}
+        {this.makeList("/tools/graphs", "グラフ")}
       </div>
     );
   }
