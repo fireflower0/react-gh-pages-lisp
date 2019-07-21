@@ -26,9 +26,9 @@ class RaspberryPi extends React.Component {
     return (
       <div>
         <h1>Raspberry Pi 電子工作</h1>
-        {this.makeArticle("Lチカ", require('./Articles/blink.md'))}
-        {this.makeArticle("タクトスイッチ", require(''))}
-        {this.makeArticle("センサー", require(''))}
+        {this.makeArticle("Lチカ", require('./Articles/01-blink.md'))}
+        {/* {this.makeArticle("タクトスイッチ", require(''))} */}
+        {/* {this.makeArticle("センサー", require(''))} */}
       </div>
     );
   }
