@@ -13,7 +13,6 @@ import WebApp from './Pages/Programming/CommonLisp/WebApp';
 import Tools from './Pages/Tools';
 import TextEditor from './Pages/Tools/TextEditor';
 import Paint from './Pages/Tools/Paint';
-import Graphs from './Pages/Tools/Graphs';
 
 export const AppContainer = styled.div`
   display: flex;
@@ -45,7 +44,6 @@ class App extends React.Component {
               <Route path='/programming/commonlisp/gettingstarted' component={GettingStarted} />
               <Route path='/programming/commonlisp' component={CommonLisp} />
               <Route path='/programming' exact component={Programming} />
-              <Route path='/tools/graphs' component={Graphs} />
               <Route path='/tools/paint' component={Paint} />
               <Route path='/tools/texteditor' component={TextEditor} />
               <Route path='/tools' exact component={Tools} />
