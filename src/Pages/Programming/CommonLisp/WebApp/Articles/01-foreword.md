@@ -26,3 +26,37 @@ qlot install
 ```shell
 npm install
 ```
+
+## データベース
+
+# PostgreSQLのインストール
+
+以下のコマンドでPostgreSQLをインストールします。
+
+```
+sudo apt install postgresql
+```
+
+## バージョン確認
+
+以下のコマンドで、PostgreSQLのバージョンを確認します。
+
+```
+psql --version
+```
+
+## フルパス確認
+
+以下のコマンドで、PostgreSQLのフルパスを確認します。
+
+```
+which psql
+```
+
+## プロセス確認
+
+以下のコマンドで、プロセスが起動していることを確認します。
+
+```
+ps aux | grep postgres | grep -v grep
+```
