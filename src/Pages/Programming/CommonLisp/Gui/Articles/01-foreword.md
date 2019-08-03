@@ -2,12 +2,19 @@
 
 ## GTK3
 
+GTK3ライブラリを以下のコマンドでインストール
+
 ```
 $ sudo apt install libgtk-3-dev
-$ sudo apt install gtk-3-examples
 ```
 
 ## GTK3デモプログラム
+
+デモプログラムは以下のコマンドでインストール
+
+```
+$ sudo apt install gtk-3-examples
+```
 
 ### GTK3 Demo
 
