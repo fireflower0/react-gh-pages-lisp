@@ -143,3 +143,59 @@ models/user.lisp
           :accessor user-email))
   (:metaclass dao-table-class))
 ```
+
+## DBマイグレーション
+
+
+```
+$ ./quicklisp/bin/lake db:generate-migrations
+
+CREATE TABLE "user" (
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "name" VARCHAR(20) NOT NULL,
+    "email" VARCHAR(255) NOT NULL,
+    "created_at" TIMESTAMP,
+    "updated_at" TIMESTAMP
+);
+Successfully generated: /home/fireflower0/Programming/CommonLisp/WebApp/hello-app/db/migrations/20190805125858.up.sql
+```
+
+### ファイル適用
+
+```
+$ ./quicklisp/bin/lake db:migrate
+
+Applying '/home/fireflower0/Programming/CommonLisp/WebApp/hello-app/db/schema.sql'...
+-> CREATE TABLE "user" (
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "name" VARCHAR(20) NOT NULL,
+    "email" VARCHAR(255) NOT NULL,
+    "created_at" TIMESTAMP,
+    "updated_at" TIMESTAMP
+);
+-> CREATE TABLE IF NOT EXISTS "schema_migrations" (
+    "version" VARCHAR(255) PRIMARY KEY
+);
+-> INSERT INTO schema_migrations (version) VALUES ('20190805125858');
+Successfully updated to the version NIL.
+```
+
+### テスト環境にも適用
+
+```
+$ APP_ENV=test quicklisp/bin/lake db:migrate
+
+Applying '/home/fireflower0/Programming/CommonLisp/WebApp/hello-app/db/schema.sql'...
+-> CREATE TABLE "user" (
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "name" VARCHAR(20) NOT NULL,
+    "email" VARCHAR(255) NOT NULL,
+    "created_at" TIMESTAMP,
+    "updated_at" TIMESTAMP
+);
+-> CREATE TABLE IF NOT EXISTS "schema_migrations" (
+    "version" VARCHAR(255) PRIMARY KEY
+);
+-> INSERT INTO schema_migrations (version) VALUES ('20190805125858');
+Successfully updated to the version NIL.
+```
