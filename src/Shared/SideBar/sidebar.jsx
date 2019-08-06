@@ -5,7 +5,7 @@ import { withRR4 } from "react-sidenav/withRR4";
 import { Icon } from 'react-icons-kit';
 import { ic_home } from 'react-icons-kit/md/ic_home';
 import { ic_keyboard } from 'react-icons-kit/md/ic_keyboard';
-import { ic_assignment } from 'react-icons-kit/md/ic_assignment'
+import { ic_assignment } from 'react-icons-kit/md/ic_assignment';
 
 export const Navigation = styled.div`
   width: 220px;
@@ -62,7 +62,6 @@ class Sidebar extends React.Component {
           {this.MenuItem(["blog", ic_assignment, "Blog"], null)}
           {this.MenuItem(["programming", ic_keyboard, "Programming"],
                          [["commonlisp", "Common Lisp"]])}
-          {this.MenuItem(["tools", ic_assignment, "Tools"], null)}
         </SideNav>
       </Navigation>
     );
