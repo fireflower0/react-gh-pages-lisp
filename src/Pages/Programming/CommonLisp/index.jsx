@@ -25,7 +25,6 @@ class CommonLisp extends React.Component {
         {this.makeList("/programming/commonlisp/gettingstarted", "Common Lisp入門")}
         {this.makeList("/programming/commonlisp/game", "ゲームプログラミング")}
         {this.makeList("/programming/commonlisp/raspberrypi", "Raspberry Pi 電子工作")}
-        {this.makeList("/programming/commonlisp/webapp", "Webアプリケーション")}
         {this.makeList("/programming/commonlisp/gui", "GUIアプリケーション")}
       </div>
     );
