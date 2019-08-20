@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/react-gh-pages-lisp/static/media/06-conditional-branching.47bbb0ba.md"
   },
   {
-    "revision": "9e0cd1c4a34c67088e39",
-    "url": "/react-gh-pages-lisp/static/js/main.7609d013.chunk.js"
+    "revision": "6b161af7d5cd48eae184",
+    "url": "/react-gh-pages-lisp/static/js/main.7170a2b9.chunk.js"
   },
   {
     "revision": "80bd2ff55ccc85f43fd25f4c83437f3f",
@@ -68,11 +68,11 @@ self.__precacheManifest = [
     "url": "/react-gh-pages-lisp/static/media/01-foreword.16b478b5.md"
   },
   {
-    "revision": "5ec8ebcd293d7437faa7",
-    "url": "/react-gh-pages-lisp/static/js/2.3b3b3c6c.chunk.js"
+    "revision": "fb64f3e917cf2927e054",
+    "url": "/react-gh-pages-lisp/static/js/2.b772c3e0.chunk.js"
   },
   {
-    "revision": "b653f2202222255c6f56c4b2a0fd61ea",
+    "revision": "06c85943249f51e6799025f775b9a59b",
     "url": "/react-gh-pages-lisp/index.html"
   }
 ];
