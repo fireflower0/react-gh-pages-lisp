@@ -35,7 +35,7 @@ class GettingStarted extends React.Component {
       <ul>
         {this.makeLinkList("Common Lisp HyperSpec", "http://www.lispworks.com/documentation/HyperSpec/Front/index.htm")}
         {this.makeLinkList("逆引きCommon Lisp", "https://lisphub.jp/common-lisp/cookbook/")}
-        {this.makeLinkList("独学 Common Lisp", "https://lisp.satoshiweb.net/")}
+        {this.makeLinkList("ANSI Common Lisp", "http://www.paulgraham.com/acl.html")}
         {this.makeLinkList("Common Lisp 入門 (xyzzy Lisp Programming)", "http://www.nct9.ne.jp/m_hiroi/xyzzy_lisp.html")}
         {this.makeLinkList("いまから始めるCommon Lisp (Qiita)", "https://qiita.com/t-sin/items/054c2ff315ec3b9d3bdc")}
         {this.makeLinkList("Practical Common Lisp", "http://www.gigamonkeys.com/book/")}
