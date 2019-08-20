@@ -7,21 +7,21 @@ const Body = styled.div`
   background-color: #FAF0E6;
   margin-bottom: 30px;
   border-collapse: collapse;
-`
+`;
 
 const Table = styled.div`
   display: table;
-`
+`;
 
 const Row = styled.div`
   display: table-row;
-`
+`;
 
 const Div = styled(Row)`
   display: table-cell;
   margin: 15px;
   padding: 15px;
-`
+`;
 
 class Home extends React.Component {
   makeTable(header, data) {

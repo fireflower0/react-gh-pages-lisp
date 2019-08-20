@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Markdown from '../../../../Shared/Markdown/markdown';
+import Markdown from '../../../../Shared/Markdown';
 
 const Article = styled.article`
   width: 100%;

@@ -5,24 +5,24 @@ import CodeBlock from './codeblock';
 
 const MarkDown = styled(ReactMarkdown)`
   width: 1000px;
-`
+`;
 
 class Markdown extends React.Component {
   constructor(props) {
-    super(props)
+      super(props);
     this.state = {
       markdown: null
-    }
+    };
   }
 
   componentDidMount() {
     fetch(this.props.mdFilePath).then(response => {
-      return response.text()
+        return response.text();
     }).then(text => {
       this.setState({
         markdown: text
-      })
-    })
+      });
+    });
   }
 
   render() {

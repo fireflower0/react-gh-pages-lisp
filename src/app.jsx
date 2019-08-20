@@ -1,7 +1,7 @@
 import React from 'react';
 import { MemoryRouter as Router, Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
-import Sidebar from './Shared/SideBar/sidebar';
+import Sidebar from './Shared/SideBar';
 import Home from './Pages/Home';
 import Blog from './Pages/Blog';
 import Programming from './Pages/Programming';
