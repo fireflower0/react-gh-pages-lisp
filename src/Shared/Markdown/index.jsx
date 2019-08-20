@@ -1,26 +1,41 @@
-import React from "react";
-import PropTypes from "prop-types";
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { rainbow } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import React from 'react';
+import styled from 'styled-components';
+import ReactMarkdown from "react-markdown";
+import CodeBlock from './CodeBlock';
 
-class CodeBlock extends React.Component {
-  static propTypes = {
-    value: PropTypes.string.isRequired,
-    language: PropTypes.string
-  };
+const MarkDown = styled(ReactMarkdown)`
+  width: 1000px;
+`;
 
-  static defaultProps = {
-    language: null
-  };
+class Markdown extends React.Component {
+  constructor(props) {
+      super(props);
+    this.state = {
+      markdown: null
+    };
+  }
+
+  componentDidMount() {
+    fetch(this.props.mdFilePath).then(response => {
+        return response.text();
+    }).then(text => {
+      this.setState({
+        markdown: text
+      });
+    });
+  }
 
   render() {
-    const { language, value } = this.props;
+    const { markdown } = this.state;
     return (
-      <SyntaxHighlighter language={language} style={rainbow}>
-        {value}
-      </SyntaxHighlighter>
+      <MarkDown
+        source={ markdown }
+        renderers={{ code: CodeBlock }}
+        escapeHtml={false}
+        linkTarget="_blank"
+      />
     );
   }
 }
 
-export default CodeBlock;
+export default Markdown;
