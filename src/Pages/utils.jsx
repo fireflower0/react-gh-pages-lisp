@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Markdown from '../Shared/Markdown';
 
@@ -9,6 +10,14 @@ const Article = styled.article`
   margin-bottom: 30px;
   background-color: #FAF0E6;
 `;
+
+export const makeList = (link, title) => {
+  return(
+    <Article>
+      <Link to={link}>{title}</Link>
+    </Article>
+  );
+}
 
 export const makeArticle = (title, mdFilePath) => {
   return (

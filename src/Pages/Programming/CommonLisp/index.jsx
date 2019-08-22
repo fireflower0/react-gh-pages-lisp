@@ -1,32 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-
-const Article = styled.article`
-  padding: 10px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  background-color: #FAF0E6;
-`;
+import { makeList } from '../../utils';
 
 class CommonLisp extends React.Component {
-  makeList(link, title) {
-    return(
-      <Article>
-        <Link to={link}>{title}</Link>
-      </Article>
-    );
-  }
-
   render() {
     return (
       <div>
         <h1>Common Lisp</h1>
-        {this.makeList("/programming/commonlisp/gettingstarted", "Common Lisp入門")}
-        {this.makeList("/programming/commonlisp/game", "ゲームプログラミング")}
-        {this.makeList("/programming/commonlisp/raspberrypi", "Raspberry Pi 電子工作")}
-        {this.makeList("/programming/commonlisp/gui", "GUIアプリケーション")}
-        {this.makeList("/programming/commonlisp/webapp", "Webアプリケーション")}
+        {makeList("/programming/commonlisp/gettingstarted", "Common Lisp入門")}
+        {makeList("/programming/commonlisp/game", "ゲームプログラミング")}
+        {makeList("/programming/commonlisp/raspberrypi", "Raspberry Pi 電子工作")}
+        {makeList("/programming/commonlisp/gui", "GUIアプリケーション")}
+        {makeList("/programming/commonlisp/webapp", "Webアプリケーション")}
       </div>
     );
   }
