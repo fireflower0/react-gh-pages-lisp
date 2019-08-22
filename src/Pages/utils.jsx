@@ -17,7 +17,7 @@ export const makeList = (link, title) => {
       <Link to={link}>{title}</Link>
     </Article>
   );
-}
+};
 
 export const makeArticle = (title, mdFilePath) => {
   return (
