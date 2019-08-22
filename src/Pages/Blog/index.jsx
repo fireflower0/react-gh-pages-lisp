@@ -1,30 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
-import Markdown from '../../Shared/Markdown';
-
-const Article = styled.article`
-  width: 100%;
-  padding: 10px;
-  background-color: #FAF0E6;
-`;
+import { makeArticle } from '../utils';
 
 class Blog extends React.Component {
-  makeBlog(title, mdFilePath){
-    return (
-      <Article>
-        <details>
-          <summary>{title}</summary>
-          <Markdown mdFilePath={mdFilePath} />
-        </details>
-      </Article>
-    );
-  }
-
   render() {
     return (
       <div>
         <h1>Blog</h1>
-        {this.makeBlog("サンプル", require("./Articles/Sample/sample.md"))}
+        {makeArticle("サンプル", require("./Articles/Sample/sample.md"))}
       </div>
     );
   }
