@@ -26,30 +26,37 @@ export const Body = styled.div`
   margin-left: auto;
 `;
 
-class App extends React.Component {
-  render() {
-    return (
-      <Router>
-        <AppContainer>
-          <Sidebar />
-          <Body>
-            <Switch>
-              <Route path='/home' component={Home} />
-              <Route path='/blog' component={Blog} />
-              <Route path='/programming/commonlisp/webapp' component={WebApp} />
-              <Route path='/programming/commonlisp/raspberrypi' component={RaspberryPi} />
-              <Route path='/programming/commonlisp/game' component={Game} />
-              <Route path='/programming/commonlisp/gui' component={Gui} />
-              <Route path='/programming/commonlisp/gettingstarted' component={GettingStarted} />
-              <Route path='/programming/commonlisp' component={CommonLisp} />
-              <Route path='/programming' exact component={Programming} />
-              <Route path='/' exact component={Home} />
-            </Switch>
-          </Body>
-        </AppContainer>
-      </Router>
-    );
-  }
-}
+const App = () => {
+  return (
+    <Router>
+      <AppContainer>
+        <Sidebar />
+        <Body>
+          <Switch>
+            <Route path='/home' component={Home} />
+            <Route path='/blog' component={Blog} />
+            <Route
+              path='/programming/commonlisp/webapp'
+              component={WebApp}
+            />
+            <Route
+              path='/programming/commonlisp/raspberrypi'
+              component={RaspberryPi}
+            />
+            <Route path='/programming/commonlisp/game' component={Game} />
+            <Route path='/programming/commonlisp/gui' component={Gui} />
+            <Route
+              path='/programming/commonlisp/gettingstarted'
+              component={GettingStarted}
+            />
+            <Route path='/programming/commonlisp' component={CommonLisp} />
+            <Route path='/programming' exact component={Programming} />
+            <Route path='/' exact component={Home} />
+          </Switch>
+        </Body>
+      </AppContainer>
+    </Router>
+  );
+};
 
 export default App;
