@@ -1,5 +1,5 @@
 import React from 'react';
-import { MemoryRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 import Sidebar from './Shared/SideBar';
 import Home from './Pages/Home';
@@ -12,14 +12,14 @@ import Gui from './Pages/Programming/CommonLisp/Gui';
 import WebApp from './Pages/Programming/CommonLisp/WebApp';
 import RaspberryPi from './Pages/Programming/CommonLisp/RaspberryPi';
 
-export const AppContainer = styled.div`
+const AppContainer = styled.div`
   display: flex;
   height: 100%;
   width: 100%;
   overflow-y: auto;
 `;
 
-export const Body = styled.div`
+const Body = styled.div`
   height: 100vh;
   width: 1000px;
   margin-right: auto;
@@ -33,8 +33,22 @@ const App = () => {
         <Sidebar />
         <Body>
           <Switch>
-            <Route path='/home' component={Home} />
-            <Route path='/blog' component={Blog} />
+            <Route
+              path='/'
+              exact component={Home}
+            />
+            <Route
+              path='/home'
+              component={Home}
+            />
+            <Route
+              path='/blog'
+              component={Blog}
+            />
+            <Route
+              path='/programming'
+              exact component={Programming}
+            />
             <Route
               path='/programming/commonlisp/webapp'
               component={WebApp}
@@ -43,15 +57,21 @@ const App = () => {
               path='/programming/commonlisp/raspberrypi'
               component={RaspberryPi}
             />
-            <Route path='/programming/commonlisp/game' component={Game} />
-            <Route path='/programming/commonlisp/gui' component={Gui} />
+            <Route
+              path='/programming/commonlisp/game'
+              component={Game}
+            />
+            <Route
+              path='/programming/commonlisp/gui'
+              component={Gui} />
             <Route
               path='/programming/commonlisp/gettingstarted'
               component={GettingStarted}
             />
-            <Route path='/programming/commonlisp' component={CommonLisp} />
-            <Route path='/programming' exact component={Programming} />
-            <Route path='/' exact component={Home} />
+            <Route
+              path='/programming/commonlisp'
+              component={CommonLisp}
+            />
           </Switch>
         </Body>
       </AppContainer>
