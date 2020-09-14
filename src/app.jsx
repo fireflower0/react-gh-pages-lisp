@@ -2,15 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 import Sidebar from './Shared/SideBar';
-import Home from './Pages/Home';
-import Blog from './Pages/Blog';
-import Programming from './Pages/Programming';
-import CommonLisp from './Pages/Programming/CommonLisp';
-import GettingStarted from './Pages/Programming/CommonLisp/GettingStarted';
-import Game from './Pages/Programming/CommonLisp/Game';
-import Gui from './Pages/Programming/CommonLisp/Gui';
-import WebApp from './Pages/Programming/CommonLisp/WebApp';
-import RaspberryPi from './Pages/Programming/CommonLisp/RaspberryPi';
+import { routes } from './routes';
 
 const AppContainer = styled.div`
   display: flex;
@@ -27,51 +19,21 @@ const Body = styled.div`
 `;
 
 const App = () => {
+  const makeRoutes = (route) => (
+    <Route
+      path={route.path}
+      exact={route.exact}
+      component={route.component}
+    />
+  );
+
   return (
     <Router>
       <AppContainer>
         <Sidebar />
         <Body>
           <Switch>
-            <Route
-              path='/'
-              exact component={Home}
-            />
-            <Route
-              path='/home'
-              component={Home}
-            />
-            <Route
-              path='/blog'
-              component={Blog}
-            />
-            <Route
-              path='/programming'
-              exact component={Programming}
-            />
-            <Route
-              path='/programming/commonlisp/webapp'
-              component={WebApp}
-            />
-            <Route
-              path='/programming/commonlisp/raspberrypi'
-              component={RaspberryPi}
-            />
-            <Route
-              path='/programming/commonlisp/game'
-              component={Game}
-            />
-            <Route
-              path='/programming/commonlisp/gui'
-              component={Gui} />
-            <Route
-              path='/programming/commonlisp/gettingstarted'
-              component={GettingStarted}
-            />
-            <Route
-              path='/programming/commonlisp'
-              component={CommonLisp}
-            />
+            {routes.map(route => makeRoutes(route))}
           </Switch>
         </Body>
       </AppContainer>
