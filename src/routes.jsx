@@ -1,12 +1,12 @@
 import Home from './Pages/Home';
 import Blog from './Pages/Blog';
 import Programming from './Pages/Programming';
-import CommonLisp from './Pages/Programming/CommonLisp';
-import GettingStarted from './Pages/Programming/CommonLisp/GettingStarted';
-import Game from './Pages/Programming/CommonLisp/Game';
-import Gui from './Pages/Programming/CommonLisp/Gui';
-import WebApp from './Pages/Programming/CommonLisp/WebApp';
-import RaspberryPi from './Pages/Programming/CommonLisp/RaspberryPi';
+import CommonLisp from './Pages/CommonLisp';
+import GettingStarted from './Pages/CommonLisp/GettingStarted';
+import Game from './Pages/CommonLisp/Game';
+import Gui from './Pages/CommonLisp/Gui';
+import WebApp from './Pages/CommonLisp/WebApp';
+import RaspberryPi from './Pages/CommonLisp/RaspberryPi';
 
 export const routes = [{
   path: '/',

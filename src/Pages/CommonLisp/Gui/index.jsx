@@ -1,15 +1,15 @@
 import React from 'react';
-import { makeArticle } from '../../../utils';
+import { makeArticle } from '../../utils';
 
-class WebApp extends React.Component {
+class Gui extends React.Component {
   render() {
     return (
       <div>
-        <h1>Webアプリケーション</h1>
+        <h1>GUIアプリケーション</h1>
         {makeArticle("第1章 開発環境構築", require("./Articles/01-foreword.md"))}
       </div>
     );
   }
 }
 
-export default WebApp;
+export default Gui;

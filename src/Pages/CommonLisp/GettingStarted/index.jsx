@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeLinkList, makeArticle } from '../../../utils';
+import { makeLinkList, makeArticle } from '../../utils';
 
 class GettingStarted extends React.Component {
   makeReferences(){

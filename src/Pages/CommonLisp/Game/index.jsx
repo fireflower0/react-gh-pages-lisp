@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeArticle } from '../../../utils';
+import { makeArticle } from '../../utils';
 
 class Game extends React.Component {
   render() {
