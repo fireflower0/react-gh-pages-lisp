@@ -1,6 +1,6 @@
 文字列を描画します。
 
-![string-drawing](https://github.com/fireflower0/react-gh-pages-lisp/blob/master/src/Pages/Programming/CommonLisp/Game/Articles/Pic/03-string-drawing.png?raw=true)
+![string-drawing](https://github.com/fireflower0/react-gh-pages-lisp/blob/master/src/Pages/CommonLisp/Game/Articles/Pic/03-string-drawing.png?raw=true)
 
 フォントはIPAex明朝(`ipaexm.ttf`)とIPAexゴシック(`ipaexg.ttf`)を使用しています。  
 以下からダウロードできます。  
