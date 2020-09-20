@@ -1,15 +1,18 @@
 import React from 'react';
 import { makeArticle } from '../../utils';
 
-class Gui extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>GUIアプリケーション</h1>
-        {makeArticle("第1章 開発環境構築", require("./Articles/01-foreword.md"))}
-      </div>
-    );
-  }
-}
+const Gui = () => {
+  const articleRoutes = [{
+    label: '第1章 開発環境構築',
+    url: require("./Articles/01-foreword.md"),
+  }];
+
+  return (
+    <div>
+      <h1>GUIアプリケーション</h1>
+      {articleRoutes.map(route => makeArticle(route.label, route.url))}
+    </div>
+  );
+};
 
 export default Gui;
