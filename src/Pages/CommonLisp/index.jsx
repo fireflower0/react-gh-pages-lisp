@@ -2,14 +2,27 @@ import React from 'react';
 import { makeList } from '../utils';
 
 const CommonLisp = () => {
+  const lists = [{
+    label: 'Common Lisp入門',
+    route: '/programming/commonlisp/gettingstarted',
+  }, {
+    label: 'ゲームプログラミング',
+    route: '/programming/commonlisp/game',
+  }, {
+    label: 'Raspberry Pi 電子工作',
+    route: '/programming/commonlisp/raspberrypi',
+  }, {
+    label: 'GUIアプリケーション',
+    route: '/programming/commonlisp/gui',
+  }, {
+    label: 'Webアプリケーション',
+    route: '/programming/commonlisp/webapp',
+  }];
+
   return (
     <div>
       <h1>Common Lisp</h1>
-      {makeList("/programming/commonlisp/gettingstarted", "Common Lisp入門")}
-      {makeList("/programming/commonlisp/game", "ゲームプログラミング")}
-      {makeList("/programming/commonlisp/raspberrypi", "Raspberry Pi 電子工作")}
-      {makeList("/programming/commonlisp/gui", "GUIアプリケーション")}
-      {makeList("/programming/commonlisp/webapp", "Webアプリケーション")}
+      {lists.map(list => makeList(list.route, list.label))}
     </div>
   );
 };
