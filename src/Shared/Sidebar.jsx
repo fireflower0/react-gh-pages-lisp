@@ -7,7 +7,7 @@ import { ic_home } from 'react-icons-kit/md/ic_home';
 import { ic_keyboard } from 'react-icons-kit/md/ic_keyboard';
 import { ic_assignment } from 'react-icons-kit/md/ic_assignment';
 
-export const Navigation = styled.div`
+const Navigation = styled.div`
   width: 220px;
   flex-shrink: 0;
   background: #333333;
@@ -32,40 +32,40 @@ const theme = {
   hoverBgColor: "#000",
 };
 
-class Sidebar extends React.Component {
-  SubMenuItem (child) {
+const Sidebar = () => {
+  const SubMenuItem = (child) => {
     var list = [];
     for (let i = 0; i < child.length; i++){
-      list.push(<Nav key={i} id={child[i][0]}><Text>{child[i][1]}</Text></Nav>);
+      list.push(
+        <Nav key={i} id={child[i][0]}>
+          <Text>{child[i][1]}</Text>
+        </Nav>
+      );
     }
     return list;
-  }
+  };
 
-  MenuItem(parent, child) {
-    return (
-      <Nav id={parent[0]}>
-        <NavIcon>
-          <Icon icon={parent[1]} />
-        </NavIcon>
-        <Text>{parent[2]}</Text>
-        { child !== null ? this.SubMenuItem(child) : null }
-      </Nav>
-    );
-  }
+  const MenuItem = (parent, child) => (
+    <Nav id={parent[0]}>
+      <NavIcon>
+        <Icon icon={parent[1]} />
+      </NavIcon>
+      <Text>{parent[2]}</Text>
+      { child !== null ? SubMenuItem(child) : null }
+    </Nav>
+  );
 
-  render() {
-    const SideNav = withRR4();
-    return (
-      <Navigation>
-        <SideNav theme={theme} defaultSelectedPath={"home"}>
-          {this.MenuItem(["home", ic_home, "Home"], null)}
-          {this.MenuItem(["blog", ic_assignment, "Blog"], null)}
-          {this.MenuItem(["programming", ic_keyboard, "Programming"],
-                         [["commonlisp", "Common Lisp"]])}
-        </SideNav>
-      </Navigation>
-    );
-  }
-}
+  const SideNav = withRR4();
+  return (
+    <Navigation>
+      <SideNav theme={theme} defaultSelectedPath={"home"}>
+        {MenuItem(["home", ic_home, "Home"], null)}
+        {MenuItem(["blog", ic_assignment, "Blog"], null)}
+        {MenuItem(["programming", ic_keyboard, "Programming"],
+                  [["commonlisp", "Common Lisp"]])}
+      </SideNav>
+    </Navigation>
+  );
+};
 
 export default Sidebar;

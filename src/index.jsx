@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
-import Sidebar from './Shared/SideBar';
+import Sidebar from './Shared/Sidebar';
 import { routes } from './routes';
 
 const AppContainer = styled.div`
