@@ -19,12 +19,12 @@ export const makeList = (link, title) => {
   );
 };
 
-export const makeArticle = (title, mdFilePath) => {
+export const makeArticle = (title, filePath) => {
   return (
     <Article>
       <details>
         <summary>{title}</summary>
-        <Markdown mdFilePath={mdFilePath} />
+        <Markdown filePath={filePath} />
       </details>
     </Article>
   );
