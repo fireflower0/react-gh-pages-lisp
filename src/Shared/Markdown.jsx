@@ -27,7 +27,7 @@ const Markdown = ({ filePath }) => {
   );
 };
 
-CodeBlock.propTypes = {
+Markdown.propTypes = {
   filePath: PropTypes.string.isRequired,
 };
 

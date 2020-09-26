@@ -11,29 +11,23 @@ const Article = styled.article`
   background-color: #FAF0E6;
 `;
 
-export const makeList = (link, title) => {
-  return(
-    <Article>
-      <Link to={link}>{title}</Link>
-    </Article>
-  );
-};
+export const makeList = (link, title) => (
+  <Article>
+    <Link to={link}>{title}</Link>
+  </Article>
+);
 
-export const makeArticle = (title, filePath) => {
-  return (
-    <Article>
-      <details>
-        <summary>{title}</summary>
-        <Markdown filePath={filePath} />
-      </details>
-    </Article>
-  );
-};
+export const makeArticle = (title, filePath) => (
+  <Article>
+    <details>
+      <summary>{title}</summary>
+      <Markdown filePath={filePath} />
+    </details>
+  </Article>
+);
 
-export const makeLinkList = (title, link) => {
-  return(
-    <li>
-      <a href={link} rel="noopener noreferrer" target="_blank">{title}</a>
-    </li>
-  );
-};
+export const makeLinkList = (title, link) => (
+  <li>
+    <a href={link} rel='noopener noreferrer' target='_blank'>{title}</a>
+  </li>
+);
