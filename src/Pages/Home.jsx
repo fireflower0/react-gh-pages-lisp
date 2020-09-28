@@ -24,6 +24,20 @@ const Div = styled(Row)`
 `;
 
 const Home = () => {
+  const links = [{
+    label: 'Qiita',
+    url: 'https://qiita.com/fireflower0',
+  }, {
+    label: 'GitHub',
+    url: 'https://github.com/fireflower0',
+  }, {
+    label: 'Twitter',
+    url: 'https://twitter.com/fireflower0',
+  }, {
+    label: '以前作成したホームページ',
+    url: 'http://fireflower.s602.xrea.com/',
+  }];
+
   const makeTable = (header, data) => {
     return (
       <Row><Div>{header}</Div><Div>{data}</Div></Row>
@@ -35,15 +49,6 @@ const Home = () => {
       <a href={link} rel='noopener noreferrer' target='_blank'>
         {title}
       </a>
-    </div>
-  );
-
-  const makeLinkList = () => (
-    <div>
-      {makeLink('Qiita', 'https://qiita.com/fireflower0')}
-      {makeLink('GitHub', 'https://github.com/fireflower0')}
-      {makeLink('Twitter', 'https://twitter.com/fireflower0')}
-      {makeLink('以前作成したホームページ', 'http://fireflower.s602.xrea.com/')}
     </div>
   );
 
@@ -68,7 +73,7 @@ const Home = () => {
                                    <div>基本情報技術者試験</div>
                                    <div>応用情報技術者試験</div>
                                  </div>)}
-          {makeTable('リンク', makeLinkList())}
+          {makeTable('リンク', links.map(l => makeLink(l.label, l.url)))}
         </Table>
       </Body>
     </div>
