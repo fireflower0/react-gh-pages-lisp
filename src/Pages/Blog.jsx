@@ -7,7 +7,7 @@ const FormWrapper = styled.div``;
 const Blog = () => {
   const articles = [{
     label: 'サンプル',
-    route: require('./Articles/Sample/sample.md'),
+    route: require('./Blogs/Sample/sample.md'),
   }];
   return (
     <FormWrapper>
