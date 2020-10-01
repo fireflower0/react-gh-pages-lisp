@@ -24,7 +24,7 @@ const Div = styled(Row)`
 `;
 
 const Home = () => {
-  const links = [{
+  const linkPaths = [{
     label: 'Qiita',
     url: 'https://qiita.com/fireflower0',
   }, {
@@ -73,7 +73,7 @@ const Home = () => {
                                    <div>基本情報技術者試験</div>
                                    <div>応用情報技術者試験</div>
                                  </div>)}
-          {makeTable('リンク', links.map(l => makeLink(l.label, l.url)))}
+          {makeTable('リンク', linkPaths.map(l => makeLink(l.label, l.url)))}
         </Table>
       </Body>
     </div>
