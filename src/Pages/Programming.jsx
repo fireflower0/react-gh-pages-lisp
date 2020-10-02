@@ -2,14 +2,14 @@ import React from 'react';
 import { makeList } from './utils';
 
 const Programming = () => {
-  const lists = [{
+  const listPaths = [{
     label: 'Common Lisp',
     route: '/programming/commonlisp',
   }];
   return (
     <div>
       <h1>Programming</h1>
-      {lists.map(list => makeList(list.route, list.label))}
+      {listPaths.map(l => makeList(l.route, l.label))}
     </div>
   );
 };
