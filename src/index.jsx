@@ -28,6 +28,7 @@ const App = () => {
 
   const makeRoutes = (route) => (
     <Route
+      key={route.id}
       path={route.path}
       exact={route.exact}
       component={route.component}

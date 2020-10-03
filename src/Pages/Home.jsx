@@ -25,17 +25,36 @@ const Div = styled(Row)`
 
 const Home = () => {
   const linkPaths = [{
+    id: 1,
     label: 'Qiita',
     url: 'https://qiita.com/fireflower0',
   }, {
+    id: 2,
     label: 'GitHub',
     url: 'https://github.com/fireflower0',
   }, {
+    id: 3,
     label: 'Twitter',
     url: 'https://twitter.com/fireflower0',
   }, {
+    id: 4,
     label: '以前作成したホームページ',
     url: 'http://fireflower.s602.xrea.com/',
+  }, {
+    id: 5,
+    label: 'Survival Common Lisp - 現代Lisperたちの生存プログラミング術 (第8章担当)',
+    url: 'https://booth.pm/ja/items/1300098'
+  }];
+
+  const itemList = [{
+    id: 1,
+    label: 'ITパスポート'
+  }, {
+    id: 2,
+    label: '基本情報技術者試験'
+  }, {
+    id: 3,
+    label: '応用情報技術者試験'
   }];
 
   const makeTable = (header, data) => {
@@ -44,12 +63,16 @@ const Home = () => {
     );
   };
 
-  const makeLink = (title, link) => (
-    <div>
-      <a href={link} rel='noopener noreferrer' target='_blank'>
-        {title}
+  const makeLink = (paths) => (
+    <div key={paths.id} >
+      <a href={paths.url} rel='noopener noreferrer' target='_blank'>
+        {paths.label}
       </a>
     </div>
+  );
+
+  const makeList = (item) => (
+    <div key={item.id} >{item.label}</div>
   );
 
   return (
@@ -67,13 +90,8 @@ const Home = () => {
           {makeTable('ハンドルネーム', 'fireflowre0')}
           {makeTable('職業', 'アプリケーションエンジニア')}
           {makeTable('業務経験のある言語', 'Common Lisp(SBCL), JavaScript(Node.js, React.js), C/C++, VB(VB6, VB.NET), Java, C#')}
-          {makeTable('同人活動', makeLink('Survival Common Lisp - 現代Lisperたちの生存プログラミング術 (第8章担当)', 'https://booth.pm/ja/items/1300098'))}
-          {makeTable('所有資格', <div>
-                                   <div>ITパスポート</div>
-                                   <div>基本情報技術者試験</div>
-                                   <div>応用情報技術者試験</div>
-                                 </div>)}
-          {makeTable('リンク', linkPaths.map(l => makeLink(l.label, l.url)))}
+          {makeTable('所有資格', itemList.map(item => makeList(item)))}
+          {makeTable('リンク', linkPaths.map(linkPath => makeLink(linkPath)))}
         </Table>
       </Body>
     </div>
