@@ -34,30 +34,30 @@ const GettingStarted = () => {
     url: 'http://cl-cookbook.sourceforge.net/index.html',
   }];
 
-  const articleRoutes = [{
+  const articles = [{
     label: '第1章 開発環境構築',
-    url: require('./Articles/01-foreword.md'),
+    route: require('./Articles/01-foreword.md'),
   }, {
     label: '第2章 アトムとコンスセルとリスト',
-    url: require('./Articles/02-list.md'),
+    route: require('./Articles/02-list.md'),
   }, {
     label: '第3章 連想リストと属性リスト',
-    url: require('./Articles/03-alist-plist.md'),
+    route: require('./Articles/03-alist-plist.md'),
   }, {
     label: '第4章 変数と定数',
-    url: require('./Articles/04-variables-constants.md'),
+    route: require('./Articles/04-variables-constants.md'),
   }, {
     label: '第5章 述語関数',
-    url: require('./Articles/05-predicate-function.md'),
+    route: require('./Articles/05-predicate-function.md'),
   }, {
     label: '第6章 条件分岐',
-    url: require('./Articles/06-conditional-branching.md'),
+    route: require('./Articles/06-conditional-branching.md'),
   }, {
     label: '第7章 繰り返し',
-    url: require('./Articles/07-loop.md'),
+    route: require('./Articles/07-loop.md'),
   }, {
     label: '第8章 シーケンス',
-    url: require('./Articles/08-sequence.md'),
+    route: require('./Articles/08-sequence.md'),
   }];
 
   return (
@@ -71,7 +71,7 @@ const GettingStarted = () => {
       <ul>
         {referenceRoutes.map(route => makeLinkList(route.label, route.url))}
       </ul>
-      {articleRoutes.map(route => makeArticle(route.label, route.url))}
+      {articles.map(article => makeArticle(article))}
     </div>
   );
 };

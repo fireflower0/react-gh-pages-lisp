@@ -12,7 +12,7 @@ const Blog = () => {
   return (
     <FormWrapper>
       <h1>Blog</h1>
-      {articles.map(article => makeArticle(article.label, article.route))}
+      {articles.map(article => makeArticle(article))}
     </FormWrapper>
   );
 };

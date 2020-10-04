@@ -17,11 +17,11 @@ export const makeList = (link, title) => (
   </Article>
 );
 
-export const makeArticle = (title, filePath) => (
+export const makeArticle = (article) => (
   <Article>
     <details>
-      <summary>{title}</summary>
-      <Markdown filePath={filePath} />
+      <summary>{article.label}</summary>
+      <Markdown filePath={article.route} />
     </details>
   </Article>
 );
