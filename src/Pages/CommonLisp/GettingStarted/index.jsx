@@ -2,7 +2,7 @@ import React from 'react';
 import { makeLinkList, makeArticle } from '../../utils';
 
 const GettingStarted = () => {
-  const referenceRoutes = [{
+  const referenceLinks = [{
     label: 'Common Lisp HyperSpec',
     url: 'http://www.lispworks.com/documentation/HyperSpec/Front/index.htm',
   }, {
@@ -69,7 +69,7 @@ const GettingStarted = () => {
       <div>ちなみに、Linux(Ubuntu)での開発を想定しています。</div>
       <h2>参考文献</h2>
       <ul>
-        {referenceRoutes.map(route => makeLinkList(route.label, route.url))}
+        {referenceLinks.map(link => makeLinkList(link))}
       </ul>
       {articles.map(article => makeArticle(article))}
     </div>

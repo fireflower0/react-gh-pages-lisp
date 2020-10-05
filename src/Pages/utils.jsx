@@ -26,8 +26,10 @@ export const makeArticle = (article) => (
   </Article>
 );
 
-export const makeLinkList = (title, link) => (
+export const makeLinkList = (link) => (
   <li>
-    <a href={link} rel='noopener noreferrer' target='_blank'>{title}</a>
+    <a href={link.url} rel='noopener noreferrer' target='_blank'>
+      {link.label}
+    </a>
   </li>
 );
