@@ -11,9 +11,9 @@ const Article = styled.article`
   background-color: #FAF0E6;
 `;
 
-export const makeList = (link, title) => (
+export const makeArticleList = (article) => (
   <Article>
-    <Link to={link}>{title}</Link>
+    <Link to={article.route}>{article.label}</Link>
   </Article>
 );
 

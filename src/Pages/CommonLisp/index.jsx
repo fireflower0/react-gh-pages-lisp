@@ -1,8 +1,8 @@
 import React from 'react';
-import { makeList } from '../utils';
+import { makeArticleList } from '../utils';
 
 const CommonLisp = () => {
-  const lists = [{
+  const articles = [{
     label: 'Common Lisp入門',
     route: '/programming/commonlisp/gettingstarted',
   }, {
@@ -22,7 +22,7 @@ const CommonLisp = () => {
   return (
     <div>
       <h1>Common Lisp</h1>
-      {lists.map(list => makeList(list.route, list.label))}
+      {articles.map(article => makeArticleList(article))}
     </div>
   );
 };
