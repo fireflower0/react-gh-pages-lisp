@@ -3,6 +3,7 @@ import { makeArticleList } from './utils';
 
 const Programming = () => {
   const articles = [{
+    id: 1,
     label: 'Common Lisp',
     route: '/programming/commonlisp',
   }];

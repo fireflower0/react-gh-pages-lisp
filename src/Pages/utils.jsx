@@ -12,7 +12,7 @@ const Article = styled.article`
 `;
 
 export const makeArticleList = (article) => (
-  <Article>
+  <Article key={article.id}>
     <Link to={article.route}>{article.label}</Link>
   </Article>
 );
