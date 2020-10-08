@@ -18,7 +18,7 @@ export const makeArticleList = (article) => (
 );
 
 export const makeArticle = (article) => (
-  <Article>
+  <Article key={article.id}>
     <details>
       <summary>{article.label}</summary>
       <Markdown filePath={article.route} />
