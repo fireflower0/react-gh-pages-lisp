@@ -3,6 +3,7 @@ import { makeArticle } from '../../utils';
 
 const RaspberryPi = () => {
   const articles = [{
+    id: 1,
     label: '第1章 Lチカ',
     route: require('./Articles/01-blink.md'),
   }];
