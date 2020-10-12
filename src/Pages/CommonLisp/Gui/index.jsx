@@ -3,6 +3,7 @@ import { makeArticle } from '../../utils';
 
 const Gui = () => {
   const articles = [{
+    id: 1,
     label: '第1章 開発環境構築',
     route: require("./Articles/01-foreword.md"),
   }];
