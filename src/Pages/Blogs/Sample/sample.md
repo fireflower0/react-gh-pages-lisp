@@ -24,7 +24,7 @@ Sub-heading
 ![image-name](file-path)
 ```
 
-![cat](https://github.com/fireflower0/react-gh-pages-lisp/blob/master/src/Pages/Blog/Articles/Sample/cat.jpg?raw=true)
+![cat](https://github.com/fireflower0/react-gh-pages-lisp/blob/master/src/Pages/Blogs/Sample/cat.jpg?raw=true)
 
 Paragraphs are separated
 by a blank line.
