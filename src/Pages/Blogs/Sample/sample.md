@@ -72,12 +72,14 @@ Tables:
 |:---:|:---|
 | 001 | Foo |
 | 002 | Bar |
+| 003 | Baz |
 ```
 
 | No. | Name |
 |:---:|:---|
 | 001 | Foo |
 | 002 | Bar |
+| 003 | Baz |
 
 Program Code:
 
