@@ -84,6 +84,10 @@ Tables:
 Program Code:
 
 ```commonlisp
+(format t "Hello, world!")
+```
+
+```commonlisp
 (defun fib (n)
   (cond ((= n 0) 0)
         ((= n 1) 1)
