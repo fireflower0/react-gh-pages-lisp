@@ -94,6 +94,15 @@ Program Code:
         (t (+ (fib (- n 1)) (fib (- n 2))))))
 ```
 
+```c
+include <stdio.h>
+
+int main(void) {
+  printf("Hello, world!\n");
+  return 0;
+}
+```
+
 ```cpp
 include <iostream>
 using namespace std;
