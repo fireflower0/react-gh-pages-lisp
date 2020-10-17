@@ -94,6 +94,10 @@ Program Code:
         (t (+ (fib (- n 1)) (fib (- n 2))))))
 ```
 
+```clojure
+(println "Hello, world!")
+```
+
 ```c
 include <stdio.h>
 
