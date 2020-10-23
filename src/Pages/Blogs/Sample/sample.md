@@ -200,4 +200,24 @@ main = do
   (print (fizzbuzz i)))
 ```
 
+```as
+    .global _start
+
+    .text
+
+_start:
+    mov $1, %rax
+    mov $1, %rdi
+    mov $message, %rsi
+    mov $13, %rdx
+    syscall
+
+    mov $60, %rax
+    xor %rdi, %rdi
+    syscall
+
+message:
+    .ascii "Hello, world!\n"
+```
+
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
