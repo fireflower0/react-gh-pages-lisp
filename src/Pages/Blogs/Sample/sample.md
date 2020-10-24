@@ -220,4 +220,13 @@ message:
     .ascii "Hello, world!\n"
 ```
 
+```fortran
+      program TEST
+         character name*32
+         read(*, '(a)') name
+         print*, 'Hello, ', name
+         stop
+      end
+```
+
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
