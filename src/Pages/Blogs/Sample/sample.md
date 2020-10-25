@@ -229,4 +229,13 @@ message:
       end
 ```
 
+```kotlin
+import java.util.*
+
+fun main(args: Array<String>) {
+  val name = Scanner(System.`in`)
+  println("Hello, " + name.next())
+}
+```
+
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
