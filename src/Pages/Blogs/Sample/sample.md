@@ -238,4 +238,11 @@ fun main(args: Array<String>) {
 }
 ```
 
+```makefile
+MSG = "Hello, world!"
+
+all:
+	@echo $(MSG)
+```
+
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
