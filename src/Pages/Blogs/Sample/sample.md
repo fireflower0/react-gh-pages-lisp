@@ -279,4 +279,11 @@ func fizzbuzz(Num n: Int) {
 fizzbuzz(Num: 15)
 ```
 
+```perl
+print(
+    (($_ % 3 ? "" : Fizz) . ($_ % 5 ? "" : Buzz) or $ _) . "\n"
+)
+for 1..15
+```
+
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
