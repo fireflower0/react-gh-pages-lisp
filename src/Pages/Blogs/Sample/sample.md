@@ -299,4 +299,13 @@ proc fizzbuzz {n {m1 3} {m2 5}} {
 fizzbuzz 15
 ```
 
+```scala
+object Main {
+  def main(args: Array[String]) {
+    var name = io.StdIn.readLine
+    println("Hello, %s".format(name))
+  }
+}
+```
+
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
