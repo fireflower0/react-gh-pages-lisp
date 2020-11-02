@@ -319,4 +319,16 @@ public class Hanoi {
 }
 ```
 
+```go
+package main
+
+import "fmt"
+
+func main() {
+  var name string
+  fmt.Scan(&name)
+  fmt.Println("Hello,", name)
+}
+```
+
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
