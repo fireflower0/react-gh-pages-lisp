@@ -331,4 +331,9 @@ func main() {
 }
 ```
 
+```crystal
+name = read_line.chomp
+puts "Hello, " + name
+```
+
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
