@@ -353,4 +353,11 @@ read_string() ->
   end.
 ```
 
+```javascript
+process.stdin.on('data', function (line) {
+    console.log("Hello, " + line);
+    process.exit(0);
+});
+```
+
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
