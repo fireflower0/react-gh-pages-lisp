@@ -378,4 +378,8 @@ end
 run(15)
 ```
 
+```io
+for(i, 1, 15, if(i % 15 == 0, "FizzBuzz" println, if(i % 3 == 0, "Fizz" println, if(i % 5 == 0, "Buzz" println, i println))))
+```
+
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
