@@ -382,4 +382,30 @@ run(15)
 for(i, 1, 15, if(i % 15 == 0, "FizzBuzz" println, if(i % 3 == 0, "Fizz" println, if(i % 5 == 0, "Buzz" println, i println))))
 ```
 
+```clips
+(deffacts hanoi (goals tower of 3 A B C))
+
+(defrule move-tower
+  ?old-goals <- (goals tower of ?number&~1 ?from ?to ?via $?rest)
+  =>
+  (retract ?old-goals)
+  (assert (goals tower of =(- ?number 1) ?from ?via ?to
+    tower of 1 ?from ?to ?via
+    tower of =(- ?number 1) ?via ?to ?from ?rest)))
+
+(defrule move-tower-with-one-disk
+  ?old-goals <- (goals tower of 1 ?from ?to ?via $?rest)
+  =>
+  (retract ?old-goals)
+  (assert (goals disk ?from ?to ?rest)))
+
+(defrule move-one-disk
+  ?old-goals <- (goals disk ?from ?to $?rest)
+  =>
+  (retract ?old-goals)
+  (printout t ?from " -> " ?to crlf)
+  (assert (goals ?rest)))
+
+```
+
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
