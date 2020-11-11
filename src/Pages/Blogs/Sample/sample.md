@@ -445,4 +445,16 @@ class FizzBuzz : Object {
 }
 ```
 
+```visualbasic
+Imports System
+
+Public Class Hanoi
+  Public Shared Sub Main()
+    Dim name As String
+    name = Console.ReadLine()
+    Console.WriteLine("Hello, " & name)
+  End Sub
+End Class
+```
+
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
