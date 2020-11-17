@@ -556,4 +556,19 @@ end
 IO.puts FizzBuzz.say(15)
 ```
 
+```egison
+fizzbuzz i :=
+  if i % 15 = 0 then print "FizzBuzz"
+  else if i % 3 = 0 then print "Fizz"
+  else if i % 5 = 0 then print "Buzz"
+  else print (show i)
+
+run i n :=
+  if i > n then print "End"
+  else do { fizzbuzz(i); run(i + 1, n) }
+
+main args :=
+  run 1 15
+```
+
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
