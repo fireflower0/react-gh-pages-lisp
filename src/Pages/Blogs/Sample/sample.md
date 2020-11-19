@@ -585,4 +585,24 @@ let run (n : int) =
 run 15
 ```
 
+```dart
+fizzbuzz(int n) {
+  for (int i = 1; i <= n; i++) {
+    if (i % 15 == 0) {
+      print("FizzBuzz");
+    } else if (i % 3 == 0) {
+      print("Fizz");
+    } else if (i % 5 == 0) {
+      print("Buzz");
+    } else {
+      print(i);
+    }
+  }
+}
+
+main() {
+  fizzbuzz(15);
+}
+```
+
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
