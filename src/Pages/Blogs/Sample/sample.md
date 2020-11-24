@@ -670,4 +670,16 @@ def fizzbuzz(n):
 fizzbuzz(16)
 ```
 
+```11l
+L(i) 1..15
+  I i % 15 == 0
+    print(‘FizzBuzz’)
+  E I i % 3 == 0
+    print(‘Fizz’)
+  E I i % 5 == 0
+    print(‘Buzz’)
+  E
+    print(i)
+```
+
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
