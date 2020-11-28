@@ -735,4 +735,29 @@ end
 fizzbuzz 15
 ```
 
+```octave
+#! octave-interpreter-name -qf
+# a fizzbuzz Octave program
+
+function fizzbuzz(i)
+  if(rem(i, 15) == 0)
+    disp("FizzBuzz")
+  elseif(rem(i, 3) == 0)
+    disp("Fizz")
+  elseif(rem(i, 5) == 0)
+    disp("Buzz")
+  else
+    printf("%d\n", i)
+  end
+end
+
+function run(n)
+  for i = i:n
+    fizzbuzz(i)
+  endfor
+end
+
+run(15)
+```
+
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
