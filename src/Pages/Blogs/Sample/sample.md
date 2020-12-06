@@ -877,4 +877,20 @@ hanoi(n, "a", "b", "c")
     i))
 ```
 
+```pico-lisp
+(de fizzbuzz (i)
+    (cond ((=0 (% i 15)) "FizzBuzz")
+          ((=0 (% i  3)) "Fizz")
+          ((=0 (% i  5)) "Buzz")
+          i))
+
+(de run (n)
+  (let i 1
+    (loop
+      (prinl (fizzbuzz i))
+      (T (= (inc 'i) (+ n 1)) 'done))))
+
+(run 15)
+```
+
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
