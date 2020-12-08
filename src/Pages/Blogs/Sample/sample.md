@@ -908,4 +908,24 @@ hanoi(n, "a", "b", "c")
 16 fizzbuzz bye
 ```
 
+```gnuplot
+i = 1;
+while (i <= 15) {
+  if (i % 15 == 0) {
+    print 'FizzBuzz';
+  } else {
+    if (i % 3 == 0) {
+      print 'Fizz';
+    } else {
+      if (i % 5 == 0) {
+        print 'Buzz';
+      } else {
+        print i;
+      }
+    }
+  }
+  i = i + 1;
+}
+```
+
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
