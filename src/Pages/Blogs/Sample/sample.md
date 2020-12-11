@@ -967,4 +967,16 @@ class FizzBuzz {
 (run-program 15)
 ```
 
+```nim
+for i in 1..15:
+  if i mod 15 == 0:
+    echo "FizzBuzz"
+  elif i mod 3 == 0:
+    echo "Fizz"
+  elif i mod 5 == 0:
+    echo "Buzz"
+  else:
+    echo i
+```
+
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
