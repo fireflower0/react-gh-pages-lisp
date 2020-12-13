@@ -997,4 +997,18 @@ run = (n) ->
 run 15
 ```
 
+```brat
+1.to 15 { i |
+  true? i % 15 == 0
+    { p "FizzBuzz" }
+    { true? i % 3 == 0
+      { p "Fizz" }
+      { true? i % 5 == 0
+        { p "Buzz" }
+        { p i }
+      }
+    }
+  }
+```
+
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
