@@ -1011,4 +1011,26 @@ run 15
   }
 ```
 
+```icon
+procedure fizzbuzz(i)
+    if i % 15 = 0 then
+        return "FizzBuzz"
+    else if i % 3 = 0 then
+        return "Fizz"
+    else if i % 5 = 0 then
+        return "Buzz"
+    else
+        return i
+end
+
+procedure run(n)
+    every i := 1 to n do
+        write(fizzbuzz(i))
+end
+
+procedure main()
+    run(15)
+end
+```
+
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
