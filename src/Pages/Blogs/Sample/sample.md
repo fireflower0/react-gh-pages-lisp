@@ -1049,4 +1049,28 @@ define(`main',
 main(range(1, 15))
 ```
 
+```sidef
+func fizzbuzz({ _ %% 15 }) {
+  "FizzBuzz"
+}
+
+func fizzbuzz({ _ %%  3 }) {
+  "Fizz"
+}
+
+func fizzbuzz({ _ %%  5 }) {
+  "Buzz"
+}
+
+func fizzbuzz(i) { i }
+
+func run (n) {
+  for i in (1..n) {
+    say fizzbuzz(i)
+  }
+}
+
+run(15)
+```
+
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
