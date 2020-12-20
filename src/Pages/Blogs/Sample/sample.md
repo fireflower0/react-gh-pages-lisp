@@ -1118,4 +1118,14 @@ fizzbuzz i = "FizzBuzz\n", if i mod 15 == 0
            = show i ++ "\n", otherwise
 ```
 
+```joy
+DEFINE fizzbuzz ==
+  [[[ dup 15 rem 0 = ] "FizzBuzz" ]
+   [[ dup  3 rem 0 = ] "Fizz" ]
+   [[ dup  5 rem 0 = ] "Buzz" ]
+   [ dup ]] cond .
+
+1 [ 15 <= ] [ dup fizzbuzz put succ ] while .
+```
+
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
