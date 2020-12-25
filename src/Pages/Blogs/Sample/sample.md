@@ -90,8 +90,4 @@ Program Code:
         (t (+ (fib (- n 1)) (fib (- n 2))))))
 ```
 
-```commonlisp
-(format t "Hello, world!~%")
-```
-
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
