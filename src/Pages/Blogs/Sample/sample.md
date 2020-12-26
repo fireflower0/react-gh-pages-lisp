@@ -90,4 +90,14 @@ Program Code:
         (t (+ (fib (- n 1)) (fib (- n 2))))))
 ```
 
+```cpp
+#include <iostream>
+using namespace std;
+
+int main(void) {
+  count << "Hello, world!" << endl;
+  return 0;
+}
+```
+
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
