@@ -89,15 +89,4 @@ Common Lisp
 (format t "Hello, world!~%")
 ```
 
-C
-
-```c
-#include <stdio.h>
-
-int main(void) {
-  printf("Hello, world!\n");
-  return 0;
-}
-```
-
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
