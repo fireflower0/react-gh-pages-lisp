@@ -89,4 +89,16 @@ Common Lisp
 (format t "Hello, world!~%")
 ```
 
+C++
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main(void) {
+  cout << "Hello, world!" << endl;
+  return 0;
+}
+```
+
 [*Home*](https://fireflower0.github.io/react-gh-pages-lisp/index.html)
