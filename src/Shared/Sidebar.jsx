@@ -56,6 +56,7 @@ const Sidebar = () => {
   );
 
   const SideNav = withRR4();
+
   return (
     <Navigation>
       <SideNav theme={theme} defaultSelectedPath={"home"}>
