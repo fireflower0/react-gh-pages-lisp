@@ -62,26 +62,20 @@ const Sidebar = () => {
     },
   ];
 
-  const SubMenuItem = (child) => {
-    var list = [];
-    for (let i = 0; i < child.length; i++) {
-      list.push(
-        <Nav key={i} id={child[i][0]}>
-          <Text>{child[i][1]}</Text>
-        </Nav>
-      );
-    }
-    return list;
-  };
+  const SubMenuItem = (menuItem) => (
+    <Nav key={menuItem.navId} id={menuItem.navId}>
+      <Text>{menuItem.label}</Text>
+    </Nav>
+  );
 
-  const MenuItem = (parent, children) => (
-    <Nav key={parent[0]} id={parent[0]}>
+  const MenuItem = (menuItem) => (
+    <Nav key={menuItem.navId} id={menuItem.navId}>
       <NavIcon>
-        <Icon icon={parent[1]} />
+        <Icon icon={menuItem.icon} />
       </NavIcon>
-      <Text>{parent[2]}</Text>
-      { children !== null
-        ? children.map(child => SubMenuItem([[child.navId, child.label]]))
+      <Text>{menuItem.label}</Text>
+      { menuItem.children !== null
+        ? menuItem.children.map(SubMenuItem)
         : null }
     </Nav>
   );
@@ -91,7 +85,7 @@ const Sidebar = () => {
   return (
     <Navigation>
       <SideNav theme={theme} defaultSelectedPath={"home"}>
-        {menuItems.map(v => MenuItem([v.navId, v.icon, v.label], v.children))}
+        {menuItems.map(v => MenuItem(v))}
       </SideNav>
     </Navigation>
   );
