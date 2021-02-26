@@ -6,6 +6,7 @@ import { Icon } from 'react-icons-kit';
 import { ic_home } from 'react-icons-kit/md/ic_home';
 import { ic_keyboard } from 'react-icons-kit/md/ic_keyboard';
 import { ic_assignment } from 'react-icons-kit/md/ic_assignment';
+import { isNullOrUndifined } from '../utils.jsx';
 
 const Navigation = styled.div`
   width: 220px;
@@ -74,7 +75,7 @@ const Sidebar = () => {
         <Icon icon={menuItem.icon} />
       </NavIcon>
       <Text>{menuItem.label}</Text>
-      { menuItem.children !== null
+      { !isNullOrUndifined(menuItem.children)
         ? menuItem.children.map(SubMenuItem)
         : null }
     </Nav>
