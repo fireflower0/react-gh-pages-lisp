@@ -1,6 +1,6 @@
 2Dレンダリング
 
-![string-drawing](https://github.com/fireflower0/react-gh-pages-lisp/blob/master/src/Pages/Programming/CommonLisp/Game/Articles/Pic/04-2d-rendering.png?raw=true)
+![string-drawing](https://github.com/fireflower0/react-gh-pages-lisp/blob/master/src/Pages/CommonLisp/Game/Articles/Pic/04-2d-rendering.png?raw=true)
 
 [2Dレンダリング (SDL 2.0 日本語リファレンスマニュアル)](http://sdl2referencejp.osdn.jp/CategoryRender.html)
 

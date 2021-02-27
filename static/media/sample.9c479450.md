@@ -24,7 +24,7 @@ Sub-heading
 ![image-name](file-path)
 ```
 
-![cat](https://github.com/fireflower0/react-gh-pages-lisp/blob/master/src/Pages/Blog/Articles/Sample/cat.jpg?raw=true)
+![cat](https://github.com/fireflower0/react-gh-pages-lisp/blob/master/src/Pages/Blogs/Sample/cat.jpg?raw=true)
 
 Paragraphs are separated
 by a blank line.
@@ -72,24 +72,27 @@ Tables:
 |:---:|:---|
 | 001 | Foo |
 | 002 | Bar |
+| 003 | Baz |
 ```
 
 | No. | Name |
 |:---:|:---|
 | 001 | Foo |
 | 002 | Bar |
+| 003 | Baz |
 
 Program Code:
 
+Common Lisp
+
 ```commonlisp
-(defun fib (n)
-  (cond ((= n 0) 0)
-        ((= n 1) 1)
-        (t (+ (fib (- n 1)) (fib (- n 2))))))
+(format t "Hello, world!~%")
 ```
 
-```cpp
-include <iostream>
+C++
+
+```c++
+#include <iostream>
 using namespace std;
 
 int main(void) {

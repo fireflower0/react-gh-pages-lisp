@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/react-gh-pages-lisp/static/media/07-loop.04615c5d.md"
   },
   {
-    "revision": "7761bf965f81796926f9",
-    "url": "/react-gh-pages-lisp/static/js/main.c4584f7d.chunk.js"
+    "revision": "8324e018f54e9788ca84",
+    "url": "/react-gh-pages-lisp/static/js/main.70da271c.chunk.js"
   },
   {
     "revision": "80bd2ff55ccc85f43fd25f4c83437f3f",
     "url": "/react-gh-pages-lisp/static/media/01-blink.80bd2ff5.md"
   },
   {
-    "revision": "9c3ab9cf94e4f92969e5f5d9b5b3914c",
-    "url": "/react-gh-pages-lisp/static/media/sample.9c3ab9cf.md"
+    "revision": "9c4794509b4a9295c7df00c3fc3ad93d",
+    "url": "/react-gh-pages-lisp/static/media/sample.9c479450.md"
   },
   {
     "revision": "0e4d07cbd2089309015b31b54266a84b",
@@ -56,12 +56,12 @@ self.__precacheManifest = [
     "url": "/react-gh-pages-lisp/static/media/02-window.cc4443e0.md"
   },
   {
-    "revision": "be631e8dffc2e7ad57a9980486dce453",
-    "url": "/react-gh-pages-lisp/static/media/03-string-drawing.be631e8d.md"
+    "revision": "0084a4e89dddaec3e2bec2bcc01ba659",
+    "url": "/react-gh-pages-lisp/static/media/03-string-drawing.0084a4e8.md"
   },
   {
-    "revision": "c094aa8d7a9bf43e480018e5f433a7a8",
-    "url": "/react-gh-pages-lisp/static/media/04-2d-rendering.c094aa8d.md"
+    "revision": "cacb813ea855dd62289b090189f43ab3",
+    "url": "/react-gh-pages-lisp/static/media/04-2d-rendering.cacb813e.md"
   },
   {
     "revision": "16b478b5be7e474d449caee80389dd94",
@@ -72,11 +72,11 @@ self.__precacheManifest = [
     "url": "/react-gh-pages-lisp/static/media/01-foreword.d41d8cd9.md"
   },
   {
-    "revision": "dd2aff48eb41273356b3",
-    "url": "/react-gh-pages-lisp/static/js/2.5c76b9e6.chunk.js"
+    "revision": "04eef996c39b56a66cd4",
+    "url": "/react-gh-pages-lisp/static/js/2.eee7b252.chunk.js"
   },
   {
-    "revision": "1aba6e93a16ad96f9fec4c85eeaf68a8",
+    "revision": "e26b6a7ea5b845cc7b2e935db0ce079b",
     "url": "/react-gh-pages-lisp/index.html"
   }
 ];
