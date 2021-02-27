@@ -34,34 +34,28 @@ const theme = {
 };
 
 const Sidebar = () => {
-  const menuProgSubItems = [
-    {
-      navId: "commonlisp",
-      label: "Commonlisp",
-      icon: null,
-    },
-  ];
+  const menuProgSubItems = [{
+    navId: "commonlisp",
+    label: "Commonlisp",
+    icon: null,
+  }];
 
-  const menuItems = [
-    {
-      navId: "home",
-      label: "Home",
-      icon: ic_home,
-      children: null,
-    },
-    {
-      navId: "blog",
-      label: "Blog",
-      icon: ic_assignment,
-      children: null,
-    },
-    {
-      navId: "programming",
-      label: "Programming",
-      icon: ic_keyboard,
-      children: menuProgSubItems,
-    },
-  ];
+  const menuItems = [{
+    navId: "home",
+    label: "Home",
+    icon: ic_home,
+    children: null,
+  }, {
+    navId: "blog",
+    label: "Blog",
+    icon: ic_assignment,
+    children: null,
+  }, {
+    navId: "programming",
+    label: "Programming",
+    icon: ic_keyboard,
+    children: menuProgSubItems,
+  }];
 
   const SubMenuItem = (menuItem) => (
     <Nav key={menuItem.navId} id={menuItem.navId}>
