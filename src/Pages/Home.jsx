@@ -84,7 +84,11 @@ const Home = () => {
       <Body>
         <h2>このサイトについて</h2>
         <div>
-          <a href='https://reactjs.org/' rel='noopener noreferrer' target='_blank'>React.js</a>の勉強がてら作成したホームページです。
+          <a
+            href='https://reactjs.org/'
+            rel='noopener noreferrer'
+            target='_blank'
+          >React.js</a>の勉強がてら作成したホームページです。
         </div>
         <div>自分が勉強したことや、ブログなんかを適当に書いていく予定。</div>
         <div>主にCommon LispやRaspberry Piについて書くことが多いと思います。</div>
