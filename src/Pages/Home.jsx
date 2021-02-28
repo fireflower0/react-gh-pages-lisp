@@ -59,7 +59,10 @@ const Home = () => {
 
   const makeTable = (header, data) => {
     return (
-      <Row><Div>{header}</Div><Div>{data}</Div></Row>
+      <Row>
+        <Div>{header}</Div>
+        <Div>{data}</Div>
+      </Row>
     );
   };
 
