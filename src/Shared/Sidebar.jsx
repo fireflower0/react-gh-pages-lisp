@@ -57,6 +57,8 @@ const Sidebar = () => {
     children: menuProgSubItems,
   }];
 
+  const SideNav = withRR4();
+
   const SubMenuItem = (menuItem) => (
     <Nav key={menuItem.navId} id={menuItem.navId}>
       <Text>{menuItem.label}</Text>
@@ -75,11 +77,9 @@ const Sidebar = () => {
     </Nav>
   );
 
-  const SideNav = withRR4();
-
   return (
     <Navigation>
-      <SideNav theme={theme} defaultSelectedPath={"home"}>
+      <SideNav theme={theme} defaultSelectedPath={'home'}>
         {menuItems.map(v => MenuItem(v))}
       </SideNav>
     </Navigation>
